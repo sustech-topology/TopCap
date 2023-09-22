@@ -24,5 +24,11 @@ Before constructing TopCap, there is a preliminary experiment that measures the 
 
 TopCap is achieved in [csv_writer_consonant](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime.  
 
-Further discussions of TopCap are involved in [observation_dimension](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension.ipynb), [observation_dimension_plot](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension_plot.ipynb), [observation_skip](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_skip.ipynb).
+Further discussions of TopCap are involved in 
+- [observation_dimension](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams.
+- [observation_dimension_plot](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension_plot.ipynb) includes parameters and graph in the discussion section.
+- [observation_skip](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_skip.ipynb) illustrates how skip influences computation time.
+
+## Supplements
+The folder `supplements` includes supplementary files for this project. 
 
