@@ -6,9 +6,18 @@ Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedoc
 ```
 conda create -n aligner -c conda-forge montreal-forced-aligner
 ```
-The detailed installation of MFA can be found on the [Installation Page](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html). After installation, use `conda activate aligner` to activate the aligner environment. 
+The detailed installation of MFA can be found on the [Installation Page](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html). After installation, use `conda activate aligner` to activate the aligner environment. The following steps help align each speech into phonetic segments. See [Montreal Forced Aligner Tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanations.
 
-For further 
+- Download the acoustic model and dictionary.
+  ```
+  mfa model download acoustic english_us_arpa
+  mfa model download dictionary english_us_arpa
+  ```
+- Align speeches in the dataset.
+  ```
+  mfa align ~/mfa_data/my_corpus english_us_arpa english_us_arpa ~/mfa_data/my_corpus_aligned
+  ```
+  
 
 
 
