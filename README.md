@@ -13,7 +13,7 @@ The detailed installation of MFA can be found on the [Installation Page](https:/
   mfa model download acoustic english_us_arpa
   mfa model download dictionary english_us_arpa
   ```
-- Align speeches in the dataset, the output are files in .Textgrid format.
+- Align speeches in the dataset, the output files are in `.TextGrid` format.
   ```
   mfa align ~/mfa_data/my_corpus english_us_arpa english_us_arpa ~/mfa_data/my_corpus_aligned
   ```
