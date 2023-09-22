@@ -1,4 +1,4 @@
-# TDA_Consonant_Recognition
+# TDA Consonant Recognition
 Code material for Topological Data Analysis in Consonant Recognition. The data that support the findings of this study are openly available in SpeechBox, ALLSSTAR Corpus, L1-ENG division at [Home Page of SpeechBox](https://speechbox.linguistics.northwestern.edu/#!/home)
 
 ## Data Preprocessing
@@ -20,7 +20,9 @@ The detailed installation of MFA can be found on the [Installation Page](https:/
   ```
 
 ## TopCap Construction
-Before constructing TopCap, there is a preliminary experiment that measures the performance of topological methods in time series. [fre_amp_av](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/fre_amp_av.ipynb) helps understand how topological methods distinguish different vibration patterns in time series.
+Before constructing TopCap, there is a preliminary experiment that measures the performance of topological methods in time series. [fre_amp_av](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/fre_amp_av.ipynb) helps understand how topological methods distinguish different vibration patterns in time series. The results are shown in [observation_result_refined](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_result_refined.ipynb)
 
 TopCap is achieved in [csv_writer_consonant](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime.  
+
+Further discussions of TopCap are involved in [observation_dimension](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension.ipynb), [observation_dimension_plot](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension_plot.ipynb), [observation_skip](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_skip.ipynb).
 
