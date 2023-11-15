@@ -29,7 +29,7 @@ Further discussions of TopCap are involved in
 - [observation_dimension_plot](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension_plot.ipynb) includes parameters and graph in the discussion section.
 - [observation_skip](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_skip.ipynb) illustrates how skip influences computation time.
 
-## Machine Learning for Topological Feathers
+## Machine Learning for Topological Features
 Matlab (R2022b) classification learner application, 5-fold cross-validation, set aside 30\% records as test data. Use the following automatic built-in algorithm: Optimizable Tree, Optimizable Discriminant, Efficient Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Kernel, Optimizable Ensemble, and Optimizable Neural Network.
 
 ## Supplements
