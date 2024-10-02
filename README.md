@@ -1,4 +1,4 @@
-# TDA Consonant Recognition
+# Topology-enhanced Machine Learning for Consonant Recognition
 Code material for Topological Data Analysis in Consonant Recognition. The data that support the findings of this study are openly available in SpeechBox, ALLSSTAR Corpus, L1-ENG division at [Home Page of SpeechBox](https://speechbox.linguistics.northwestern.edu/#!/home)
 
 ## Data Preprocessing
