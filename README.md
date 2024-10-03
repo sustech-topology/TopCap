@@ -29,7 +29,7 @@ Further discussions of TopCap are involved in
 Matlab (R2022b) [classification learner application](https://www.mathworks.com/help/stats/classificationlearner-app.html), 5-fold cross-validation, set aside 30\% records as test data. Use the following automatic built-in algorithm: Optimizable Tree, Optimizable Discriminant, Efficient Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Kernel, and Optimizable Ensemble.
 
 ## Method Comparison
-The MFCC-GRU classification model is obtained in [deep_learning](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/deep_learning.ipynb)
+The MFCC-GRU classification model is obtained in [MFCC_GRU_classification_model](model comparison/MFCC_GRU_classification_model.py)
 
 ## Supplements
 The folder `supplements` includes supplementary files for this project. 
