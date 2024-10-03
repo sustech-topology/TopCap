@@ -28,7 +28,7 @@ Further discussions of TopCap are involved in
 ## Machine Learning for Topological Features
 Matlab (R2022b) [classification learner application](https://www.mathworks.com/help/stats/classificationlearner-app.html), 5-fold cross-validation, set aside 30\% records as test data. Use the following automatic built-in algorithm: Optimizable Tree, Optimizable Discriminant, Efficient Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Kernel, and Optimizable Ensemble.
 
-## Method Comparison
+## Model Comparison
 The MFCC-GRU classification model is obtained in [MFCC_GRU_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_GRU_classification_model.py) and the MFCC-Transformer classification model is obtained in [MFCC_Transformer_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_Transformer_classification_model.py).
 
 ## Supplements
