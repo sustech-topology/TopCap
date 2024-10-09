@@ -1,4 +1,4 @@
-#Preprocessing of datasets
+# Preprocessing of datasets
 - ALLSSTAR
 
 - TIMIT
@@ -7,4 +7,4 @@
 
 - LibriSpeech
 
-#Comparison methods for different datasets
+# Comparison methods for different datasets
