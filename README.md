@@ -31,6 +31,16 @@ Matlab (R2022b) [classification learner application](https://www.mathworks.com/h
 ## Model Comparison
 We built other state-of-art models for comparison with TopCap to comprehensively evaluate its performance. The MFCC-GRU classification model is obtained in [MFCC_GRU_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_GRU_classification_model.py), the MFCC-Transformer classification model is obtained in [MFCC_Transformer_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_Transformer_classification_model.py), both the STFT-CNN classification model and the STFT-CNN^+ classification model are obtained in [STFT_CNN_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/STFT_CNN_classification_model). 
 
+## Data Preprocessing of other date set
+
+-ALLSSTAR
+
+-TIMIT
+
+-LJSpeech
+
+-LibriSpeech
+
 ## Supplements
 The folder `supplements` includes supplementary files for this project. 
 
