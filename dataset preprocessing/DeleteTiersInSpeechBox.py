@@ -9,23 +9,24 @@ from os.path import join
 import librosa
 from scipy.io.wavfile import write
 
-# 源文件夹路径,原始ALLSSTAR数据集
+# 源文件夹路径,原始ALLSSTAR数据集, Source folder path
 inputPath="D:\\phonetic\\ALLSSTAR_reMFA\\HT2"
-# 源文件夹路径
+# 源文件夹路径Source folder path
 source_folder = inputPath
-# 目标文件夹路径
+# 目标文件夹路径Target folder path 
 destination_folder = "D:\\phonetic\\ALLSSTAR_reMFA\\Deleted_HT2"
 
-# 确保目标文件夹存在，如果不存在则创建
+# 确保目标文件夹存在，如果不存在则创建Ensure that the target folder exists; if it does not, create it.
 if not os.path.exists(destination_folder):
     os.makedirs(destination_folder)
 
-# 遍历源文件夹中的文件,先复制到Deleted_DHR
+# 遍历源文件夹中的文件,先复制到Deleted_DHR. 
+# Traverse the files in the source folder and copy them to Deleted_DHR
 for filename in os.listdir(source_folder):
  #   if filename.endswith(".wav"):
         source_file = os.path.join(source_folder, filename)
         destination_file = os.path.join(destination_folder, filename)
-        # 复制文件
+        # 复制文件 copy file
         shutil.copy(source_file, destination_file)
 
 print("文件复制完成！")
@@ -33,7 +34,7 @@ print("文件复制完成！")
 
 
 for fn in os.listdir(destination_folder):
-    #分别读取文件名和后缀
+    #分别读取文件名和后缀 Read the filename and the file extension separately.
     name,ext=os.path.splitext(fn)
     if ext!=".wav":
         inputFilename=destination_folder+'\\'+name+".TextGrid"
