@@ -2,8 +2,7 @@
 - ALLSSTAR
   
   Use [DeleteTiersInSpeechBox](https://github.com/sustech-topology/TopCap/blob/main/dataset%20preprocessing/DeleteTiersInSpeechBox.py) to remove all 
-  tiers from the original TextGrid file except for the "words" tier. Next, utilize the Montreal Forced Aligner (MFA) to analyze the modified TextGrid 
-  file, which will generate a new "phones" tier. 
+  tiers from the original TextGrid file except for the "words" tier. Next, utilize the Montreal Forced Aligner (MFA) to generate a new "phones" tier. 
   
 - TIMIT
   
@@ -26,7 +25,7 @@
   original txt file and reads its contents to process the sentences, it splits each sentence based on several beginning string characters. Finally, 
   for each processed sentence, a corresponding TextGrid file is generated with the appropriate format for MFA.
 
-# As input for the main experiment and comparison experiments
+# As input of the main experiment and comparison experiments
 In our study, we consider two types of input: the main experiment and the comparison experiment. 
 
 The main experiment employs the TopCap method [csv_process_TopCap](https://github.com/sustech-topology/TopCap/blob/main/dataset%20preprocessing/csv_process_TopCap.py), utilizing the "phones" tier in the TextGrid file to extract the corresponding phonemes, then to do time delay embedding and persistent homology to obtain topological features, which are then recorded in a CSV file. All datasets follow this streamlined process except for TIMIT, which uses its original phonemes cutting information. The relevant code for this part is included in the TIMIT_study file. 
