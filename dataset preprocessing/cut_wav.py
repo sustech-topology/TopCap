@@ -12,8 +12,9 @@ from numpy import argmax
 import math
 
 # 假设你已经有了音节标记的数据，其中包含了每个音节的开始和结束时间
+# Assume you already have syllable-labeled data, which includes the start and end times for each syllable.
 # 将音素片段剪切下来放入不同文件夹
-
+# Cut the phoneme segments and place them into different folders.
 
 
 DATASET_PATH = 'D:\\phonetic\\ALLSSTAR_reMFA\\Newcut_NWS'
@@ -23,7 +24,7 @@ inputPath=DATASET_PATH
 def get_wav_filenames_without_extension(directory):
     return [f[:-4] for f in os.listdir(directory) if f.endswith('.wav')]
 
-# 使用方法
+# 使用方法Method
 wav_filenames = get_wav_filenames_without_extension(DATASET_PATH)
 
 def ensure_directory_exists(file_path):
@@ -39,7 +40,7 @@ def ensure_directory_exists(file_path):
     else:
         print(f"目录已存在：{directory}")
         
-# 获取当前脚本所在的文件夹路径
+# 获取当前脚本所在的文件夹路径Obtain the path of the folder where the current script is located
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
 # 创建文件夹 audio_segment
@@ -47,6 +48,7 @@ folder_a = os.path.join(current_directory, 'audio_segment')
 os.makedirs(folder_a, exist_ok=True)
 
 # 在文件夹 audio_segment 中创建两个空文件夹 voiced 和 voiceless
+# Create two empty folders, 'voiced' and 'voiceless', in the 'audio_segment' folder.
 folder_v1 = os.path.join(folder_a, 'voiced')
 os.makedirs(folder_v1, exist_ok=True)
 
