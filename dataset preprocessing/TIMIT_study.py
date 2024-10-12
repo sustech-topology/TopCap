@@ -21,13 +21,13 @@ from persim import plot_diagrams
 # 把TIMIT文件的Train文件夹里的所有文件放在一个文件夹下面，并且把子文件夹路径写入到文件名中
 #Put all the files in the Train folder of the TIMIT dataset into one folder, and include the subfolder path in the file names.
 
-# 源文件夹路径
+# 源文件夹路径sourse file folder
 source_folder = 'D:\\phonetic\\dataset'
 
-# 目标文件夹路径
+# 目标文件夹路径target file folder
 target_folder = 'D:\\phonetic\\dataset1'
 
-# 遍历源文件夹下的所有文件夹和文件
+# 遍历源文件夹下的所有文件夹和文件Traverse all folders and files under the source folder
 for speaker_folder in os.listdir(source_folder):
     speaker_path = os.path.join(source_folder, speaker_folder)
     
@@ -53,13 +53,14 @@ for speaker_folder in os.listdir(source_folder):
 
 
 # 原始文件播放不了是因为虽然显示的是WAV文件但实际上是SPH文件，读取后把文件拓展名替换为wav
+#The original files cannot be played because they are displayed as WAV files but are actually SPH files. After reading them, replace the file extension with .wav.
 if __name__ == "__main__":
     path = 'D:\\phonetic\\dataset1\\*.wav'
     sph_files = glob.glob(path)
     print(len(sph_files),"train utterances")
     for i in sph_files:
         sph = SPHFile(i)
-        # 音频数据和采样率
+        # 音频数据和采样率Get audio data and sample rate
         audio_data = sph.content  # 读取音频数据内容
         sample_rate = 16000
         # 指定文件夹路径和文件名， 分割文件路径
@@ -189,6 +190,7 @@ for audio_file in os.listdir(audio_folder):
                         # 在这里可以将符合条件的音素段切割出来,存入文件夹
                         segment=sig[int(start_time): int(end_time)]
                         # 将数组写入为wav音频文件, 将浮点数数据乘以 32767（int16 的最大值），并转换为 int16 类型。
+                        # Write the array as a WAV audio file, multiply the float data by 32767 (the maximum value for int16), and convert it to int16 type.
                         wavfile.write( output_folder_1+"\\"+filename+'_'+phone+'_'+start_time+".wav", sample_rate, (segment * 32767).astype(np.int16))
                         
                     elif phone in voiceless_phones:
@@ -197,6 +199,7 @@ for audio_file in os.listdir(audio_folder):
                         # 在这里可以将符合条件的音素段切割出来,存入文件夹
                         segment=sig[int(start_time): int(end_time)]
                         # 将数组写入为wav音频文件, 将浮点数数据乘以 32767（int16 的最大值），并转换为 int16 类型。
+                        # Write the array as a WAV audio file, multiply the float data by 32767 (the maximum value for int16), and convert it to int16 type.
                         wavfile.write( output_folder_2+"\\"+filename+'_'+phone+'_'+start_time+".wav", sample_rate, (segment * 32767).astype(np.int16)) 
                         
                      
@@ -225,7 +228,7 @@ for audio_file in os.listdir(audio_folder):
                 for line in phn_file:
                     start_time, end_time, phone = line.split()
                     
-                    # 检查音素是否在有声音素列表中
+                    # 检查音素是否在浊辅音音素列表中
                     if phone in voiced_phones:
                         # 处理浊辅音音素, 可以根据起止时间切割音频
                         print(f"Found voiced phone '{phone}' from {start_time} to {end_time} in {audio_file}")
@@ -299,8 +302,6 @@ with open(csv_name,"a",newline="") as csvfile:
         if delay_voiceless[i]==0:
             delay_voiceless[i]=1
         point_Cloud=timedelay.TimeDelayEmbedding(M, delay_voiceless[i], 5)
-        if i==787:
-            continue
         
         try:
         # 这里是可能抛出异常的代码
