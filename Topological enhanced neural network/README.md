@@ -1,41 +1,93 @@
-# Audio Feature Extraction Notebooks
+# Audio Processing and Topology-Enhanced Classification Framework
 
-This repository contains three Jupyter Notebooks that demonstrate various methods for extracting and analyzing audio features from audio signals. Each notebook focuses on a different technique and provides step-by-step guidance along with visualizations to help you understand the feature extraction process.
+This repository contains a collection of Python scripts designed for advanced audio signal processing, feature extraction using topological data analysis, and machine learning experiments. The provided scripts cover a range of functionalities from preprocessing audio signals and extracting persistent homology features, to training topology-enhanced neural network classifiers and evaluating a Gaussian SVM model.
 
-## File Functionality Overview
+---
 
-- **pd_feature.ipynb:**  
-  - Demonstrates the extraction and analysis of PD features from audio signals.
-  - Includes steps for loading audio data, processing the signal, and visualizing the extracted PD features.
-  - Useful for understanding how power or other domain-specific metrics can be derived from audio.
+## File Overview
 
-- **stft_feature2.ipynb:**  
-  - Focuses on extracting features using the Short-Time Fourier Transform (STFT).
-  - Converts time-domain audio signals into a time-frequency representation.
-  - Provides visualizations to analyze how the frequency content of the audio evolves over time.
+### 1. `segment_PD.py`
+This script performs advanced audio signal processing and topological feature extraction. Its key functionalities include:
 
-- **mfcc_feature2.ipynb:**  
-  - Shows how to compute Mel-Frequency Cepstral Coefficients (MFCCs), a key feature in speech and audio processing.
-  - Walks through preprocessing the audio, extracting MFCCs, and visualizing the results.
-  - Ideal for projects related to speech recognition and audio classification.
+- **Signal Normalization and Noise Addition:**  
+  Functions are provided to normalize audio signals to the range [-1, 1] and add noise (Gaussian, uniform, or impulse) with controllable signal-to-noise ratios (SNR) using reproducible random seeds.
 
-## Features
+- **Frequency Estimation:**  
+  Multiple methods are implemented to estimate the principal frequency of the audio signal, including Fourier Transform-based peak detection and autocorrelation-based methods.
 
-- **Audio Preprocessing:** Load and preprocess audio data for feature extraction.
-- **Diverse Feature Extraction Methods:** 
-  - PD features for specific audio analysis tasks.
-  - STFT for time-frequency representation.
-  - MFCC for capturing the spectral properties of audio.
-- **Visualization:** Each notebook includes plots and charts to help interpret the extracted features.
+- **Time Delay Embedding & Persistent Homology:**  
+  The script uses time delay embedding (via the Gudhi library) to transform one-dimensional audio signals into multi-dimensional point clouds. Persistent homology is then computed using the Ripser library to extract topological features (e.g., persistence intervals).
+
+- **Parallel Processing:**  
+  Leveraging Python's multiprocessing, the script processes multiple audio files (from designated "voiced" and "voiceless" folders) concurrently. It trims and preprocesses each audio sample, computes its topological features, and writes the results (e.g., persistence values, corresponding indices, and data category) into a CSV file.
+
+- **Usage Considerations:**  
+  - Adjust file paths for the audio directories and CSV output as needed.  
+  - Ensure all required libraries (e.g., NumPy, SciPy, SoundFile, Gudhi, Ripser, Persim) are installed.
+
+---
+
+### 2. `Multiple_experiments_on_Topology_enhanced_neural_networks.py`
+This script is focused on performing multiple experiments for classifying audio consonants using topology-enhanced neural networks. Its main functionalities include:
+
+- **Data Preparation and Feature Extraction:**  
+  - Reads a CSV file (e.g., `Sample_TIMIT_noise5_arr.csv`) containing pre-extracted topological features, MFCC features, and labels from the TIMIT dataset.  
+  - Constructs a file index for audio samples stored in designated "voiced" and "voiceless" folders.  
+  - Extracts MFCC features from each audio file using Librosa, with an option to add noise.
+
+- **Custom Dataset and DataLoader:**  
+  A custom PyTorch `Dataset` (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.
+
+- **Neural Network Models:**  
+  Three GRU-based classifiers are implemented:
+  - **TopGRUClassifier:** Combines GRU-encoded features with topological features.
+  - **ZeroGRUClassifier:** Uses GRU features concatenated with zero vectors in place of topological features.
+  - **GRUClassifier:** A standard GRU classifier, with optional initialization based on weights from the other models.
+  
+- **Training and Evaluation with Cross-Validation:**  
+  - The script uses k-fold cross-validation to train and evaluate the three models over multiple experiments (default 20 experiments).  
+  - Training and testing accuracies are recorded and averaged across folds.
+  
+- **Usage Considerations:**  
+  - Ensure that the CSV file and audio directories are correctly specified.  
+  - Install necessary libraries such as PyTorch, scikit-learn, Librosa, NumPy, Pandas, and Matplotlib.  
+  - Adjust hyperparameters (e.g., number of epochs, batch size, learning rate) as needed for your dataset.
+
+---
+
+### 3. `Gauss_SVM_acc.py`
+This script evaluates the performance of a Gaussian (RBF) SVM classifier on a dataset using stratified 5-fold cross-validation. Key aspects include:
+
+- **Data Loading and Preprocessing:**  
+  - Reads a CSV file (e.g., `Sample_TIMIT_noise0_arr.csv`) where the third and fourth columns represent features and the fifth column represents binary labels.
+  - Ensures that the dataset is suitable for binary classification.
+
+- **Pipeline Construction and Cross-Validation:**  
+  - Constructs a scikit-learn pipeline that standardizes the features using `StandardScaler` and then applies an SVM classifier with an RBF kernel.
+  - Performs stratified 5-fold cross-validation in parallel (using all available CPU cores by default) to assess model performance.
+
+- **Output Metrics:**  
+  - Prints individual fold accuracies as well as the mean accuracy and standard deviation across folds.
+
+- **Usage Considerations:**  
+  - Verify that the CSV file is in the expected format.  
+  - Install necessary libraries such as scikit-learn, Pandas, and NumPy.
+  - Adjust the `n_jobs` parameter if needed to optimize parallel processing.
+
+---
 
 ## Requirements
 
-- Python 3.x
-- Jupyter Notebook or JupyterLab
+- **Python Version:** Python 3.x
+- **Key Libraries:**
+  - **Common:** NumPy, Pandas, Matplotlib
+  - **Audio Processing:** SciPy, SoundFile, Librosa
+  - **Topological Data Analysis:** Gudhi, Ripser, Persim
+  - **Machine Learning:** scikit-learn
+  - **Deep Learning:** PyTorch
+  - **Others:** CSV, OS, Multiprocessing modules
 
-### Required Python Packages
-
-Install the necessary packages using pip:
+You can install most of these packages using pip. For example:
 
 ```bash
-pip install numpy pandas matplotlib librosa
+pip install numpy pandas matplotlib scipy soundfile librosa gudhi ripser persim scikit-learn torch
