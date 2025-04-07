@@ -1,4 +1,4 @@
-# Audio Processing and Topology-Enhanced Classification Framework
+# Topological enhanced neural neteork
 
 This repository contains a collection of Python scripts designed for advanced audio signal processing, feature extraction using topological data analysis, and machine learning experiments. The provided scripts cover a range of functionalities from preprocessing audio signals and extracting persistent homology features, to training topology-enhanced neural network classifiers and evaluating a Gaussian SVM model.
 
