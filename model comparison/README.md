@@ -34,7 +34,6 @@ This script implements a GRU-based classifier for MFCC features.
   - Prints training loss and accuracy periodically.
   - Evaluates the model on a test set and reports overall test loss and accuracy.
 
-*(See [57] for full implementation details.)*
 
 ---
 
@@ -61,7 +60,6 @@ This script implements a Transformer-based classifier for MFCC features.
   - Training progress (loss and accuracy) is printed periodically.
   - Evaluates model performance on the test set and displays training progress graphs.
 
-*(See [58] for full implementation details.)*
 
 ---
 
