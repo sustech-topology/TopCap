@@ -1,4 +1,4 @@
-# Time Delay Embedding Analysis and Visualization Framework
+# Drawing
 
 This repository contains a suite of Python scripts for analyzing time series data through time delay embeddings. The tools provided here focus on visualizing the geometry of embedded data, characterizing the dynamical properties via PCA eigenvalues, and quantifying topological features (persistent homology) as a function of embedding parameters. These scripts are particularly useful for studying complex signals (e.g., audio or other sequential data) by revealing hidden structures and dynamical invariants.
 
