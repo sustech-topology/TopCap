@@ -20,7 +20,7 @@ from scipy.interpolate import interp1d
 from numpy import argmax
 from matplotlib.gridspec import GridSpec
 
-#找MP随delay变化有没有关系
+# Check if MP changes with delay
 
 def time_delay_embedding(time_series, embedding_dim=2, delay=1):
     """
@@ -78,66 +78,63 @@ def time_delay_embedding_circular(time_series, embedding_dim=3, delay=1):
 
     return np.array(embedded_data)
 
-
-
 '''
-# 定义音频文件夹路径
-audio_folder = 'D:\phonetic\Revised\winter_holiday\phone'  # 替换为实际路径
+# Define the audio folder path
+audio_folder = 'D:\phonetic\Revised\winter_holiday\phone'  # Replace with the actual path
 
-# 输出TopCap信息的csv文件名
+# CSV file name to output TopCap information
 # csv_name = 'G:\\phonetic\\PD_Sample2000_Part_Libri_pcatest.csv'
 
-# 初始化两个空列表,记录音频
+# Initialize two empty lists to store audio data
 valid_voiced_list = []
 valid_voiceless_list = []
 
-# 初始化两个空列表,记录文件名
+# Initialize two empty lists to store file names
 name_voiced_list = []
 name_voiceless_list = []
 
-# 定义子文件夹
+# Define subfolders
 voiced_folder = os.path.join(audio_folder, 'voiced')
 voiceless_folder = os.path.join(audio_folder, 'voiceless')
 
-# 读取 voiced 文件夹中的音频文件
+# Read audio files from the voiced folder
 for filename in os.listdir(voiced_folder):
     if filename.endswith('.wav'):
         file_path = os.path.join(voiced_folder, filename)
         sample_rate, data = wavfile.read(file_path)
-        valid_voiced_list.append(data)  # 将音频数据添加到列表中
-        name_voiced_list.append(filename)  # 将音频文件名添加到列表中
+        valid_voiced_list.append(data)  # Add audio data to the list
+        name_voiced_list.append(filename)  # Add audio file name to the list
 
-# 读取 voiceless 文件夹中的音频文件
+# Read audio files from the voiceless folder
 for filename in os.listdir(voiceless_folder):
     if filename.endswith('.wav'):
         file_path = os.path.join(voiceless_folder, filename)
         sample_rate, data = wavfile.read(file_path)
-        valid_voiceless_list.append(data)  # 将音频数据添加到列表中
-        name_voiceless_list.append(filename)  # 将音频文件名添加到列表中
+        valid_voiceless_list.append(data)  # Add audio data to the list
+        name_voiceless_list.append(filename)  # Add audio file name to the list
 
-# 读取 voiced 文件夹中的音频文件
+# Read audio files (FLAC) from the voiced folder
 for filename in os.listdir(voiced_folder):
     if filename.endswith('.flac'):
         file_path = os.path.join(voiced_folder, filename)
-        data , sample_rate = sf.read(file_path)
-        valid_voiced_list.append(data)  # 将音频数据添加到列表中
-        name_voiced_list.append(filename)  # 将音频文件名添加到列表中
+        data, sample_rate = sf.read(file_path)
+        valid_voiced_list.append(data)  # Add audio data to the list
+        name_voiced_list.append(filename)  # Add audio file name to the list
 
-# 读取 voiceless 文件夹中的音频文件
+# Read audio files (FLAC) from the voiceless folder
 for filename in os.listdir(voiceless_folder):
     if filename.endswith('.flac'):
         file_path = os.path.join(voiceless_folder, filename)
-        data , sample_rate = sf.read(file_path)
-        valid_voiceless_list.append(data)  # 将音频数据添加到列表中
-        name_voiceless_list.append(filename)  # 将音频文件名添加到列表中
+        data, sample_rate = sf.read(file_path)
+        valid_voiceless_list.append(data)  # Add audio data to the list
+        name_voiceless_list.append(filename)  # Add audio file name to the list
 
-# 输出读取的音频数据列表的长度
+# Output the number of audio files read
 print(f'Voiced audio files: {len(valid_voiced_list)}')
 print(f'Voiceless audio files: {len(valid_voiceless_list)}')
 
 
-# 示例时间序列数据
-########################################################################
+# Example time series data
 time_series = valid_voiced_list[1]
 
 # Step 1: Generate a simulated time series of length N=209
@@ -146,7 +143,7 @@ N = 200
 t = np.linspace(0, 100, N)
 
 # Three sinusoidal waves with different frequencies and amplitudes
-wave1 = 0.5 * np.sin(0.1* np.pi * t)
+wave1 = 0.5 * np.sin(0.1 * np.pi * t)
 wave2 = 0 * np.cos(0.3 * t + np.pi / 3)
 wave3 = 0 * np.sin(0.7 * t + np.pi / 4)
 
@@ -154,12 +151,10 @@ wave3 = 0 * np.sin(0.7 * t + np.pi / 4)
 noise = 0 * np.random.randn(N)
 
 # Combine the waves and noise to form the time series
-#time_series = wave1 + wave2 + wave3 + noise
+# time_series = wave1 + wave2 + wave3 + noise
 '''
 
-
-
-# Step 5: Define a function to plot projections on the first three principal components in 3D
+# Step 5: Define a function to plot 3D projections of the first three principal components
 def plot_3d_pca_projections_circular(time_series, embedding_dim, delay, ax, cmap='viridis'):
     embedded_data = time_delay_embedding_circular(time_series, embedding_dim=embedding_dim, delay=delay)
     pca = PCA(n_components=3)
@@ -201,36 +196,33 @@ def plot_3d_pca_projections_standard(time_series, embedding_dim, delay, ax, cmap
     ax.set_zlabel('PC3')
     fig.colorbar(scatter, ax=ax, label='Index in Time Series')
 
-
-
-# Step 6: Define Fourier 3 peak frequencies estimated function
+# Step 6: Define a function to estimate the top three peak frequencies in the Fourier spectrum
 def analyze_spectrum(time_series):
     """
-    分析时间序列的频谱并返回主要频率和周期
-    参数:
-        time_series: 输入时间序列
-    返回:
-        frequencies_estimated: 估计的前三个主要频率
-        periods_estimated: 对应的周期
-        fig: 创建的图形对象
-        axs: 子图数组
+    Analyze the spectrum of the time series and return the main frequencies and corresponding periods.
+    
+    Parameters:
+        time_series: the input time series
+    Returns:
+        frequencies_estimated: the estimated top three main frequencies
+        periods_estimated: the corresponding periods
     """
     t = np.arange(np.size(time_series))
     
-    # 进行傅里叶变换
-    n = len(time_series)  # 信号长度
-    yf = np.fft.fft(time_series)  # 傅里叶变换
-    xf = np.fft.fftfreq(n, d=1.0)  # 频率轴
+    # Perform Fourier transform
+    n = len(time_series)  # Signal length
+    yf = np.fft.fft(time_series)  # Fourier transform
+    xf = np.fft.fftfreq(n, d=1.0)  # Frequency axis
     
-    # 计算单边幅度谱
+    # Compute the single-sided magnitude spectrum
     yf_single_side = yf[:n//2]
     magnitude_spectrum = 2.0/n * np.abs(yf_single_side)
     
-    # 找到前三个最大峰值对应的频率（排除频率为0的情况）
+    # Find the frequencies corresponding to the top three peaks (excluding zero frequency)
     non_zero_magnitude_spectrum = magnitude_spectrum[1:]
     non_zero_xf = xf[1:]
     
-    # 找出所有局部最大值
+    # Find all local maxima
     peaks = []
     for i in range(1, len(non_zero_magnitude_spectrum) - 1):
         if (non_zero_magnitude_spectrum[i] > non_zero_magnitude_spectrum[i-1]) and \
@@ -240,73 +232,70 @@ def analyze_spectrum(time_series):
     if len(peaks) < 3:
         raise ValueError("Not enough local maxima to find the top three frequencies.")
     
-    # 提取峰值对应的频率和幅度
+    # Extract frequencies and magnitudes for the peaks
     peak_frequencies = [non_zero_xf[p] for p in peaks]
     peak_magnitudes = [non_zero_magnitude_spectrum[p] for p in peaks]
     
-    # 找到前三个最大峰值
+    # Get the top three peaks
     top_three_indices = sorted(range(len(peak_magnitudes)), key=lambda k: peak_magnitudes[k], reverse=True)[:3]
     frequencies_estimated = [peak_frequencies[i] for i in top_three_indices]
     periods_estimated = [1.0 / freq for freq in frequencies_estimated]
     
     return frequencies_estimated, periods_estimated
 
-
-
-
-#MP_tau
-#circular
+# MP_tau
+# Circular embedding version
 def compute_mp_for_tau_circular(args):
-    """计算单个tau值的MP值的辅助函数"""
+    """Helper function to compute the MP value for a single tau value."""
     time_series, tau, d = args
     embedded_data = time_delay_embedding_circular(time_series, embedding_dim=d, delay=tau)
     dgms = ripser(embedded_data, maxdim=1)['dgms']
     dgms = dgms[1]
-    persistent_time = [ele[1]-ele[0] for ele in dgms]
+    persistent_time = [ele[1] - ele[0] for ele in dgms]
     index = argmax(persistent_time)
     birth_date = dgms[index][0]
     lifetime = persistent_time[index]
-    print(f"完成 tau={tau} 的计算")
+    print(f"Completed calculation for tau={tau}")
     return (tau, birth_date, lifetime)
 
 def MP_delay_parallel_circular(time_series, d=10, n_cores=16):
-    # Compute PCA eigenvalues for each delay from 1 to N-1
+    # Compute MP values for each delay from 1 to N-1
     N = len(time_series)
     
-    # 重采样
+    # Resample
     MaxSample = 128
     if N > MaxSample:
-        # 生成新的均匀分布的点
-        x_old = np.linspace(0, 1, N)  # 原数组的归一化坐标
-        x_new = np.linspace(0, 1, MaxSample)  # 新数组的归一化坐标
-        # 线性插值
+        # Generate new uniformly distributed points
+        x_old = np.linspace(0, 1, N)  # Normalized coordinates of the original array
+        x_new = np.linspace(0, 1, MaxSample)  # Normalized coordinates for the new array
+        # Linear interpolation
         time_series = np.interp(x_new, x_old, time_series)
         N = MaxSample
     
-    # 准备并行计算参数
+    # Prepare parameters for parallel computation
     tau_range = range(1, N)
     args_list = [(time_series, tau, d) for tau in tau_range]
     
-    # 使用多进程池并行计算
+    # Use a multiprocessing pool to compute in parallel
     with Pool(processes=n_cores) as pool:
         results = pool.map(compute_mp_for_tau_circular, args_list)
     
-    # 整理结果，按tau排序
+    # Sort results by tau
     results.sort(key=lambda x: x[0])
     tau_values = [r[0] for r in results]
     birth_dates = [r[1] for r in results]
     lifetimes = [r[2] for r in results]
     
-    # 转换为numpy数组
+    # Convert to a numpy array
     MP_per_delay = np.array([birth_dates, lifetimes]).T
     
-    # 绘图
+    # Plot the results
     plt.figure(figsize=(14, 8))
     plt.plot(tau_values, MP_per_delay[:, 0], color='cyan', label='birth date')
     plt.plot(tau_values, MP_per_delay[:, 1], color='red', label='lifetime')
     
-    plt.title('lifetime and birth date vs Delay (Circular TDE)')
-    plt.xlabel('Delay(tau)')
+    plt.title('Lifetime and Birth Date vs Delay (Circular TDE)')
+    plt.xlabel('Delay (tau)')
     plt.ylabel('Time')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.grid(True)
@@ -314,59 +303,58 @@ def MP_delay_parallel_circular(time_series, d=10, n_cores=16):
     
     return tau_values, MP_per_delay
 
-#MP_tau, standard TDE
-
+# MP_tau, standard TDE version
 def compute_mp_for_tau_standard(args):
-    """计算单个tau值的MP值的辅助函数"""
+    """Helper function to compute the MP value for a single tau value."""
     time_series, tau, d = args
     embedded_data = time_delay_embedding(time_series, embedding_dim=d, delay=tau)
     dgms = ripser(embedded_data, maxdim=1)['dgms']
     dgms = dgms[1]
-    persistent_time = [ele[1]-ele[0] for ele in dgms]
+    persistent_time = [ele[1] - ele[0] for ele in dgms]
     index = argmax(persistent_time)
     birth_date = dgms[index][0]
     lifetime = persistent_time[index]
-    print(f"完成 tau={tau} 的计算")
+    print(f"Completed calculation for tau={tau}")
     return (tau, birth_date, lifetime)
 
 def MP_delay_parallel_standard(time_series, d=10, n_cores=16):
-    # Compute PCA eigenvalues for each delay from 1 to N-1
+    # Compute MP values for each delay from 1 to N-1
     N = len(time_series)
     
-    # 重采样
+    # Resample
     MaxSample = 128
     if N > MaxSample:
-        # 生成新的均匀分布的点
-        x_old = np.linspace(0, 1, N)  # 原数组的归一化坐标
-        x_new = np.linspace(0, 1, MaxSample)  # 新数组的归一化坐标
-        # 线性插值
+        # Generate new uniformly distributed points
+        x_old = np.linspace(0, 1, N)  # Normalized coordinates of the original array
+        x_new = np.linspace(0, 1, MaxSample)  # Normalized coordinates for the new array
+        # Linear interpolation
         time_series = np.interp(x_new, x_old, time_series)
         N = MaxSample
     
-    # 准备并行计算参数
-    tau_range = range(1, int(np.floor((N - 1) / (d - 1)) -5))
+    # Prepare parameters for parallel computation
+    tau_range = range(1, int(np.floor((N - 1) / (d - 1)) - 5))
     args_list = [(time_series, tau, d) for tau in tau_range]
     
-    # 使用多进程池并行计算
+    # Use a multiprocessing pool to compute in parallel
     with Pool(processes=n_cores) as pool:
         results = pool.map(compute_mp_for_tau_standard, args_list)
     
-    # 整理结果，按tau排序
+    # Sort results by tau
     results.sort(key=lambda x: x[0])
     tau_values = [r[0] for r in results]
     birth_dates = [r[1] for r in results]
     lifetimes = [r[2] for r in results]
     
-    # 转换为numpy数组
+    # Convert to a numpy array
     MP_per_delay = np.array([birth_dates, lifetimes]).T
     
-    # 绘图
+    # Plot the results
     plt.figure(figsize=(14, 8))
     plt.plot(tau_values, MP_per_delay[:, 0], color='cyan', label='birth date')
     plt.plot(tau_values, MP_per_delay[:, 1], color='red', label='lifetime')
     
-    plt.title('lifetime and birth date vs Delay (Standard TDE)')
-    plt.xlabel('Delay(tau)')
+    plt.title('Lifetime and Birth Date vs Delay (Standard TDE)')
+    plt.xlabel('Delay (tau)')
     plt.ylabel('Time')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.grid(True)
@@ -374,33 +362,32 @@ def MP_delay_parallel_standard(time_series, d=10, n_cores=16):
     
     return MP_per_delay
 
-
-#MP_dim
+# MP_dim
 def compute_mp_for_dim_circular(args):
-    """计算单个维度d的MP值的辅助函数"""
+    """Helper function to compute the MP value for a single embedding dimension d."""
     time_series, d, fixed_tau = args
     embedded_data = time_delay_embedding_circular(time_series, embedding_dim=d, delay=fixed_tau)
     dgms = ripser(embedded_data, maxdim=1)['dgms']
     dgms = dgms[1]
-    persistent_time = [ele[1]-ele[0] for ele in dgms]
+    persistent_time = [ele[1] - ele[0] for ele in dgms]
     index = argmax(persistent_time)
     birth_date = dgms[index][0]
     lifetime = persistent_time[index]
-    print(f"完成 d={d} 的计算")
+    print(f"Completed calculation for d={d}")
     return (d, birth_date, lifetime)
 
 def MP_dim_parallel_circular(time_series, fixed_tau=10, n_cores=16):
     """
-    并行计算不同嵌入维度d的MP值
+    Parallel computation of MP values for different embedding dimensions d.
     
-    参数:
-        time_series: 输入时间序列
-        fixed_tau: 固定的延迟值
-        n_cores: 使用的CPU核心数
+    Parameters:
+        time_series: input time series
+        fixed_tau: fixed delay value
+        n_cores: number of CPU cores to use
     """
     N = len(time_series)
     
-    # 重采样
+    # Resample
     MaxSample = 128
     if N > MaxSample:
         x_old = np.linspace(0, 1, N)
@@ -408,29 +395,29 @@ def MP_dim_parallel_circular(time_series, fixed_tau=10, n_cores=16):
         time_series = np.interp(x_new, x_old, time_series)
         N = MaxSample
     
-    # 确定d的范围 
+    # Determine the range for d
     max_dim = N  
-    min_dim = 2  # 最小嵌入维度
+    min_dim = 2  # Minimum embedding dimension
     skip = 17
     dim_range = range(min_dim, max_dim + 1, skip)
     
-    # 准备并行计算参数
+    # Prepare parameters for parallel computation
     args_list = [(time_series, d, fixed_tau) for d in dim_range]
     
-    # 使用多进程池并行计算
+    # Use a multiprocessing pool to compute in parallel
     with Pool(processes=n_cores) as pool:
         results = pool.map(compute_mp_for_dim_circular, args_list)
     
-    # 整理结果，按d排序
+    # Sort results by d
     results.sort(key=lambda x: x[0])
     dim_values = [r[0] for r in results]
     birth_dates = [r[1] for r in results]
     lifetimes = [r[2] for r in results]
     
-    # 转换为numpy数组
+    # Convert to a numpy array
     MP_per_dim = np.array([birth_dates, lifetimes]).T
     
-    # 绘图
+    # Plot the results
     plt.figure(figsize=(14, 8))
     plt.plot(dim_values, MP_per_dim[:, 0], 'o-', color='cyan', label='birth date')
     plt.plot(dim_values, MP_per_dim[:, 1], 'o-', color='red', label='lifetime')
@@ -445,80 +432,75 @@ def MP_dim_parallel_circular(time_series, fixed_tau=10, n_cores=16):
     return dim_values, MP_per_dim
 
 if __name__ == "__main__":
-    # 主程序初始化代码
+    # Main program initialization code
     
-    #打开某个特定的音频[NG]
-    with open("D:\phonetic\Revised\winter_holiday\phone", "rb") as fp: 
+    # Open a specific audio [NG]
+    with open("D:\\phonetic\\Revised\\winter_holiday\\phone", "rb") as fp: 
         time_series = pickle.load(fp)
 
-    # 使用函数分析频谱
+    # Analyze the spectrum of the time series using the function
     frequencies_estimated, periods_estimated = analyze_spectrum(time_series)
 
-
     # Step 7: Plot in 3 rows - original time series, standard embeddings, circular embeddings
-    fig = plt.figure(figsize=(20, 15))  # 3行布局
+    fig = plt.figure(figsize=(20, 15))  # 3-row layout
 
-    # 使用 GridSpec 定义 3 行 4 列的布局
+    # Define a 3 row by 4 column layout using GridSpec
     gs = GridSpec(3, 4, figure=fig)
 
-    # 第一行：原始时间序列及其频谱（跨所有4列）
-    ax_original = fig.add_subplot(gs[0, :2])  # 第一行左侧
+    # First row: Original time series and its spectrum (spanning 2 columns each)
+    ax_original = fig.add_subplot(gs[0, :2])  # First row left side
     ax_original.plot(time_series)
     ax_original.set_title('Original Time Series')
     ax_original.set_xlabel('Time')
     ax_original.set_ylabel('Value')
 
-    ax1_spectrum = fig.add_subplot(gs[0, 2:])  # 第一行右侧
+    ax1_spectrum = fig.add_subplot(gs[0, 2:])  # First row right side
     n = len(time_series)
     yf = np.fft.fft(time_series)
-    xf = np.fft.fftfreq(n, d=1.0/16000)  # 修改这里：添加采样率转换
+    xf = np.fft.fftfreq(n, d=1.0/16000)  # Modified here: add sampling rate conversion
     yf_single_side = yf[:n//2]
     magnitude_spectrum = 2.0/n * np.abs(yf_single_side)
     ax1_spectrum.plot(xf[:n//2], magnitude_spectrum)
     ax1_spectrum.set_title('Magnitude Spectrum')
-    ax1_spectrum.set_xlabel('Frequency [Hz]')  # 修改单位
+    ax1_spectrum.set_xlabel('Frequency [Hz]')  # Modified unit
     ax1_spectrum.set_ylabel('Magnitude')
-    ax1_spectrum.set_xlim(0, 16000*0.2)  # 修改x轴范围到Hz单位
+    ax1_spectrum.set_xlim(0, 16000 * 0.2)  # Set x-axis range in Hz
 
-    # 在前三个频率处绘制不同颜色的虚线（转换为Hz单位）
+    # Draw dashed lines in different colors at the top three frequencies (converted to Hz)
     colors = ['r', 'g', 'b']
     for i, freq in enumerate(frequencies_estimated):
-        freq_hz = freq * 16000  # 转换为Hz单位
+        freq_hz = freq * 16000  # Convert to Hz
         ax1_spectrum.axvline(
-            freq_hz,  # 使用Hz单位
+            freq_hz,  # Using Hz
             color=colors[i], 
             linestyle='--', 
-            label=f'Peak {i+1}: {freq_hz:.2f} Hz'  # 修改单位显示
+            label=f'Peak {i+1}: {freq_hz:.2f} Hz'  # Modified display of unit
         )
     ax1_spectrum.legend()
 
-    # 第二行：4 个标准嵌入（time_delay_embedding）的 3D 图
-    delays_standard = [5, 10, 50, 100]  # 你的延迟参数
+    # Second row: 4 standard embedding (time_delay_embedding) 3D plots
+    delays_standard = [5, 10, 50, 100]  # Your delay parameters
     for i, delay in enumerate(delays_standard):
-        ax = fig.add_subplot(gs[1, i], projection='3d')  # 第1行，第i列
+        ax = fig.add_subplot(gs[1, i], projection='3d')  # Row 1, Column i
         plot_3d_pca_projections_standard(time_series, 10, delay, ax)
 
-    # 第三行：4 个循环嵌入（time_delay_embedding_circular）的 3D 图
-    delays_circular = [5, 100, 500, 1000]  # 你的延迟参数
+    # Third row: 4 circular embedding (time_delay_embedding_circular) 3D plots
+    delays_circular = [5, 100, 500, 1000]  # Your delay parameters
     for i, delay in enumerate(delays_circular):
-        ax = fig.add_subplot(gs[2, i], projection='3d')  # 第2行，第i列
+        ax = fig.add_subplot(gs[2, i], projection='3d')  # Row 2, Column i
         plot_3d_pca_projections_circular(time_series, 10, delay, ax)
 
     plt.tight_layout()
     plt.show()
 
-    # 使用示例
-    ##MP_delay_parallel_standard(time_series, d=10, n_cores=16)
+    # Example usage
+    # MP_delay_parallel_standard(time_series, d=10, n_cores=16)
     
-    
-
-
-    # 修改后的调用方式
-    result_file = "D:\\phonetic\\Revised\\winter_holiday\\MP_dim_results.pkl"  # 定义结果文件名
+    # Modified function call
+    result_file = "D:\\phonetic\\Revised\\winter_holiday\\MP_dim_results.pkl"  # Define result file name
     dim_values, MP_per_dim = MP_dim_parallel_circular(time_series, fixed_tau=10, n_cores=16)
 
-    # 将结果保存到文件
-    import pickle
+    # Save the results to file
     with open(result_file, 'wb') as f:
         pickle.dump({
             'dim_values': dim_values,
@@ -528,7 +510,7 @@ if __name__ == "__main__":
 
     print(f"Results saved to {result_file}")
 
-    # 从文件读取并绘图的代码
+    # Code to read from file and plot
     with open(result_file, 'rb') as f:
         data = pickle.load(f)
 
@@ -542,17 +524,11 @@ if __name__ == "__main__":
     plt.grid(True)
     plt.show()
     
-    
-
-
-   
-
-    # 修改后的调用方式
-    result_file = "D:\\phonetic\\Revised\\winter_holiday\\MP_delay_results.pkl"  # 定义结果文件名
+    # Modified function call
+    result_file = "D:\\phonetic\\Revised\\winter_holiday\\MP_delay_results.pkl"  # Define result file name
     tau_values, MP_per_delay = MP_delay_parallel_circular(time_series, d=10, n_cores=16)
 
-    # 将结果保存到文件
-    import pickle
+    # Save the results to file
     with open(result_file, 'wb') as f:
         pickle.dump({
             'dim_values': dim_values,
@@ -562,7 +538,7 @@ if __name__ == "__main__":
 
     print(f"Results saved to {result_file}")
 
-    # 从文件读取并绘图的代码
+    # Code to read from file and plot
     with open(result_file, 'rb') as f:
         data = pickle.load(f)
 
@@ -570,8 +546,8 @@ if __name__ == "__main__":
     plt.plot(tau_values, MP_per_delay[:, 0], color='cyan', label='birth date')
     plt.plot(tau_values, MP_per_delay[:, 1], color='red', label='lifetime')
     
-    plt.title('lifetime and birth date vs Delay (Circular TDE)')
-    plt.xlabel('Delay(tau)')
+    plt.title('Lifetime and Birth Date vs Delay (Circular TDE)')
+    plt.xlabel('Delay (tau)')
     plt.ylabel('Time')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.grid(True)
