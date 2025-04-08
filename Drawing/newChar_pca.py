@@ -1,4 +1,3 @@
-
 import glob
 import os
 import numpy as np
@@ -76,36 +75,29 @@ def time_delay_embedding_circular(time_series, embedding_dim=3, delay=1):
     return np.array(embedded_data)
 
 
-
-
-
-
-
-def PCA_eigenvalues_delay(time_series,d=10):
+def PCA_eigenvalues_delay(time_series, d=10):
     # Compute PCA eigenvalues for each delay from 1 to N-1
-    N=len(time_series)
+    N = len(time_series)
     eigenvalues_per_delay = []
 
-
-    # 重采样
+    # Resampling
     maxnum = 2000
     if N > maxnum:
-        # 生成新的均匀分布的点
-        x_old = np.linspace(0, 1, N)  # 原数组的归一化坐标
-        x_new = np.linspace(0, 1, maxnum)  # 新数组的归一化坐标
-        # 线性插值
+        # Generate new uniformly distributed points
+        x_old = np.linspace(0, 1, N)  # Normalized coordinates of the original array
+        x_new = np.linspace(0, 1, maxnum)  # Normalized coordinates for the new array
+        # Linear interpolation
         time_series = np.interp(x_new, x_old, time_series)
-        N=maxnum
+        N = maxnum
 
-    # 循环
-    for tau in range(1,N):
+    # Loop over tau values
+    for tau in range(1, N):
         embedded_data = time_delay_embedding_circular(time_series, embedding_dim=d, delay=tau)
         pca = PCA(n_components=min(d, N))
         pca.fit(embedded_data)
         eigenvalues = pca.explained_variance_
         eigenvalues_per_delay.append(eigenvalues[:10])  # Keep only the first 10 eigenvalues
         print(f'tau = {tau}')
-    
     
     # Convert to a numpy array for easier manipulation
     eigenvalues_per_delay = np.array(eigenvalues_per_delay)
@@ -119,7 +111,7 @@ def PCA_eigenvalues_delay(time_series,d=10):
         plt.plot(range(1, N), eigenvalues_per_delay[:, i], color=colors[i], label=f'Eigenvalue {i+1}')
 
     plt.title('First 10 Eigenvalues of PCA vs Delay')
-    plt.xlabel('Delay(tau)')
+    plt.xlabel('Delay (tau)')
     plt.ylabel('Eigenvalue')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.grid(True)
@@ -127,32 +119,28 @@ def PCA_eigenvalues_delay(time_series,d=10):
     return
 
 
-
-
-
-
 def PCA_eigenvalues_dimension(time_series, tau=10):
     # Compute PCA eigenvalues for each embedding dimension from 1 to N
     N = len(time_series)
     eigenvalues_per_dimension = []
 
-    # 重采样
+    # Resampling
     maxnum = 2000
     if N > maxnum:
-        # 生成新的均匀分布的点
-        x_old = np.linspace(0, 1, N)  # 原数组的归一化坐标
-        x_new = np.linspace(0, 1, maxnum)  # 新数组的归一化坐标
-        # 线性插值
+        # Generate new uniformly distributed points
+        x_old = np.linspace(0, 1, N)  # Normalized coordinates of the original array
+        x_new = np.linspace(0, 1, maxnum)  # Normalized coordinates for the new array
+        # Linear interpolation
         time_series = np.interp(x_new, x_old, time_series)
         N = maxnum
 
-    # 循环，维数从1到N
+    # Loop over dimensions from 1 to N
     for d in range(1, N+1):
         embedded_data = time_delay_embedding_circular(time_series, embedding_dim=d, delay=tau)
         pca = PCA(n_components=min(d, N))
         pca.fit(embedded_data)
         eigenvalues = pca.explained_variance_
-        # 填充到固定长度N，不足部分补0
+        # Pad to fixed length N, filling with zeros if necessary
         padded_eigenvalues = np.zeros(N)
         padded_eigenvalues[:len(eigenvalues)] = eigenvalues
         eigenvalues_per_dimension.append(padded_eigenvalues[:10])  # Keep only the first 10 eigenvalues
@@ -170,7 +158,7 @@ def PCA_eigenvalues_dimension(time_series, tau=10):
         plt.plot(range(1, N+1), eigenvalues_per_dimension[:, i], color=colors[i], label=f'Eigenvalue {i+1}')
 
     plt.title(f'First 10 Eigenvalues of PCA vs Embedding Dimension (τ={tau})')
-    plt.xlabel('Embedding Dimension(d)')
+    plt.xlabel('Embedding Dimension (d)')
     plt.ylabel('Eigenvalue')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.grid(True)
@@ -179,10 +167,10 @@ def PCA_eigenvalues_dimension(time_series, tau=10):
     return eigenvalues_per_dimension
 
 
-
 with open("G:\\phonetic\\fig8-plot\\phone", "rb") as fp: 
     time_series = pickle.load(fp)
 
 
-PCA_eigenvalues_delay(time_series,100)
-PCA_eigenvalues_dimension(time_series,10)
+PCA_eigenvalues_delay(time_series, 100)
+PCA_eigenvalues_dimension(time_series, 10)
+
