@@ -10,7 +10,7 @@ import re
 import os
 
 # Open the original CSV file and the target CSV file.
-with open('D:\\phonetic\\test_csv\\metadata.csv', 'r', encoding='utf-8') as input_file, \
+with open("../metadata.csv", 'r', encoding='utf-8') as input_file, \
      open('correctedmetadata.csv', 'w', newline='', encoding='utf-8') as output_file:
     reader = csv.reader(input_file)
     writer = csv.writer(output_file)
@@ -30,7 +30,7 @@ with open('D:\\phonetic\\test_csv\\metadata.csv', 'r', encoding='utf-8') as inpu
             writer.writerow([match])
 
 
-csv_file = 'D:\\phonetic\\test_csv\\correctedmetadata.csv'  # Path to the CSV file.
+csv_file = "~/correctedmetadata.csv"  # Path to the CSV file.
 output_folder = 'textgrid_files'  # Folder to store the generated TextGrid files.
 
 # Create the folder to store TextGrid files; if it doesn't exist, create it.
