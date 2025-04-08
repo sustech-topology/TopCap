@@ -38,7 +38,7 @@ print(consonant_labels.shape)
 
 
 file_names =df.iloc[:, 1].astype(str).tolist()
-folder_paths = ["D:\\code\\Signal_Recognition\\TIMIT\\voiced","D:\\code\\Signal_Recognition\\TIMIT\\voiceless"] 
+folder_paths = ["../data/Sample2000_TIMIT/voiced","../data/Sample2000_TIMIT/voiceless"] 
 
 def build_file_index(folder_paths):
     file_index = {}
@@ -626,6 +626,5 @@ print("ZeroGRU: Training Accuracy - Mean: {:.3f}, Std: {:.4f}".format(np.mean(tr
 print("ZeroGRU: Testing Accuracy  - Mean: {:.3f}, Std: {:.4f}".format(np.mean(test_acc_2), np.std(test_acc_2)))
 print("GRU: Training Accuracy - Mean: {:.3f}, Std: {:.4f}".format(np.mean(train_acc_3), np.std(train_acc_3)))
 print("GRU: Testing Accuracy  - Mean: {:.3f}, Std: {:.4f}".format(np.mean(test_acc_3), np.std(test_acc_3)))
-    
 
 
