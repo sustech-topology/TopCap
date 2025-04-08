@@ -167,7 +167,7 @@ def PCA_eigenvalues_dimension(time_series, tau=10):
     return eigenvalues_per_dimension
 
 
-with open("G:\\phonetic\\fig8-plot\\phone", "rb") as fp: 
+with open("../phone", "rb") as fp: 
     time_series = pickle.load(fp)
 
 
