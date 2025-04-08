@@ -20,7 +20,7 @@ from scipy.interpolate import interp1d
 from numpy import argmax
 from matplotlib.gridspec import GridSpec
 
-#16幅图
+# 16 plots
 
 def time_delay_embedding(time_series, embedding_dim=2, delay=1):
     """
@@ -78,17 +78,14 @@ def time_delay_embedding_circular(time_series, embedding_dim=3, delay=1):
 
     return np.array(embedded_data)
 
+# Step 5: Define functions to plot 3D PCA projections for both standard and circular embeddings.
 
-
-
-
-# Step 5: Define a function to plot projections on the first three principal components in 3D
 def plot_3d_pca_projections_circular(time_series, embedding_dim, delay, ax, cmap='viridis'):
     embedded_data = time_delay_embedding_circular(time_series, embedding_dim=embedding_dim, delay=delay)
     pca = PCA(n_components=3)
     projected_data = pca.fit_transform(embedded_data)
     
-    # Use the index as the color value
+    # Use the index as the color value for the points.
     indices = np.arange(len(projected_data))
     scatter = ax.scatter(
         projected_data[:, 0],
@@ -96,7 +93,7 @@ def plot_3d_pca_projections_circular(time_series, embedding_dim, delay, ax, cmap
         projected_data[:, 2],
         c=indices,
         cmap=cmap,
-        s=20  # Increase the size of the points
+        s=20  # Increased point size
     )
     ax.set_title(f'Circular Embedding (Tau = {delay}, dim = {embedding_dim})')
     ax.set_xlabel('PC1')
@@ -124,47 +121,50 @@ def plot_3d_pca_projections_standard(time_series, embedding_dim, delay, ax, cmap
     ax.set_zlabel('PC3')
     fig.colorbar(scatter, ax=ax, label='Index in Time Series')
 
-
-
 if __name__ == "__main__":
-    # 主程序初始化代码
-    
-    #打开某个特定的音频[NG]
+    # Main program initialization code
+
+    # Open a specific audio file [NG]
     with open("C:\\Users\\KikyoForever\\Desktop\\Topcap\\phone", "rb") as fp: 
         time_series = pickle.load(fp)
 
+    # Step 7: Plot 16 projections in a 4x4 grid layout using different parameters for embedding.
+    fig = plt.figure(figsize=(20, 15))  # Layout for 4 rows (16 subplots)
 
-    # Step 7: Plot in 3 rows - original time series, standard embeddings, circular embeddings
-    fig = plt.figure(figsize=(20, 15))  # 3行布局
-
-    # 使用 GridSpec 定义 4 行 4 列的布局
+    # Define a 4 row by 4 column layout using GridSpec.
     gs = GridSpec(4, 4, figure=fig)
 
-    # 第一行：4 个标准嵌入（固定d=10，变化tau）
-    delays_standard = [5, 10, 50, 100]  # 你的延迟参数
+    # First row: 4 standard embeddings (fixed dimension = 10, varying tau)
+    delays_standard = [5, 10, 50, 100]  # Delay parameters
     for i, delay in enumerate(delays_standard):
-        ax = fig.add_subplot(gs[0, i], projection='3d')  # 第0行，第i列
+        ax = fig.add_subplot(gs[0, i], projection='3d')  # Row 0, Column i
         plot_3d_pca_projections_standard(time_series, 10, delay, ax)
 
-    # 第二行：4 个循环嵌入（固定d=10，变化tau）
-    delays_circular = [5, 100, 500, 1000]  # 你的延迟参数
+    # Second row: 4 circular embeddings (fixed dimension = 10, varying tau)
+    delays_circular = [5, 100, 500, 1000]  # Delay parameters
     for i, delay in enumerate(delays_circular):
-        ax = fig.add_subplot(gs[1, i], projection='3d')  # 第1行，第i列
+        ax = fig.add_subplot(gs[1, i], projection='3d')  # Row 1, Column i
         plot_3d_pca_projections_circular(time_series, 10, delay, ax)
 
-    # 第三行：4 个标准嵌入（固定tau=5，变化d）
-    dims_standard = [10, 100, 500, 1000]  # 变化的嵌入维数
+    # Third row: 4 standard embeddings (fixed tau = 1, varying embedding dimensions)
+    dims_standard = [10, 100, 500, 1000]  # Varying embedding dimensions
     for i, dim in enumerate(dims_standard):
-        ax = fig.add_subplot(gs[2, i], projection='3d')  # 第2行，第i列
+        ax = fig.add_subplot(gs[2, i], projection='3d')  # Row 2, Column i
         plot_3d_pca_projections_standard(time_series, dim, 1, ax)  
 
-    # 第四行：4 个循环嵌入（固定tau=5，变化d）
-    dims_circular = [10, 100, 500, 1000]  # 变化的嵌入维数
+    # Fourth row: 4 circular embeddings (fixed tau = 1, varying embedding dimensions)
+    dims_circular = [10, 100, 500, 1000]  # Varying embedding dimensions
     for i, dim in enumerate(dims_circular):
-        ax = fig.add_subplot(gs[3, i], projection='3d')  # 第3行，第i列
+        ax = fig.add_subplot(gs[3, i], projection='3d')  # Row 3, Column i
         plot_3d_pca_projections_circular(time_series, dim, 1, ax)  
 
     plt.tight_layout()
     plt.show()
+
+
+
+
+
+
    
     
