@@ -20,9 +20,9 @@ from persim import plot_diagrams
 # and include the subfolder path in the file names.
 
 # Source folder path
-source_folder = 'D:\\phonetic\\dataset'
+source_folder = "~/dataset"
 # Target folder path
-target_folder = 'D:\\phonetic\\dataset1'
+target_folder = "~/dataset1"
 
 # Traverse all folders and files under the source folder
 for speaker_folder in os.listdir(source_folder):
@@ -46,7 +46,7 @@ for speaker_folder in os.listdir(source_folder):
 # The original files cannot be played because they are displayed as WAV files but are actually SPH files.
 # After reading them, replace the file extension with .wav.
 if __name__ == "__main__":
-    path = 'D:\\phonetic\\dataset1\\*.wav'
+    path = "../phonetic/dataset1/*.wav"
     sph_files = glob.glob(path)
     print(len(sph_files), "train utterances")
     for i in sph_files:
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         # Split into folder name and file name
         folder_name, file_name = os.path.split(name)
         # Your target folder path
-        output_folder = "D:\\phonetic\\dataset2"  
+        output_folder = "~/dataset2"  
         # Write the array as a WAV audio file
         wavfile.write(os.path.join(output_folder, file_name + "_nn.wav"), sample_rate, audio_data.astype(np.int16))
         # os.remove(i)    # No need to delete the original SPH file
@@ -127,9 +127,9 @@ voiced_phones = ['v', 'l', 'ng', 'm', 'n', 'y', 'zh']
 voiceless_phones = ['f', 'th', 't', 's', 'k', 'ch']
 
 # Audio folder path
-audio_folder = 'D:\\phonetic\\dataset2'
+audio_folder = "~/dataset2"
 # PHN folder path
-phn_folder = 'D:\\phonetic\\dataset1'
+phn_folder = "~/dataset1"
 
 # CSV file name for outputting TopCap information.
 csv_name = 'PD_TIMIT.csv'
@@ -139,8 +139,8 @@ with open(csv_name, 'w', newline='') as csv_file:
     writer = csv.writer(csv_file)
 
 # Target folder paths for segmented files.
-output_folder_1 = "D:\\phonetic\\TIMIT_voiced"  
-output_folder_2 = "D:\\phonetic\\TIMIT_voiceless" 
+output_folder_1 = "~/TIMIT_voiced"  
+output_folder_2 = "~/TIMIT_voiceless" 
 
 # Traverse all files in the audio folder.
 for audio_file in os.listdir(audio_folder):
