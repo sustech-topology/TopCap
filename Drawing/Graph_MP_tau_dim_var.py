@@ -525,7 +525,7 @@ if __name__ == "__main__":
     plt.show()
     
     # Modified function call
-    result_file = "D:\\phonetic\\Revised\\winter_holiday\\MP_delay_results.pkl"  # Define result file name
+    result_file = "../MP_delay_results.pkl"  # Define result file name
     tau_values, MP_per_delay = MP_delay_parallel_circular(time_series, d=10, n_cores=16)
 
     # Save the results to file
