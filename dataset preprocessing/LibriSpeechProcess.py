@@ -24,8 +24,8 @@ def move_files(src_folder, dest_folder):
             print(f'moved {file}')
 
 # Copy all files from a specific folder (including files in subfolders) to another folder without preserving the original subfolder structure.
-source_directory = 'D:\\phonetic\\LibriSpeech\\train-other-500'  # Source folder path.
-destination_directory = 'D:\\phonetic\\LibriProcess\\train500'      # Target folder path.
+source_directory = "~/train-other-500"  # Source folder path.
+destination_directory = "~/train500"      # Target folder path.
 
 move_files(source_directory, destination_directory)
           
