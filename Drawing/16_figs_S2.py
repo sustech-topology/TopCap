@@ -125,7 +125,7 @@ if __name__ == "__main__":
     # Main program initialization code
 
     # Open a specific audio file [NG]
-    with open("C:\\Users\\KikyoForever\\Desktop\\Topcap\\phone", "rb") as fp: 
+    with open("../phone", "rb") as fp: 
         time_series = pickle.load(fp)
 
     # Step 7: Plot 16 projections in a 4x4 grid layout using different parameters for embedding.
