@@ -10,11 +10,11 @@ import librosa
 from scipy.io.wavfile import write
 
 # Source folder path for the original ALLSSTAR dataset.
-inputPath = "D:\\phonetic\\ALLSSTAR_reMFA\\HT2"
+inputPath = "../HT2"
 # Source folder path.
 source_folder = inputPath
 # Target folder path.
-destination_folder = "D:\\phonetic\\ALLSSTAR_reMFA\\Deleted_HT2"
+destination_folder = "../Deleted_HT2"
 
 # Ensure that the target folder exists; if it does not, create it.
 if not os.path.exists(destination_folder):
