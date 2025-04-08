@@ -20,9 +20,9 @@ voiceless_phones = ['F', 'TH', 'T', 'S', 'K', 'CH']
 M = 100
 max_edge_length = 1
 samplerate = 16000
-# inputPath = "D:\\phonetic\\new_consonant_recognition\\speech_file_input_LJSpeech"
-inputPath = "D:\\phonetic\\LibriProcess\\MInCut"
-# outputPath = "D:\\phonetic\\new_consonant_recognition\\speech_file_output"
+# inputPath = "~/speech_file_input_LJSpeech"
+inputPath = "~/MInCut"
+# outputPath = "~/speech_file_output"
 csv_name = "PersistentDiagRefined_MinLibri.csv"
 
 # wav_fraction_finder finds the corresponding portion of a wav signal based on the given interval.
