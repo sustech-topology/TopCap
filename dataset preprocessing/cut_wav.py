@@ -12,7 +12,7 @@ import math
 # Assume you already have syllable-labeled data which includes each syllable's start and end times.
 # Cut the phoneme segments and place them into different folders.
 
-DATASET_PATH = 'D:\\phonetic\\ALLSSTAR_reMFA\\Newcut_NWS'
+DATASET_PATH = "~/Newcut_NWS"
 inputPath = DATASET_PATH
 
 def get_wav_filenames_without_extension(directory):
@@ -135,14 +135,14 @@ for fn in os.listdir(inputPath):
 
         counter = 0
         for audio_segment in valid_voiced_list:
-            audio_filename = f'D:\\phonetic\\new_consonant_recognition\\audio_segment\\voiced\\voiced{fileName}_{counter}.wav'
+            audio_filename = f'~/voiced{fileName}_{counter}.wav'
             sf.write(audio_filename, audio_segment, samplerate)
             counter += 1
             print(f"Saved {fileName}_{counter} to the voiced folder.")
 
         counter = 0
         for audio_segment in valid_voiceless_list:
-            audio_filename = f'D:\\phonetic\\new_consonant_recognition\\audio_segment\\voiceless\\voiceless{fileName}_{counter}.wav'
+            audio_filename = f'~/voiceless{fileName}_{counter}.wav'
             sf.write(audio_filename, audio_segment, samplerate)
             counter += 1
             print(f"Saved {fileName}_{counter} to the voiceless folder.")
