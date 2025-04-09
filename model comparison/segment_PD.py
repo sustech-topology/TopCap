@@ -207,21 +207,6 @@ def process_single_item(args, data_category=1, M=100):
     i, data, delay_values, name_list = args
     
     try:
-        # 1. Trim the head and tail of the audio signal (remove parts with amplitude < 0.03).
-        valid_indices = np.where(np.abs(data) > 0.03)[0]
-        if len(valid_indices) == 0:
-            return None  # If the signal is completely invalid, return None.
-        
-        head = valid_indices[0]
-        tail = valid_indices[-1]
-        trimmed_data = data[head: tail + 1]
-        
-        # 2. Check if the trimmed signal length is greater than 500.
-        if len(trimmed_data) < 500:
-            return None  # Discard if the signal is too short.
-        
-        # 3. Update data to the trimmed signal.
-        data = trimmed_data
 
         # Process the delay parameter.
         if delay_values[i] * M > len(data):
