@@ -7,7 +7,7 @@ This repository contains a suite of Python scripts for analyzing time series dat
 ## File Overview
 
 ### 1. `16_figs_S2.py`
-This script generates a grid of 16 interactive 3D plots to visualize the effects of different time delay embedding parameters. Key functionalities include:
+This script corresponding to Figure.S3 of the paper generates a grid of 16 interactive 3D plots to visualize the effects of different time delay embedding parameters. Key functionalities include:
 
 - **Time Delay Embedding Methods:**  
   Implements two types of embeddings:
