@@ -1,6 +1,6 @@
 # feature analysis
 
-This repository contains three Jupyter Notebooks that demonstrate various methods for extracting and analyzing audio features from audio signals. Each notebook focuses on a different technique and provides step-by-step guidance along with visualizations to help you understand the feature extraction process.
+The repository corresponds to Figure 4 in Section 2.1.3, Feature Analysis, of the paper. This repository contains three Jupyter Notebooks that demonstrate various methods for extracting and analyzing audio features from audio signals. Each notebook focuses on a different technique and provides step-by-step guidance along with visualizations to help you understand the feature extraction process. 
 
 ## File Functionality Overview
 
