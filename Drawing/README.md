@@ -28,7 +28,7 @@ This script corresponding to Figure.S3 of the paper generates a grid of 16 inter
 ---
 
 ### 2. `Graph_MP_tau_dim_var.py`
-This script is designed to study how topological features, extracted from the embedded time series via persistent homology, vary with changes in the time delay (τ) and the embedding dimension (d). Its features include:
+This script corresponding to Discussion section of the paper is designed to study how topological features, extracted from the embedded time series via persistent homology, vary with changes in the time delay (τ) and the embedding dimension (d). Its features include:
 
 - **Persistent Homology Computation:**  
   Uses the Ripser library to compute persistence diagrams on the point clouds obtained from both standard and circular time delay embeddings. It then extracts the key metrics:
@@ -49,7 +49,7 @@ This script is designed to study how topological features, extracted from the em
 ---
 
 ### 3. `newChar_pca.py`
-This script focuses on characterizing the dynamical properties of the time series by examining how PCA eigenvalues of the embedded data change with embedding parameters. It offers:
+This script also corresponding to Discussion section of the paper focuses on characterizing the dynamical properties of the time series by examining how PCA eigenvalues of the embedded data change with embedding parameters. It offers:
 
 - **PCA Eigenvalue Analysis:**  
   - **As a Function of Delay (τ):** Computes PCA eigenvalues using circular time delay embeddings while varying τ. It then plots the first 10 eigenvalues versus the delay.
