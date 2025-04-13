@@ -16,7 +16,7 @@ Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedoc
   ```
 
 ## TopCap Construction
-Before constructing TopCap, there is a preliminary experiment that measures the performance of topological methods in time series. [fre_amp_av] (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/fre_amp_av.ipynb) helps understand how topological methods distinguish different vibration patterns in time series. The results are shown in [observation_result_refined]. This part corrspondes to section.2.3 of the paper.  (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_result_refined.ipynb)
+Before constructing TopCap, there is a preliminary experiment that measures the performance of topological methods in time series. [fre_amp_av] (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/fre_amp_av.ipynb) helps understand how topological methods distinguish different vibration patterns in time series. The results are shown in [observation_result_refined].  (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_result_refined.ipynb) This part corrspondes to section.2.3 of the paper. 
 
 TopCap is achieved in [csv_writer_consonant](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime.  
 
