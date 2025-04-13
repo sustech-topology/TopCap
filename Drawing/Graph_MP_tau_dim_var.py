@@ -435,7 +435,7 @@ if __name__ == "__main__":
     # Main program initialization code
     
     # Open a specific audio [NG]
-    with open("D:\\phonetic\\Revised\\winter_holiday\\phone", "rb") as fp: 
+    with open("data/phone", "rb") as fp: 
         time_series = pickle.load(fp)
 
     # Analyze the spectrum of the time series using the function
@@ -497,7 +497,7 @@ if __name__ == "__main__":
     # MP_delay_parallel_standard(time_series, d=10, n_cores=16)
     
     # Modified function call
-    result_file = "D:\\phonetic\\Revised\\winter_holiday\\MP_dim_results.pkl"  # Define result file name
+    result_file = "~/MP_dim_results.pkl"  # Define result file name
     dim_values, MP_per_dim = MP_dim_parallel_circular(time_series, fixed_tau=10, n_cores=16)
 
     # Save the results to file
@@ -525,7 +525,7 @@ if __name__ == "__main__":
     plt.show()
     
     # Modified function call
-    result_file = "../MP_delay_results.pkl"  # Define result file name
+    result_file = "~/MP_delay_results.pkl"  # Define result file name
     tau_values, MP_per_delay = MP_delay_parallel_circular(time_series, d=10, n_cores=16)
 
     # Save the results to file
