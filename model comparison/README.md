@@ -63,29 +63,10 @@ This script corresponding to scetion 2.1.2 of the paper implements a Transformer
 
 ---
 
-### 3. `segment_PD.py`
-This script performs advanced audio signal processing and topological feature extraction. Its key functionalities include:
-
-- **Signal Normalization and Noise Addition:**  
-  Functions are provided to normalize audio signals to the range [-1, 1] and add noise (Gaussian, uniform, or impulse) with controllable signal-to-noise ratios (SNR) using reproducible random seeds.
-
-- **Frequency Estimation:**  
-  Multiple methods are implemented to estimate the principal frequency of the audio signal, including Fourier Transform-based peak detection and autocorrelation-based methods.
-
-- **Time Delay Embedding & Persistent Homology:**  
-  The script uses time delay embedding (via the Gudhi library) to transform one-dimensional audio signals into multi-dimensional point clouds. Persistent homology is then computed using the Ripser library to extract topological features (e.g., persistence intervals).
-
-- **Parallel Processing:**  
-  Leveraging Python's multiprocessing, the script processes multiple audio files (from designated "voiced" and "voiceless" folders) concurrently. It trims and preprocesses each audio sample, computes its topological features, and writes the results (e.g., persistence values, corresponding indices, and data category) into a CSV file.
-
-- **Usage Considerations:**  
-  - Adjust file paths for the audio directories and CSV output as needed.  
-  - Ensure all required libraries (e.g., NumPy, SciPy, SoundFile, Gudhi, Ripser, Persim) are installed.
-
----
 
 
-### 4. `Gauss_SVM_acc.py`
+
+### 3. `Gauss_SVM_acc.py`
 This script evaluates the performance of a Gaussian (RBF) SVM classifier on a dataset using stratified 5-fold cross-validation. Key aspects include:
 
 - **Data Loading and Preprocessing:**  
