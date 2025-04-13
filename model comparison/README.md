@@ -12,7 +12,7 @@ Both implementations include full pipelines from data loading and MFCC feature e
 ## File Overview
 
 ### 1. `MFCC_GRU_classification_model.py`  
-This script implements a GRU-based classifier for MFCC features.
+This script corresponding to scetion2.1.2 of the paper implements a GRU-based classifier for MFCC features.
 
 - **Data Loading & Feature Extraction:**  
   - Loads audio files (WAV format) from separate directories for voiced and voiceless sounds.
@@ -38,7 +38,7 @@ This script implements a GRU-based classifier for MFCC features.
 ---
 
 ### 2. `MFCC_Transformer_classification_model.py`  
-This script implements a Transformer-based classifier for MFCC features.
+This script corresponding to scetion2.1.2 of the paper implements a Transformer-based classifier for MFCC features.
 
 - **Data Loading & Feature Extraction:**  
   - Similar to the GRU model, it extracts MFCC features from the audio files in the voiced and voiceless directories.
