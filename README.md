@@ -16,9 +16,9 @@ Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedoc
   ```
 
 ## TopCap Construction
-Before constructing TopCap, there is a preliminary experiment that measures the performance of topological methods in time series. [fre_amp_av] (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/fre_amp_av.ipynb) helps understand how topological methods distinguish different vibration patterns in time series. The results are shown in [observation_result_refined].  (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_result_refined.ipynb). This part corrspondes to section.2.3 of the paper. 
+Before constructing TopCap, there is a preliminary experiment that measures the performance of topological methods in time series. [fre_amp_av] (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/fre_amp_av.ipynb) helps understand how topological methods distinguish different vibration patterns in time series. The results are shown in [observation_result_refined].  (https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_result_refined.ipynb). This part corrspondes to section 2.3 of the paper. 
 
-TopCap is achieved in [csv_writer_consonant](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime. This part corresponds to section.2.1 of the paper. 
+TopCap is achieved in [csv_writer_consonant](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime. This part corresponds to section 2.1 of the paper. 
 
 Further discussions of TopCap are involved in 
 - [observation_dimension](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
@@ -26,17 +26,17 @@ Further discussions of TopCap are involved in
 - [observation_skip](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_skip.ipynb) illustrates how skip influences computation time.
 
 ## Machine Learning for Topological Features
-Matlab (R2022b) [classification learner application](https://www.mathworks.com/help/stats/classificationlearner-app.html), 5-fold cross-validation, set aside 30\% records as test data. Use the following automatic built-in algorithm: Optimizable Tree, Optimizable Discriminant, Efficient Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Kernel, and Optimizable Ensemble. This is used in section.2.1 of the paper.
+Matlab (R2022b) [classification learner application](https://www.mathworks.com/help/stats/classificationlearner-app.html), 5-fold cross-validation, set aside 30\% records as test data. Use the following automatic built-in algorithm: Optimizable Tree, Optimizable Discriminant, Efficient Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Kernel, and Optimizable Ensemble. This is used in section 2.1 of the paper.
 
 ## Model Comparison
-We built other state-of-art models for comparison with TopCap to comprehensively evaluate its performance. The MFCC-GRU classification model is obtained in [MFCC_GRU_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_GRU_classification_model.py), the MFCC-Transformer classification model is obtained in [MFCC_Transformer_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_Transformer_classification_model.py), both the STFT-CNN classification model and the STFT-CNN^+ classification model are obtained in [STFT_CNN_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/STFT_CNN_classification_model). This part corresponds to section.2.1.3 of the paper.
+We built other state-of-art models for comparison with TopCap to comprehensively evaluate its performance. The MFCC-GRU classification model is obtained in [MFCC_GRU_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_GRU_classification_model.py), the MFCC-Transformer classification model is obtained in [MFCC_Transformer_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_Transformer_classification_model.py), both the STFT-CNN classification model and the STFT-CNN^+ classification model are obtained in [STFT_CNN_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/STFT_CNN_classification_model). This part corresponds to section 2.1.3 of the paper.
 
 ## Data Preprocessing of other date set
 The comparison experiments include the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in our main experiments. The data preprocessing files can be found in the folder [dataset preprocessing](https://github.com/sustech-topology/TopCap/tree/main/dataset%20preprocessing). 
 
 
 ## Supplements
-The folder `supplements` includes supplementary files for this project. This part corresponds to section.2.1.3 of the paper.
+The folder `supplements` includes supplementary files for this project. This part corresponds to section 2.1.3 of the paper.
 
 - The `results` folder contains ROC, and AUC for machine learning, as well birthtime, lifetime of consonants.
 - The `consonants_waveforms` folder contains waveforms of pulmonic consonants. Audio for these consonants comes from [Wiki-List of consonants](https://en.wikipedia.org/wiki/List_of_consonants). This gives consonants concrete shapes for readers.
