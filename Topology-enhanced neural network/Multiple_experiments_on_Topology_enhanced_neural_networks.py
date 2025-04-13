@@ -38,7 +38,7 @@ print(consonant_labels.shape)
 
 
 file_names =df.iloc[:, 1].astype(str).tolist()
-folder_paths = ["../data/Sample2000_TIMIT/voiced","../data/Sample2000_TIMIT/voiceless"] 
+folder_paths = ["data/Sample2000_TIMIT/voiced","data/Sample2000_TIMIT/voiceless"] 
 
 def build_file_index(folder_paths):
     file_index = {}
