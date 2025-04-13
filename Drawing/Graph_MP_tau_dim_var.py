@@ -80,10 +80,10 @@ def time_delay_embedding_circular(time_series, embedding_dim=3, delay=1):
 
 '''
 # Define the audio folder path
-audio_folder = 'D:\phonetic\Revised\winter_holiday\phone'  # Replace with the actual path
+audio_folder = 'data/phone'  # Replace with the actual path
 
 # CSV file name to output TopCap information
-# csv_name = 'G:\\phonetic\\PD_Sample2000_Part_Libri_pcatest.csv'
+# csv_name = 'PD_Sample2000_Part_Libri_pcatest.csv'
 
 # Initialize two empty lists to store audio data
 valid_voiced_list = []
