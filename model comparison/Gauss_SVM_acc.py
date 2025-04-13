@@ -58,6 +58,6 @@ def parallel_gaussian_svm_cv(csv_file, n_jobs=-1):
 
 # Example usage
 if __name__ == "__main__":
-    csv_path = "../data/Sample_TIMIT_noise0_arr.csv"
+    csv_path = "data/Sample_TIMIT_noise0_arr.csv"
     print(csv_path)
     results = parallel_gaussian_svm_cv(csv_path, n_jobs=6)
