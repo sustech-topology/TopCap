@@ -119,7 +119,8 @@ for fn in os.listdir(inputPath):
         
         wavFile = os.path.join(inputPath, fileName + ".wav")
         sig, samplerate = sf.read(wavFile)
-        
+
+        '''
         # Filter phoneme entries for voiced and voiceless segments.
         voiced_list = [ele for ele in phoneTier.entries if ele[2] in voiced_phones]
         voiceless_list = [ele for ele in phoneTier.entries if ele[2] in voiceless_phones]
@@ -132,6 +133,10 @@ for fn in os.listdir(inputPath):
             head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[1] 
             for ele in voiceless_list if head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[0]
         ]
+        '''
+    
+        voiced_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiced_phones]
+        voiceless_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiceless_phones]
 
         counter = 0
         for audio_segment in valid_voiced_list:
