@@ -30,19 +30,6 @@ def wav_fraction_finder(start_time, end_time, sig):
     sig_fraction = sig[int(start_time * samplerate): int(end_time * samplerate)]
     return sig_fraction
 
-# head_tail_scissor removes the sections at the beginning and end of a signal where amplitude is lower than 0.05.
-# It can also be used to check if the length of the trimmed signal is greater than 500.
-def head_tail_scissor(sig):
-    valid_interval = [index for index in range(len(sig)) if (sig[index] > 0.03).any()]
-    if len(valid_interval) == 0:
-        return False, sig
-    head = min(valid_interval)
-    tail = max(valid_interval)
-    sig = sig[head: tail + 1]
-    if tail - head < 500:
-        return False, sig
-    return True, sig
-
 # principle_frequency_finder finds the period of a speech signal.
 def principle_frequency_finder(sig):
     t = int(len(sig) / 2)
@@ -96,17 +83,9 @@ for fn in os.listdir(inputPath):
         
         wavFile = os.path.join(inputPath, fileName + ".wav")
         sig, samplerate = sf.read(wavFile)
-        voiced_list = [ele for ele in phoneTier.entries if ele[2] in voiced_phones]
-        voiceless_list = [ele for ele in phoneTier.entries if ele[2] in voiceless_phones]
-    
-        valid_voiced_list = [
-            head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[1]
-            for ele in voiced_list if head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[0]
-        ]
-        valid_voiceless_list = [
-            head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[1]
-            for ele in voiceless_list if head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[0]
-        ]
+       
+        valid_voiced_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiced_phones]
+        valid_voiceless_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiceless_phones]
 
         T_voiced = [0] * len(valid_voiced_list)
         for i in range(len(valid_voiced_list)):
