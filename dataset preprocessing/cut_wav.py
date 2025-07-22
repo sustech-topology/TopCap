@@ -63,18 +63,6 @@ def wav_fraction_finder(start_time, end_time, sig):
     sig_fraction = sig[int(start_time * samplerate): int(end_time * samplerate)]
     return sig_fraction
 
-# head_tail_scissor trims the head and tail of a signal where the amplitude is smaller than 0.03.
-# It also checks if the trimmed signal length is greater than 500.
-def head_tail_scissor(sig):
-    valid_interval = [index for index in range(len(sig)) if (sig[index] > 0.03).any()]
-    if len(valid_interval) == 0:
-        return False, sig
-    head = min(valid_interval)
-    tail = max(valid_interval)
-    sig = sig[head: tail + 1]
-    if tail - head < 500:
-        return False, sig
-    return True, sig
 
 # principle_frequency_finder finds the period of a speech signal using autocorrelation.
 def principle_frequency_finder(sig):
@@ -119,24 +107,9 @@ for fn in os.listdir(inputPath):
         
         wavFile = os.path.join(inputPath, fileName + ".wav")
         sig, samplerate = sf.read(wavFile)
-
-        '''
-        # Filter phoneme entries for voiced and voiceless segments.
-        voiced_list = [ele for ele in phoneTier.entries if ele[2] in voiced_phones]
-        voiceless_list = [ele for ele in phoneTier.entries if ele[2] in voiceless_phones]
     
-        valid_voiced_list = [
-            head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[1] 
-            for ele in voiced_list if head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[0]
-        ]
-        valid_voiceless_list = [
-            head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[1] 
-            for ele in voiceless_list if head_tail_scissor(wav_fraction_finder(ele[0], ele[1], sig))[0]
-        ]
-        '''
-    
-        voiced_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiced_phones]
-        voiceless_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiceless_phones]
+        valid_voiced_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiced_phones]
+        valid_voiceless_list = [wav_fraction_finder(ele[0], ele[1], sig) for ele in phoneTier.entries if ele[2] in voiceless_phones]
 
         counter = 0
         for audio_segment in valid_voiced_list:
