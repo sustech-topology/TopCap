@@ -6,13 +6,13 @@ The repository corresponds to Section 2.2, Topology-enhanced neural networks of 
 
 ## File Overview
 
-### 1. `Multiple_experiments_on_Topology_enhanced_neural_networks.py`
+### 1. `Multiple_experiments_on_topology_enhanced_neural_networks.py`
 This script is focused on performing multiple experiments for classifying audio consonants using topology-enhanced neural networks. Its main functionalities include:
 
 - **Data Preparation and Feature Extraction:**  
-  - Reads a CSV file (e.g., `Sample_TIMIT_noise5_arr.csv`) containing pre-extracted topological features, MFCC features, and labels from the TIMIT dataset.  
-  - Constructs a file index for audio samples stored in designated "voiced" and "voiceless" folders.  
-  - Extracts MFCC features from each audio file using Librosa, with an option to add noise.
+  - Load audio files and constructs a file index for audio samples stored in designated "voiced" and "voiceless" folders, with an option to add noise.
+  - Extracts topological features from each audio file using time delay embedding and persistent homology.
+  - Extracts MFCC features from each audio file using Librosa.
 
 - **Custom Dataset and DataLoader:**  
   A custom PyTorch `Dataset` (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.
