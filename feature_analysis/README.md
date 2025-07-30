@@ -4,17 +4,17 @@ The repository corresponds to Figure 4 in Section 2.1.3, Feature Analysis, of th
 
 ## File Functionality Overview
 
-- **pd_feature.ipynb:**  
+- **pd_feature_new.ipynb:**  
   - Demonstrates the extraction and analysis of PD features from audio signals.
   - Includes steps for loading audio data, processing the signal, and visualizing the extracted PD features.
   - Useful for understanding how power or other domain-specific metrics can be derived from audio.
 
-- **stft_feature2.ipynb:**  
+- **stft_feature.ipynb:**  
   - Focuses on extracting features using the Short-Time Fourier Transform (STFT).
   - Converts time-domain audio signals into a time-frequency representation.
   - Provides visualizations to analyze how the frequency content of the audio evolves over time.
 
-- **mfcc_feature2.ipynb:**  
+- **mfcc_feature.ipynb:**  
   - Shows how to compute Mel-Frequency Cepstral Coefficients (MFCCs), a key feature in speech and audio processing.
   - Walks through preprocessing the audio, extracting MFCCs, and visualizing the results.
   - Ideal for projects related to speech recognition and audio classification.
@@ -27,6 +27,7 @@ The repository corresponds to Figure 4 in Section 2.1.3, Feature Analysis, of th
   - STFT for time-frequency representation.
   - MFCC for capturing the spectral properties of audio.
 - **Visualization:** Each notebook includes plots and charts to help interpret the extracted features.
+- **Quantification:** Use logistic classification to quantify the features.
 
 ## Requirements
 
