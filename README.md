@@ -17,7 +17,7 @@ Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedoc
 
 ## TopCap Construction
 
-TopCap is achieved in [csv_writer_consonant](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime. This part corresponds to section 2.1 of the paper. 
+TopCap is achieved in [csv_writer_consonant](csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime. This part corresponds to section 2.1 of the paper. 
 
 Further discussions of TopCap are involved in 
 - [observation_dimension](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
