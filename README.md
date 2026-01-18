@@ -9,7 +9,7 @@ Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedoc
   mfa model download acoustic english_us_arpa
   mfa model download dictionary english_us_arpa
   ```
-- Convert sampling rate into 16kHz by [wav_modification](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/wav_modification.ipynb).  
+- Convert sampling rate into 16kHz by [wav_modification](wav_modification.ipynb).  
 - Align speeches, the output files are in `.TextGrid` format.
   ```
   mfa align ~/mfa_data/my_corpus english_us_arpa english_us_arpa ~/mfa_data/my_corpus_aligned
@@ -20,15 +20,15 @@ Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedoc
 TopCap is achieved in [csv_writer_consonant](csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime. This part corresponds to section 2.1 of the paper. 
 
 Further discussions of TopCap are involved in 
-- [observation_dimension](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
-- [observation_dimension_plot](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_dimension_plot.ipynb) includes parameters and graph in the discussion section. Notice that: the newest version does not contain this part.
-- [observation_skip](https://github.com/AnnFeng233/TDA_Consonant_Recognition/blob/main/observation_skip.ipynb) illustrates how skip influences computation time.
+- [observation_dimension](observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
+- [observation_dimension_plot](observation_dimension_plot.ipynb) includes parameters and graph in the discussion section. Notice that: the newest version does not contain this part.
+- [observation_skip](observation_skip.ipynb) illustrates how skip influences computation time.
 
 ## Machine Learning for Topological Features
 Matlab (R2022b) [classification learner application](https://www.mathworks.com/help/stats/classificationlearner-app.html), 5-fold cross-validation, set aside 30\% records as test data. Use the following automatic built-in algorithm: Optimizable Tree, Optimizable Discriminant, Efficient Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Kernel, and Optimizable Ensemble. This is used in section 2.1 of the paper.
 
 ## Model Comparison
-We built other state-of-art models for comparison with TopCap to comprehensively evaluate its performance. The MFCC-GRU classification model is obtained in [MFCC_GRU_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_GRU_classification_model.py), the MFCC-Transformer classification model is obtained in [MFCC_Transformer_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_Transformer_classification_model.py), both the STFT-CNN classification model and the STFT-CNN^+ classification model are obtained in [STFT_CNN_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/STFT_CNN_classification_model). This part corresponds to section 2.1.3 of the paper.
+We built other state-of-art models for comparison with TopCap to comprehensively evaluate its performance. The MFCC-GRU classification model is obtained in [MFCC_GRU_classification_model](model%20comparison/MFCC_GRU_classification_model.py), the MFCC-Transformer classification model is obtained in [MFCC_Transformer_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/MFCC_Transformer_classification_model.py), both the STFT-CNN classification model and the STFT-CNN^+ classification model are obtained in [STFT_CNN_classification_model](https://github.com/sustech-topology/TopCap/blob/main/model%20comparison/STFT_CNN_classification_model). This part corresponds to section 2.1.3 of the paper.
 
 ## Data Preprocessing of other data sets
 The comparison experiments include the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in our main experiments. The data preprocessing files can be found in the folder [dataset preprocessing](https://github.com/sustech-topology/TopCap/tree/main/dataset%20preprocessing). 
