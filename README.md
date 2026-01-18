@@ -48,11 +48,10 @@ This repository corresponding to Figure 4 in Section 2.1.3, Feature Analysis, of
 
 This repository corresponding to section 2.2 of the paper contains a collection of Python scripts designed for advanced audio signal processing, feature extraction using topological data analysis, and machine learning experiments. The provided scripts cover a range of functionalities from preprocessing audio signals and extracting persistent homology features, to training topology-enhanced neural network classifiers.
 
-# Detection of vibration patterns
+## 2.3 Detection of vibration patterns
 
-Code for Sec. 2.3 is located in the main folder as follows.  
-- Experiments on synthetic data: fre_amp_av.ipynb
-- Experiments on real-world data: observation_result_refined.ipynb
+- [Experiments on synthetic data](fre_amp_av.ipynb) 
+- [Experiments on real-world data](observation_result_refined.ipynb) 
 
 # Drawing
 
