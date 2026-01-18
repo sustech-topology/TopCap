@@ -51,7 +51,7 @@ This repository corresponding to section 2.2 of the paper contains a collection 
 
 # Detection of vibration patterns
 
-Code is located in the main folder as follows.  
+Code for Sec. 2.3 is located in the main folder as follows.  
 - Experiments on synthetic data: fre_amp_av.ipynb
 - Experiments on real-world data: observation_result_refined.ipynb
 
