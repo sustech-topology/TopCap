@@ -1,5 +1,8 @@
 # Topology-enhanced machine learning for consonant recognition
-Code material for Topological Data Analysis in Consonant Recognition. The data that support the findings of this study are openly available in SpeechBox, ALLSSTAR Corpus, L1-ENG division at [Home Page of SpeechBox](https://speechbox.linguistics.northwestern.edu/#!/home)
+
+Here is the source code for TopCap and related models from the [article](https://yifeizhu.github.io/tail.pdf).  
+The data that support the findings of this study are openly available in [SpeechBox, ALLSSTAR Corpora](https://speechbox.linguistics.northwestern.edu/allsstar), as well as [LJSpeech](https://keithito.com/LJ-Speech-Dataset/), [TIMIT](https://catalog.ldc.upenn.edu/LDC93S1), and [LibriSpeech](https://www.openslr.org/12).  
+
 
 ## Data Preprocessing
 Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) to align each speech into phonetic segments. The detailed guidance of MFA can be found on the [Installation Page](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html). The following steps help align each speech into phonetic segments. See [Montreal Forced Aligner Tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanations.
