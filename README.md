@@ -4,9 +4,9 @@ Here is the source code for TopCap and related models from the [article](https:/
 
 ## TopCap: topological features for machine learning
 
-### Primary experiment
+### Primary experiments
 
-The following corresponds to results in Fig. 3 of machine learning topological features.  
+The following corresponds to results in Fig. 3 of machine learning topological features.  Sections are organised according to the flowchart in Fig. 3e.  
 
 The folder `supplements` includes supplementary files for this project. This part corresponds to section 2.1.3 of the paper.
 
