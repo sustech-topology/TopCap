@@ -8,6 +8,10 @@ Here is the source code for TopCap and related models from the [article](https:/
 
 The following corresponds to results in Fig. 3 of machine learning topological features.  
 
+The folder `supplements` includes supplementary files for this project. This part corresponds to section 2.1.3 of the paper.
+
+- The `results` folder contains ROC, and AUC for machine learning, as well birthtime, lifetime of consonants.
+
 #### Deriving phonetic data from natural speech
 
 Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) to align each speech into phonetic segments. The detailed guidance of MFA can be found on the [Installation Page](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html). The following steps help align each speech into phonetic segments. See [Montreal Forced Aligner Tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanations.
@@ -66,22 +70,24 @@ The following corresponds to results in Figs. 6 and 7.
 
 
 
-## Appendix: Drawing the figures
+## Supplementary Information
 
-This repository contains a suite of Python scripts for analyzing time series data through time delay embeddings. The tools provided here focus on visualizing the geometry of embedded data, characterizing the dynamical properties via PCA eigenvalues, and quantifying topological features (persistent homology) as a function of embedding parameters. These scripts are particularly useful for studying complex signals (e.g., audio or other sequential data) by revealing hidden structures and dynamical invariants.
+The following corresponds to results in Supplementary Fig. 3 on skip, MP, and persistence execution time.  
+
+- [observation_skip](observation_skip.ipynb) illustrates how skip influences computation time.
 
 
 
+## Appendix I: Supplements
 
-## TopCap Construction
+- The `consonants_waveforms` folder contains waveforms of pulmonic consonants. Audio for these consonants comes from [Wiki-List of consonants](https://en.wikipedia.org/wiki/List_of_consonants). This gives consonants concrete shapes for readers.
 
 Further discussions of TopCap are involved in 
 - [observation_dimension](observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
 - [observation_dimension_plot](observation_dimension_plot.ipynb) includes parameters and graph in the discussion section. Notice that: the newest version does not contain this part.
-- [observation_skip](observation_skip.ipynb) illustrates how skip influences computation time.
 
-## Supplements
-The folder `supplements` includes supplementary files for this project. This part corresponds to section 2.1.3 of the paper.
 
-- The `results` folder contains ROC, and AUC for machine learning, as well birthtime, lifetime of consonants.
-- The `consonants_waveforms` folder contains waveforms of pulmonic consonants. Audio for these consonants comes from [Wiki-List of consonants](https://en.wikipedia.org/wiki/List_of_consonants). This gives consonants concrete shapes for readers.
+
+## Appendix II: Drawing the figures
+
+This repository contains a suite of Python scripts for analyzing time series data through time delay embeddings. The tools provided here focus on visualizing the geometry of embedded data, characterizing the dynamical properties via PCA eigenvalues, and quantifying topological features (persistent homology) as a function of embedding parameters. These scripts are particularly useful for studying complex signals (e.g., audio or other sequential data) by revealing hidden structures and dynamical invariants.
