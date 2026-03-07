@@ -1,6 +1,6 @@
 # Topology-enhanced machine learning for consonant recognition
 
-Here is the source code for TopCap and related models from the [article](https://yifeizhu.github.io/tail.pdf).  The data that support the findings of this study are openly available in [SpeechBox, ALLSSTAR Corpora](https://speechbox.linguistics.northwestern.edu/allsstar), as well as [LJSpeech](https://keithito.com/LJ-Speech-Dataset/), [TIMIT](https://catalog.ldc.upenn.edu/LDC93S1), and [LibriSpeech](https://www.openslr.org/12).  
+Here is the source code for TopCap and related models from the [manuscript](https://yifeizhu.github.io/tail.pdf).  The data that support the findings of this study are openly available in [SpeechBox, ALLSSTAR Corpora](https://speechbox.linguistics.northwestern.edu/allsstar), as well as [LJSpeech](https://keithito.com/LJ-Speech-Dataset/), [TIMIT](https://catalog.ldc.upenn.edu/LDC93S1), and [LibriSpeech](https://www.openslr.org/12).  
 
 ## TopCap: topological features for machine learning
 
