@@ -5,6 +5,12 @@ Here is the source code for TopCap and related models from the [article](https:/
 
 ## TopCap: topological features for machine learning
 
+## TopNN: topology-enhanced neural networks
+
+## Detection of vibration patterns
+
+
+
 ### Deriving phonetic data from natural speech
 
 Using [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) to align each speech into phonetic segments. The detailed guidance of MFA can be found on the [Installation Page](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html). The following steps help align each speech into phonetic segments. See [Montreal Forced Aligner Tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanations.
