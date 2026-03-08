@@ -34,7 +34,7 @@ Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/
 
 #### Time-delay embedding and persistent homology
 
-TopCap is achieved in [csv_writer_consonant](csv_writer_consonant.ipynb), which captures the most significant topological features within those segmented phonetic time series. The output is a `.csv` file containing the birthtime and lifetime corresponding to the point in the persistent diagram with the longest lifetime.  
+Topological feature extraction is achieved in [csv_writer_consonant](csv_writer_consonant.ipynb), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
 
 #### Machine learning
 
