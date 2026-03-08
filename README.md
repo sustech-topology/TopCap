@@ -39,7 +39,7 @@ Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/
 
 ### Model comparison
 
-The following corresponds to results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
+This repository corresponds to results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
 
 These datasets are from the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in the primary experiments.  
 
@@ -53,9 +53,7 @@ We build state-of-art comparison models to comprehensively evaluate TopCap's per
 
 ### Feature analysis
 
-The following corresponds to results in Fig. 4 of analysing the features derived from TopCap, STFT, and MFCC.  
-
-This repository corresponding to Figure 4 in Section 2.1.3, Feature Analysis, of the paper contains three Jupyter Notebooks that demonstrate various methods for extracting and analyzing audio features from audio signals. Each notebook focuses on a different technique and provides step-by-step guidance along with visualizations to help you understand the feature extraction process.
+This repository corresponds to results in Fig. 4 of analysing the features derived from TopCap, STFT, and MFCC.  It contains three Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
 
 
 
