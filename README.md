@@ -39,7 +39,7 @@ Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/
 
 ### Model comparison
 
-This repository corresponds to results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
+[This repository](model%20comparison) corresponds to results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
 
 These datasets are from the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in the primary experiments.  
 
@@ -53,13 +53,13 @@ We build state-of-art comparison models to comprehensively evaluate TopCap's per
 
 ### Feature analysis
 
-This repository corresponds to results in Fig. 4 of analysing the features derived from TopCap, STFT, and MFCC.  It contains three Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
+[This repository](feature_analysis) corresponds to results in Fig. 4 of analysing the features derived from TopCap, STFT, and MFCC.  It contains three Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
 
 
 
 ## TopNN: topology-enhanced neural networks
 
-This repository corresponds to results in Fig. 5 and Table 2 of experiments with topology-enhanced Gated Recurrent Unit networks.  It contains a collection of Python scripts designed for advanced audio signal processing, feature extraction using topological data analysis, and machine learning experiments.  The provided scripts cover a range of functionalities from preprocessing audio signals and extracting persistent homology features, to training topology-enhanced neural network classifiers.  
+[This repository](Topology-enhanced%20neural%20network) corresponds to results in Fig. 5 and Table 2 of experiments with topology-enhanced Gated Recurrent Unit networks.  It contains a collection of Python scripts designed for advanced audio signal processing, feature extraction using topological data analysis, and machine learning experiments.  The provided scripts cover a range of functionalities from preprocessing audio signals and extracting persistent homology features, to training topology-enhanced neural network classifiers.  
 
 
 
