@@ -13,9 +13,9 @@ The following corresponds to overview results in Fig. 2 of the varied shapes of 
 
 The following corresponds to results in Fig. 3 of machine learning topological features.  Sections are organised according to the flowchart in Fig. 3e.  
 
-The folder `supplements` includes supplementary files for this project. This part corresponds to section 2.1.3 of the paper.
+The folder `supplements` includes supplementary files for this project.  
 
-- The `results` folder contains ROC, and AUC for machine learning, as well birthtime, lifetime of consonants.
+- The `results` folder contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d).  
 
 #### Deriving phonetic data from natural speech
 
