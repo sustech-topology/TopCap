@@ -46,7 +46,7 @@ We build state-of-art comparison models to comprehensively evaluate TopCap's per
 - [MFCC–Transformer_classification_model](model%20comparison/MFCC_Transformer_classification_model.py) 
 - [STFT–CNN_classification_models](model%20comparison/STFT_CNN_classification_model), including both STFT–CNN-8 and STFT–CNN-16 
 
-The comparison experiments include the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in our main experiments. The data preprocessing files can be found in the folder [dataset preprocessing](https://github.com/sustech-topology/TopCap/tree/main/dataset%20preprocessing).  
+The comparison experiments are performed on the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in the primary experiments.  The data preprocessing files can be found [here](dataset%20preprocessing).  
 
 
 ### Feature analysis
