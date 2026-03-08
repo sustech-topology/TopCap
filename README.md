@@ -41,10 +41,11 @@ Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/
 
 The following corresponds to results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
 
-The comparison experiments are performed on the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in the primary experiments: 
+These datasets are from the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in the primary experiments.  
+
 - [Data preprocessing](dataset%20preprocessing) 
 
-We build state-of-art comparison models to comprehensively evaluate TopCap's performance:
+We build state-of-art comparison models to comprehensively evaluate TopCap's performance: 
 - [MFCC–GRU_classification_model](model%20comparison/MFCC_GRU_classification_model.py) 
 - [MFCC–Transformer_classification_model](model%20comparison/MFCC_Transformer_classification_model.py) 
 - [STFT–CNN_classification_models](model%20comparison/STFT_CNN_classification_model), including both STFT–CNN-8 and STFT–CNN-16 
