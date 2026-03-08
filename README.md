@@ -19,15 +19,15 @@ The folder `supplements` includes supplementary files for this project.
 
 #### Deriving phonetic data from natural speech
 
-Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) (MFA) to align each speech signal into phonetic segments.  Detailed guidelines of MFA can be found on the [Installation](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html) page.  See [this tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanation.  
+Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) (MFA) to align each speech signal into phonetic segments through the following steps (cf. Supplementary Sec. 4.1).  Detailed guidelines of MFA can be found on the [Installation](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html) page.  See [this tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanation.  
 
-- Download the acoustic model and dictionary.
+- Download the acoustic model and dictionary.  
   ```
   mfa model download acoustic english_us_arpa
   mfa model download dictionary english_us_arpa
   ```
 - Convert sampling rate into 16kHz by [wav_modification](wav_modification.ipynb).  
-- Align speeches, the output files are in `.TextGrid` format.
+- Align speech records.  The output files are in `.TextGrid` format.  
   ```
   mfa align ~/mfa_data/my_corpus english_us_arpa english_us_arpa ~/mfa_data/my_corpus_aligned
   ```
