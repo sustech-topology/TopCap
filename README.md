@@ -19,7 +19,7 @@ The folder `supplements` includes supplementary files for this project.
 
 #### Deriving phonetic data from natural speech
 
-Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) (MFA) to align each speech signal into phonetic segments.  Detailed guidelines of MFA can be found on the [Installation](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html) page.  See [Montreal Forced Aligner Tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanation.  
+Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) (MFA) to align each speech signal into phonetic segments.  Detailed guidelines of MFA can be found on the [Installation](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html) page.  See [this tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanation.  
 
 - Download the acoustic model and dictionary.
   ```
