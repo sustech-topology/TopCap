@@ -72,15 +72,13 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 
 
-## Supplementary Information
+## Additional code
 
-The following corresponds to results in Supplementary Fig. 3 on skip, MP, and persistence execution time.  
+The following corresponds to Supplementary Fig. 3 on skip, MP, and persistence execution time.  
 
 - [observation_skip](observation_skip.ipynb) illustrates how skip influences computation time.
 
-
-
-## Appendix I: Supplements
+### Supplements
 
 - The `consonants_waveforms` folder contains waveforms of pulmonic consonants. Audio for these consonants comes from [Wiki-List of consonants](https://en.wikipedia.org/wiki/List_of_consonants). This gives consonants concrete shapes for readers.
 
@@ -88,8 +86,6 @@ Further discussions of TopCap are involved in
 - [observation_dimension](observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
 - [observation_dimension_plot](observation_dimension_plot.ipynb) includes parameters and graph in the discussion section. Notice that: the newest version does not contain this part.
 
-
-
-## Appendix II: Drawing the figures
+### Drawing
 
 This repository contains a suite of Python scripts for analyzing time series data through time delay embeddings. The tools provided here focus on visualizing the geometry of embedded data, characterizing the dynamical properties via PCA eigenvalues, and quantifying topological features (persistent homology) as a function of embedding parameters. These scripts are particularly useful for studying complex signals (e.g., audio or other sequential data) by revealing hidden structures and dynamical invariants.
