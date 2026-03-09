@@ -69,7 +69,7 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 
 
-## Additional codes and meterials
+## Additional codes and materials
 
 - [Code](Drawing/Graph_MP_tau_dim_var.py) for results in Fig. 8c supporting discussion on parameter selection
 - [Code](Drawing/newChar_pca.py) for results in Fig. 8d supporting discussion on additional geometric features
