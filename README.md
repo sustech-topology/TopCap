@@ -69,16 +69,16 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 
 
-## Additional code
+## Additional codes
 
-- Results in Fig. 8 supporting discussion on parameter selection and additional geometric features
-- Visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE
-- Results in Supplementary Fig. 3 supporting discussion on how skip affects MP and computation time
+- [Code](Drawing/Graph_MP_tau_dim_var.py) for results in Fig. 8c supporting discussion on parameter selection
+- [Code](Drawing/newChar_pca.py) for results in Fig. 8d supporting discussion on additional geometric features
+- [Code](Drawing/16_figs_S2.py) for visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE
+- [Code](observation_skip.ipynb) for results in Supplementary Fig. 3 supporting discussion on how skip affects MP and computation time
 - Results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
 
-The following corresponds to Supplementary Fig. 3 on skip, MP, and persistence execution time.  
+Note on generating the figures: 
 
-- [observation_skip](observation_skip.ipynb) illustrates how skip influences computation time.
 
 ### Supplements
 
@@ -87,7 +87,3 @@ The following corresponds to Supplementary Fig. 3 on skip, MP, and persistence e
 Further discussions of TopCap are involved in 
 - [observation_dimension](observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
 - [observation_dimension_plot](observation_dimension_plot.ipynb) includes parameters and graph in the discussion section. Notice that: the newest version does not contain this part.
-
-### Drawing
-
-This repository contains a suite of Python scripts for analyzing time series data through time delay embeddings. The tools provided here focus on visualizing the geometry of embedded data, characterizing the dynamical properties via PCA eigenvalues, and quantifying topological features (persistent homology) as a function of embedding parameters. These scripts are particularly useful for studying complex signals (e.g., audio or other sequential data) by revealing hidden structures and dynamical invariants.
