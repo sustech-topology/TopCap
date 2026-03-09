@@ -77,7 +77,7 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 - [Code](observation_skip.ipynb) for results in Supplementary Fig. 3 supporting discussion on how skip affects MP and computation time
 - Results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
 
-Note on generating the figures: 
+Note on figure generation: 
 
 
 ### Supplements
