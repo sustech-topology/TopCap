@@ -10,7 +10,7 @@ The code for the snapshot results in Fig. 2 of the varied shapes of vowels, voic
 
 The following corresponds to results in Fig. 3 of machine learning topological features.  Sections are organised according to the flowchart in Fig. 3e.  
 
-#### Deriving phonetic data from natural speech
+#### Step 1: Deriving phonetic data from natural speech
 
 Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) (MFA) to align each speech signal into phonetic segments through the following steps (cf. Supplementary Sec. 4.1).  Detailed guidelines of MFA can be found on the [Installation](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html) page.  See [this tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanation.  
 
@@ -25,11 +25,11 @@ Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/
   mfa align ~/mfa_data/my_corpus english_us_arpa english_us_arpa ~/mfa_data/my_corpus_aligned
   ```
 
-#### Time-delay embedding and persistent homology
+#### Step 2: Time-delay embedding and persistent homology
 
 Topological feature extraction is achieved in [csv_writer_consonant](csv_writer_consonant.ipynb), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
 
-#### Machine learning
+#### Step 3: Machine learning
 
 Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  The [results](/supplements/results) folder contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d).  
 
