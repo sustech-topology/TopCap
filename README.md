@@ -75,7 +75,7 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 - [Code](Drawing/newChar_pca.py) for results in Fig. 8d supporting discussion on additional geometric features
 - [Code](Drawing/16_figs_S2.py) for visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE
 - [Code](observation_skip.ipynb) for results in Supplementary Fig. 3 supporting discussion on how skip affects MP and computation time
-- Results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
+- Code for results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
 
 ### Consonant waveforms
 
@@ -86,7 +86,8 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 
 
-
+<!--
 Further discussions of TopCap are involved in 
 - [observation_dimension](observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
 - [observation_dimension_plot](observation_dimension_plot.ipynb) includes parameters and graph in the discussion section. Notice that: the newest version does not contain this part.
+-->
