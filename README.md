@@ -36,21 +36,21 @@ Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/
 
 ### Model comparison
 
-[This repository](model%20comparison) corresponds to results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
+[This repository](TopCap/comparison) corresponds to results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
 
 These datasets are from the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in the primary experiments.  
 
 - [Data preprocessing](dataset%20preprocessing) 
 
 We build state-of-art comparison models to comprehensively evaluate TopCap's performance: 
-- [MFCC–GRU_classification_model](model%20comparison/MFCC_GRU_classification_model.py) 
-- [MFCC–Transformer_classification_model](model%20comparison/MFCC_Transformer_classification_model.py) 
-- [STFT–CNN_classification_models](model%20comparison/STFT_CNN_classification_model), including both STFT–CNN-8 and STFT–CNN-16 
+- [MFCC–GRU](TopCap/comparison/MFCC–GRU.py) 
+- [MFCC–Transformer](TopCap/comparison/MFCC–Transformer.py) 
+- [STFT–CNN](TopCap/comparison/STFT–CNN), including both STFT–CNN-8 and STFT–CNN-16 
 
 
 ### Feature analysis
 
-[This repository](feature_analysis) corresponds to results in Fig. 4 of analysing the features derived from TopCap, STFT, and MFCC.  It contains three Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
+[This repository](TopCap/analysis) corresponds to results in Fig. 4 of analysing the features derived from TopCap, STFT, and MFCC.  It contains three Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
 
 
 
