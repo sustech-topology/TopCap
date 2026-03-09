@@ -6,7 +6,7 @@ This repository contains a suite of Python scripts for analyzing time series dat
 
 ## File Overview
 
-### 1. `16_figs_S2.py`
+### 1. `TDE.py`
 This script corresponding to Figure.S3 of the paper generates a grid of 16 interactive 3D plots to visualize the effects of different time delay embedding parameters. Key functionalities include:
 
 - **Time Delay Embedding Methods:**  
@@ -27,7 +27,7 @@ This script corresponding to Figure.S3 of the paper generates a grid of 16 inter
 
 ---
 
-### 2. `Graph_MP_tau_dim_var.py`
+### 2. `parameter.py`
 This script corresponding to Discussion section of the paper is designed to study how topological features, extracted from the embedded time series via persistent homology, vary with changes in the time delay (τ) and the embedding dimension (d). Its features include:
 
 - **Persistent Homology Computation:**  
@@ -48,7 +48,7 @@ This script corresponding to Discussion section of the paper is designed to stud
 
 ---
 
-### 3. `newChar_pca.py`
+### 3. `feature.py`
 This script also corresponding to Discussion section of the paper focuses on characterizing the dynamical properties of the time series by examining how PCA eigenvalues of the embedded data change with embedding parameters. It offers:
 
 - **PCA Eigenvalue Analysis:**  
