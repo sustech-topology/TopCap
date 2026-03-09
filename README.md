@@ -71,6 +71,11 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 ## Additional code
 
+- Results in Fig. 8 supporting discussion on parameter selection and additional geometric features
+- Visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE
+- Results in Supplementary Fig. 3 supporting discussion on how skip affects MP and computation time
+- Results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
+
 The following corresponds to Supplementary Fig. 3 on skip, MP, and persistence execution time.  
 
 - [observation_skip](observation_skip.ipynb) illustrates how skip influences computation time.
