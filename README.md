@@ -69,7 +69,7 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 
 
-## Additional codes
+## Additional codes and meterials
 
 - [Code](Drawing/Graph_MP_tau_dim_var.py) for results in Fig. 8c supporting discussion on parameter selection
 - [Code](Drawing/newChar_pca.py) for results in Fig. 8d supporting discussion on additional geometric features
@@ -77,13 +77,15 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 - [Code](observation_skip.ipynb) for results in Supplementary Fig. 3 supporting discussion on how skip affects MP and computation time
 - Results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
 
+### Consonant waveforms
+
+[This repository](supplements/consonants_waveforms) contains waveforms of pulmonic consonants.  Audio signals for these consonants are from [here](https://en.wikipedia.org/wiki/List_of_consonants).  
+
+
 ### Figure generation
 
 
 
-### Supplements
-
-- The `consonants_waveforms` folder contains waveforms of pulmonic consonants. Audio for these consonants comes from [Wiki-List of consonants](https://en.wikipedia.org/wiki/List_of_consonants). This gives consonants concrete shapes for readers.
 
 Further discussions of TopCap are involved in 
 - [observation_dimension](observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams. Notice that: the newest version does not contain this part.
