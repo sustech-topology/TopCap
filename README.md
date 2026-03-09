@@ -4,7 +4,7 @@ Here is the source code for TopCap and related models from the [manuscript](http
 
 ## TopCap: topological features for machine learning
 
-The code for the snapshot results in Fig. 2 of the varied shapes of vowels, voiced consonants, and voiceless consonants can be found [here](working_flow.ipynb).  
+The code for the snapshot results in Fig. 2 of the varied shapes of vowels, voiced consonants, and voiceless consonants can be found [here](TopCap/snapshot.ipynb).  
 
 ### Primary experiments
 
@@ -27,7 +27,7 @@ Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/
 
 #### Step 2: Time-delay embedding and persistent homology
 
-Topological feature extraction is achieved in [csv_writer_consonant](csv_writer_consonant.ipynb), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
+Topological feature extraction is achieved [here](TopCap/feature-extraction.ipynb), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
 
 #### Step 3: Machine learning
 
