@@ -19,7 +19,7 @@ Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/
   mfa model download acoustic english_us_arpa
   mfa model download dictionary english_us_arpa
   ```
-- Convert sampling rate into 16kHz by [wav_modification](wav_modification.ipynb).  
+- Convert sampling rate into 16kHz by [here](TopCap/primary/convert.ipynb).  
 - Align the speech records.  The output files are in `.TextGrid` format.  
   ```
   mfa align ~/mfa_data/my_corpus english_us_arpa english_us_arpa ~/mfa_data/my_corpus_aligned
@@ -27,11 +27,11 @@ Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/
 
 #### Step 2: Time-delay embedding and persistent homology
 
-Topological feature extraction is achieved [here](TopCap/feature.ipynb), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
+Topological feature extraction is achieved [here](TopCap/primary/feature.ipynb), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
 
 #### Step 3: Machine learning
 
-Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  The [results](/supplements/results) folder contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d).  
+Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  The [results](TopCap/primary/results) folder contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d).  
 
 
 ### Model comparison
