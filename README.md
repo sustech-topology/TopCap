@@ -4,7 +4,7 @@ Here is the source code for TopCap and related models from the [manuscript](http
 
 ## TopCap: topological features for machine learning
 
-This [working_flow](working_flow.ipynb) corresponds to the results in Fig. 2 of the varied shapes of vowels, voiced consonants, and voiceless consonants.  
+The code for the overview results in Fig. 2 of the varied shapes of vowels, voiced consonants, and voiceless consonants can be found [here](working_flow.ipynb).  
 
 ### Primary experiments
 
