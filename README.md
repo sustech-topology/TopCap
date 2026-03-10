@@ -75,7 +75,7 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 - [Code](additional/feature.py) for results in Fig. 8d supporting discussion on additional geometric features
 - [Code](additional/TDE.py) for visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE
 - [Code](additional/skip.ipynb) for results in Supplementary Fig. 3 supporting discussion on how skip affects MP and computation time
-- Code for results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
+- [Code](observation_skip.ipynb) for results in Supplementary Table 1 supporting discussion on dependency of MP on multiple parameters for TDE
 
 ### Consonant waveforms
 
