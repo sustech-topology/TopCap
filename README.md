@@ -27,7 +27,7 @@ Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/
 
 #### Step 2: Time-delay embedding and persistent homology
 
-Topological feature extraction is achieved [here](TopCap/primary/feature.ipynb), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
+Topological feature extraction is achieved [here](TopCap/primary/feature.py), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
 
 #### Step 3: Machine learning
 
