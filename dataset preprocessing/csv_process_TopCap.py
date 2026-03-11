@@ -96,6 +96,8 @@ def time_delay_embedding_circular(time_series, embedding_dim=3, delay=1):
     ]
     return np.array(embedded_data)
 
+fil_num_points=40
+
 for fn in os.listdir(inputPath):
     fileName, ext = os.path.splitext(fn)
     if ext == ".TextGrid":
@@ -158,6 +160,9 @@ for fn in os.listdir(inputPath):
                     point_Cloud = timedelay.TimeDelayEmbedding(M, tau, 5)
                     Points = point_Cloud(data)
 
+                if len(Points) < fil_num_points:               
+                    continue
+
                 dgms = ripser(Points,maxdim=1)['dgms']
                 dgms=dgms[1]
                 if dgms.size==0:
@@ -185,6 +190,9 @@ for fn in os.listdir(inputPath):
                     point_Cloud = timedelay.TimeDelayEmbedding(M, tau, 5)
                     Points = point_Cloud(data)
 
+                if len(Points) < fil_num_points:               
+                    continue
+
                 dgms = ripser(Points,maxdim=1)['dgms']
                 dgms=dgms[1]
                 if dgms.size==0:
@@ -196,4 +204,5 @@ for fn in os.listdir(inputPath):
                 writer.writerow((birth_date,lifetime,2,len(Points)))
 
         continue
+
 
