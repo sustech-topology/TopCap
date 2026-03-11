@@ -71,10 +71,10 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 ## Additional codes and materials
 
-- [Code](additional/parameter.py) for results in Fig. 8c supporting discussion on parameter selection
-- [Code](additional/feature.py) for results in Fig. 8d supporting discussion on additional geometric features
-- [Code](additional/TDE.py) for visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE
-- [Code](additional/further.ipynb) for results in Supplementary Fig. 3 and Supplementary Table 1 supporting further discussion on parameter selection
+- [Code](additional/Disc-parameter.py) for results in Fig. 8c supporting discussion on parameter selection
+- [Code](additional/Disc-feature.py) for results in Fig. 8d supporting discussion on additional geometric features
+- [Code](additional/Supp-TDE.py) for visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE
+- [Code](additional/Supp-Disc.ipynb) for results in Supplementary Fig. 3 and Supplementary Table 1 supporting further discussion on parameter selection
 
 ### Consonant waveforms
 
