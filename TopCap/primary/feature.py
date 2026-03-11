@@ -19,12 +19,8 @@ voiceless_phones=['F','TH','T','S','K','CH']
 M=100
 max_edge_length=1
 samplerate=16000
-#inputPath="D:\\phonetic\\new_consonant_recognition\\speech_file_input_LJSpeech"
-inputPath="G:\\phonetic\\HangZhou2\\Newcut_HT1"
-#inputPath="D:\phonetic\TDA_Consonant_Recognition-main\\article_TDA_phonetic_input"
+inputPath="G:\\phonetic\\Newcut_HT1"
 
-#inputPath="D:\\phonetic\\LibriProcess\\MInCut"
-#outputPath="D:\\phonetic\\new_consonant_recognition\\speech_file_output"
 csv_name="PD_HT1_last.csv"
 
 # wav_fraction_finder is to find the corresponding wav signal according to interval
@@ -63,6 +59,40 @@ def principle_frequency_finder(sig):
         max_index = maxidx[np.argmax(corr[maxidx])]
 
     return (max_index, corr)
+
+
+def time_delay_embedding_circular(time_series, embedding_dim=3, delay=1):
+    """
+    Perform circular time delay embedding on a given time series.
+
+    Parameters:
+    - time_series: 1D array-like, the input time series data.
+    - embedding_dim: int, the dimension of the embedded space (must be ≥1).
+    - delay: int, the time delay between coordinates (must be ≥1).
+
+    Returns:
+    - numpy array of shape (N, embedding_dim), where N is the length of the time series.
+    """
+    # Parameter checking
+    if not isinstance(embedding_dim, int) or embedding_dim < 1:
+        raise ValueError("Embedding dimension must be a positive integer.")
+    if not isinstance(delay, int) or delay < 1:
+        raise ValueError("Delay must be a positive integer.")
+    if not isinstance(time_series, (list, np.ndarray)):
+        raise TypeError("Input time_series must be a list or numpy array.")
+    
+    N = len(time_series)
+    if N < embedding_dim:
+        raise ValueError(
+            f"Time series length ({N}) must be ≥ embedding dimension ({embedding_dim})."
+        )
+
+    # Core logic
+    embedded_data = [
+        [time_series[(i + j * delay) % N] for j in range(embedding_dim)]
+        for i in range(N)
+    ]
+    return np.array(embedded_data)
 
 fil_num_points=40
 
@@ -118,10 +148,18 @@ for fn in os.listdir(inputPath):
                     delay_voiced[i]=int(np.floor(len(data)/M))
                 if delay_voiced[i]==0:
                     delay_voiced[i]=1
-                point_Cloud=timedelay.TimeDelayEmbedding(M, delay_voiced[i], 5)
-                Points=point_Cloud(data)
+                # Core calculation
+                tau= delay_voiced[i]              
+                if len(data) < 500:
+                    Points = time_delay_embedding_circular(data,M,tau)
+                    continue   
+                else:
+                    point_Cloud = timedelay.TimeDelayEmbedding(M, tau, 5)
+                    Points = point_Cloud(data)
+
                 if len(Points) < fil_num_points:               
                     continue
+
                 dgms = ripser(Points,maxdim=1)['dgms']
                 dgms=dgms[1]
                 if dgms.size==0:
@@ -140,10 +178,18 @@ for fn in os.listdir(inputPath):
                     delay_voiceless[i]=int(np.floor(len(data)/M))
                 if delay_voiceless[i]==0:
                     delay_voiceless[i]=1
-                point_Cloud=timedelay.TimeDelayEmbedding(M, delay_voiceless[i], 5)
-                Points=point_Cloud(data)
+                # Core calculation
+                tau= delay_voiceless[i]
+                if len(data) < 500:
+                    Points = time_delay_embedding_circular(data,M,tau)
+                    continue                
+                else:
+                    point_Cloud = timedelay.TimeDelayEmbedding(M, tau, 5)
+                    Points = point_Cloud(data)
+
                 if len(Points) < fil_num_points:               
                     continue
+
                 dgms = ripser(Points,maxdim=1)['dgms']
                 dgms=dgms[1]
                 if dgms.size==0:
@@ -155,3 +201,4 @@ for fn in os.listdir(inputPath):
                 writer.writerow((birth_date,lifetime,2,len(Points)))
 
         continue
+
