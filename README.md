@@ -64,8 +64,8 @@ We build state-of-art comparison models to comprehensively evaluate TopCap's per
 
 The following codes correspond to results in Figs. 6 and 7, respectively.  
 
-- [Experiments on synthetic data](vibration/synthetic.ipynb) 
-- [Experiments on real-world data](vibration/real.ipynb)
+- [Experiments on synthetic data](Vibration/synthetic.ipynb) 
+- [Experiments on real-world data](Vibration/real.ipynb)
 
 
 
