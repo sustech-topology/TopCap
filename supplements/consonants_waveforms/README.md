@@ -1,1 +1,0 @@
-# Waveforms of consonants
