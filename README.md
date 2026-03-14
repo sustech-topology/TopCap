@@ -40,7 +40,7 @@ Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/
 
 These datasets are from the LJSpeech, TIMIT, and LibriSpeech repositories, along with four additional corpora from ALLSSTAR that do not appear in the primary experiments.  
 
-- [Data preprocessing](dataset%20preprocessing) 
+- [Data preprocessing](TopCap/comparison/preprocessing) 
 
 We build state-of-art comparison models to comprehensively evaluate TopCap's performance: 
 - [MFCC–GRU](TopCap/comparison/MFCC–GRU.py) 
