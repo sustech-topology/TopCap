@@ -1,20 +1,22 @@
 # Model comparison
 
-The [`preprocessing`](preprocessing) directory contains code for data preprocessing prior to running [TopCap](/TopCap) and the comparison models.  
+## Data preprocessing
+
+The [`preprocessing`](preprocessing) directory contains code for data preprocessing prior to running [TopCap](/TopCap) and the comparison models below.  
 
 We build state-of-art comparison models to comprehensively evaluate TopCap's performance: 
-- [MFCC–GRU](TopCap/comparison/MFCC–GRU.py) 
-- [MFCC–Transformer](TopCap/comparison/MFCC–Transformer.py) 
+
 - [STFT–CNN](TopCap/comparison/STFT–CNN), including both STFT–CNN-8 and STFT–CNN-16 
 
-# MFCC-based Audio Classification Models
+# MFCC-based speech classification models
 
-This repository provides two distinct audio classification models that leverage Mel-Frequency Cepstral Coefficients (MFCC) extracted from audio files. Both models are implemented using PyTorch and are designed to distinguish between two classes (e.g., voiced vs. voiceless consonants) based on MFCC features. The models differ in architecture:
+We build two state-of-art comparison models that leverage mel-frequency cepstral coefficients (MFCC) extracted from speech signals.  Both models are implemented using 
+PyTorch and are designed to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on MFCC features.  The models differ in architecture: 
 
-- **GRU-based Model** (`MFCC_GRU_classification_model.py`)
-- **Transformer-based Model** (`MFCC_Transformer_classification_model.py`)
+- Gated recurrent unit (GRU) [`MFCC–GRU.py`](MFCC–GRU.py) 
+- Transformer [`MFCC–Transformer.py`](MFCC–Transformer.py) 
 
-Both implementations include full pipelines from data loading and MFCC feature extraction to model training and evaluation.
+Both implementations include full pipelines from data loading and MFCC feature extraction to model training and evaluation.  
 
 ---
 
