@@ -28,7 +28,7 @@ Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/
 To be more specific in this step, we prepare a corresponding code [`SVM.py`](SVM.py) for the SVM algorithm and use it with TopCap in the [model comparison experiments](/TopCap/comparison).  This script evaluates the performance of a Gaussian Radial Basis Function (RBF) SVM classifier on a dataset using stratified 5-fold cross-validation.  Key aspects are as follows.  
 
 - Data loading and preprocessing
-  - Reads a .csv file (e.g., [`Sample_TIMIT.csv`](Sample_TIMIT.csv)) where the third and fourth columns represent features and the fifth column represents binary labels.  
+  - Reads a `.csv` file (e.g., [`Sample_TIMIT.csv`](Sample_TIMIT.csv)) where the third and fourth columns represent features and the fifth column represents binary labels.  
   - Ensures that the dataset is suitable for binary classification.  
 
 - Pipeline construction and cross-validation
@@ -39,6 +39,6 @@ To be more specific in this step, we prepare a corresponding code [`SVM.py`](SVM
   - Prints individual fold accuracies as well as the mean accuracy and standard deviation across folds.  
 
 - Usage considerations
-  - Verify that the .csv file is in the expected format.  
+  - Verify that the `.csv` file is in the expected format.  
   - Install necessary libraries such as scikit-learn, Pandas, and NumPy.  
   - Adjust the `n_jobs` parameter if needed to optimise parallel processing.  
