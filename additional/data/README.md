@@ -1,9 +1,3 @@
 # Data
 
-This repository contains the data required to run the associated code. Please note:
-
-- **Demo Data Only**: The provided dataset is a **demo version** of the original data
-- **Partial Dataset**: We have only uploaded a portion of the complete dataset due to its large size
-- **Reference Purpose**: This sample data is intended to help users understand the data structure and format
-
-For access to the full dataset, please contact the corresponding author.
+This directory contains sample data associated with the code for the experiements.  Please note that the provided datasets are a demo version of the original data used to obtain the results in the [manuscript](https://yifeizhu.github.io/tail.pdf).  We have only uploaded a portion of the complete data due to its large size.  This sample data is intended to help users understand the data structure and format.  For access to the full datasets, please refer to the Data availability section of the manuscript and also feel free to contact the corresponding author.  
