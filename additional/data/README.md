@@ -1,4 +1,4 @@
-# Data Repository
+# Data
 
 This repository contains the data required to run the associated code. Please note:
 
