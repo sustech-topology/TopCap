@@ -25,4 +25,20 @@ Topological feature extraction is achieved [`feature.py`](feature.py), which cap
 
 Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  
 
-To be more specific in this step, we prepare a corresponding code [`Gauss_SVM_acc.py`](Gauss_SVM_acc.py) for the SVM algorithm and use it with TopCap in the [comparison model experiments](/TopCap/comparison).  
+To be more specific in this step, we prepare a corresponding code [`Gauss_SVM_acc.py`](Gauss_SVM_acc.py) for the SVM algorithm and use it with TopCap in the [model comparison experiments](/TopCap/comparison).  This script evaluates the performance of a Gaussian Radial Basis Function SVM classifier on a dataset using stratified 5-fold cross-validation.  Key aspects include: 
+
+- Data loading and preprocessing:   
+  - Reads a CSV file (e.g., `Sample_TIMIT_noise0_arr.csv`) where the third and fourth columns represent features and the fifth column represents binary labels.
+  - Ensures that the dataset is suitable for binary classification.
+
+- **Pipeline Construction and Cross-Validation:**  
+  - Constructs a scikit-learn pipeline that standardizes the features using `StandardScaler` and then applies an SVM classifier with an RBF kernel.
+  - Performs stratified 5-fold cross-validation in parallel (using all available CPU cores by default) to assess model performance.
+
+- **Output Metrics:**  
+  - Prints individual fold accuracies as well as the mean accuracy and standard deviation across folds.
+
+- **Usage Considerations:**  
+  - Verify that the CSV file is in the expected format.  
+  - Install necessary libraries such as scikit-learn, Pandas, and NumPy.
+  - Adjust the `n_jobs` parameter if needed to optimize parallel processing.
