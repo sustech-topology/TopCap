@@ -18,14 +18,17 @@ We build 2 state-of-the-art comparison models that leverage mel-frequency cepstr
   - Loads speech files (.wav format) from separate directories for voiced and voiceless consonants.  
   - Extracts 40-dimensional MFCC features (with `n_fft=256`) using Librosa.  
   - Transposes and converts features to PyTorch tensors.  
-  - Generates binary labels (0 for voiced, 1 for voiceless) and constructs a combined dataset.  
+  - Generates binary labels (0 for voiced, 1 for voiceless) and constructs a combined dataset.
+
 - Dataset preparation
   - Splits the dataset into training and test sets.  
-  - Uses a custom PyTorch `Dataset` and a collate function that handles variable-length sequences with padding.  
+  - Uses a custom PyTorch `Dataset` and a collate function that handles variable-length sequences with padding.
+
 - GRU classifier architecture
   - A single-layer GRU processes the MFCC sequences using packed padded sequences.  
   - A batch normalization layer is applied to the final hidden state.  
-  - A fully connected layer outputs a single logit for binary classification.  
+  - A fully connected layer outputs a single logit for binary classification.
+
 - Training & evaluation
   - Trains the model using Binary Cross Entropy with Logits Loss and the Adam optimiser.  
   - Prints training loss and accuracy periodically.  
@@ -35,26 +38,22 @@ We build 2 state-of-the-art comparison models that leverage mel-frequency cepstr
 
 [`MFCC–Transformer.py`](MFCC–Transformer.py) realises this model as follows.  
 
--Data loading & feature extraction
-
+- Data loading & feature extraction
   - Similar to the GRU model, it extracts MFCC features from the speech files in the voiced and voiceless directories.  
   - Pads the sequences to a uniform length and converts them into a tensor suitable for Transformer input.  
   - Generates corresponding binary labels.
 
 - Dataset preparation
-
   - Splits the data into training and test sets.  
   - Uses PyTorch DataLoader to create batches for training.
 
 - Transformer classifier architecture
-
   - Incorporates absolute positional encoding to capture sequential information.  
   - Uses a Transformer Encoder with multi-head self-attention and feedforward layers.  
   - Applies global average pooling across the sequence dimension.  
   - Uses a dropout layer and a fully connected output layer for binary classification.
 
 - Training & evaluation
-
   - Trains the Transformer model using the same loss function and optimiser settings as the GRU model.  
   - Training progress (loss and accuracy) is printed periodically.  
   - Evaluates model performance on the test set and displays training progress graphs.  
