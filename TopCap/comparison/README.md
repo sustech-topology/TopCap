@@ -1,6 +1,6 @@
 # Model comparison
 
-- [Data preprocessing](TopCap/comparison/preprocessing) 
+The [`preprocessing`](preprocessing) directory contains code for data preprocessing prior to running [TopCap](/TopCap) and the comparison models.  
 
 We build state-of-art comparison models to comprehensively evaluate TopCap's performance: 
 - [MFCC–GRU](TopCap/comparison/MFCC–GRU.py) 
