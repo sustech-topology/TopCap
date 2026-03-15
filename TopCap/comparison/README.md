@@ -61,7 +61,7 @@ We build 2 state-of-the-art comparison models that leverage mel-frequency cepstr
 Running the above codes requires: 
 
 - Python version: Python 3.x 
-- Key Libraries: 
+- Key libraries: 
   - Librosa 
   - Matplotlib 
   - NumPy 
