@@ -1,29 +1,24 @@
-# Preprocessing of datasets
-- ALLSSTAR
+# Data preprocessing
+
+## ALLSSTAR
   
-  Use [`ALLSSTAR.py`](ALLSSTAR.py) to remove all 
-  tiers from the original TextGrid file except for the "words" tier. Next, utilize the Montreal Forced Aligner (MFA) to generate a new "phones" tier. 
+[`ALLSSTAR.py`](ALLSSTAR.py) removes all tiers from the original `.TextGrid` file except for the "words" tier.  It then uses MFA to generate a new "phones" tier.  
+
+## LJSpeech
+
+[`LJSpeech.py`](LJSpeech.py) processes the LJSpeech dataset as follows: 
+
+- Reading the `.csv` file: The script opens the original `.csv` file and reads its contents.
+- Processing sentences: It splits each sentence based on the identifier LJ0 and filters the relevant entries.
+- Creating `.TextGrid` files: For each processed sentence, a corresponding `.TextGrid` file is generated with the appropriate format for MFA.  
+
+## TIMIT
+
+[`TIMIT.py`](TIMIT.py) organises all files from the Train folder of the TIMIT dataset into a single directory, ensuring that the paths of subfolders are included in the filenames to avoid any confusion with duplicate names.  The original files cannot be played because they are displayed as `.wav` files but are actually `.sph` files.  After reading these files, the script replaces their extensions with `.wav` and extracts all selected phones from the Train set.  
+
+## LibriSpeech
   
-- TIMIT
-  
-  Use [`TIMIT.py`](TIMIT.py) to process TIMIT dataset. The script 
-  organizes all files from the Train folder of the TIMIT dataset into a single directory, ensuring that the paths of subfolders are included in the 
-  filenames to avoid any confusion with duplicate names. The original files cannot be played because they are displayed as WAV files but are actually 
-  SPH files. After reading these files, the script replaces their extensions with .wav and extracts all selected phonemes from the Train set.
-  
-- LJSpeech
-  
-  Use [`LJSpeech.py`](LJSpeech.py) to process LJSpeech dataset. 
-  Reading the CSV: The script opens the original CSV file and reads its contents. Processing Sentences: It splits each sentence based on the identifier 
-  LJ0 and filters the relevant entries. Creating TextGrid Files: For each processed sentence, a corresponding TextGrid file is generated with the 
-  appropriate format for MFA.
-  
-- LibriSpeech
-  
-  Use [`LibriSpeech.py`](LibriSpeech.py) to process LibriSpeech 
-  dataset. The file begins by traversing the source folder and its subfolders, gathering all files into a new directory. Next, the script opens the 
-  original txt file and reads its contents to process the sentences, it splits each sentence based on several beginning string characters. Finally, 
-  for each processed sentence, a corresponding TextGrid file is generated with the appropriate format for MFA.
+[`LibriSpeech.py`](LibriSpeech.py) begins with traversing the source folder and its subfolders, gathering all files into a new directory.  Next, the script opens the original `.txt` file and reads its contents to process the sentences.  It splits each sentence based on several beginning string characters.  Finally, for each processed sentence, a corresponding `.TextGrid` file is generated with the appropriate format for MFA.  
 
 # As input of the main experiment and comparison experiments
 In our study, we consider two types of input: the main experiment and the comparison experiment. 
