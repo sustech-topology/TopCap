@@ -8,9 +8,7 @@ The [`preprocessing`](preprocessing) directory contains code for preprocessing d
 
 ## MFCC-based speech classification models
 
-We build 2 state-of-the-art comparison models that leverage mel-frequency cepstral coefficients (MFCC) extracted from speech signals.  Both models are implemented using 
-PyTorch and are designed to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on MFCC features.  The models differ in architecture.  
-Implementation of each includes a full pipeline from data loading and MFCC-feature extraction to model training and evaluation.  
+We build 2 state-of-the-art comparison models that leverage mel-frequency cepstral coefficients (MFCC) extracted from speech signals.  Both models are implemented using PyTorch and are designed to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on MFCC features.  The models differ in architecture.  Implementation of each includes a full pipeline from data loading and MFCC-feature extraction to model training and evaluation.  
 
 ### Gated recurrent unit (GRU)
 
