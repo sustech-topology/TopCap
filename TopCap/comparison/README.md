@@ -58,17 +58,17 @@ We build 2 state-of-the-art comparison models that leverage mel-frequency cepstr
   - Training progress (loss and accuracy) is printed periodically.  
   - Evaluates model performance on the test set and displays training progress graphs.  
 
-## Requirements
+Running the above codes requires: 
 
-- **Python Version:** Python 3.x  
-- **Key Libraries:**  
-  - PyTorch  
-  - Librosa  
-  - NumPy  
-  - Matplotlib  
-  - Scikit-learn  
+- Python version: Python 3.x 
+- Key Libraries: 
+  - Librosa 
+  - Matplotlib 
+  - NumPy 
+  - PyTorch 
+  - Scikit-learn 
 
-Install the required packages using pip:
+Install the required packages using pip: 
 
 ```bash
 pip install torch librosa numpy matplotlib scikit-learn
