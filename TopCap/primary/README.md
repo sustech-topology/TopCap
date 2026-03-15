@@ -1,6 +1,6 @@
 # Primary experiments
 
-We proceed according to the flowchart in Fig. 3e.  
+We proceed according to the flowchart in Fig. 3e.  The [`results`](results) directory contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d). 
 
 ## Step 1: Deriving phonetic data from natural speech
 
@@ -23,4 +23,6 @@ Topological feature extraction is achieved [`feature.py`](feature.py), which cap
 
 ## Step 3: Machine learning
 
-Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  The [`results`](results) directory contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d).  
+Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  
+
+To be more specific in this step, we prepare a corresponding code [`Gauss_SVM_acc.py`](Gauss_SVM_acc.py) for the SVM algorithm and use it with TopCap in the [comparison model experiments](/TopCap/comparison).  
