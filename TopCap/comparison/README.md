@@ -1,31 +1,21 @@
 # Model comparison
 
+To comprehensively evaluate TopCap's performance, we build multiple state-of-the-art comparison models and benchmark them against a wide range datasets.  
+
 ## Data preprocessing
 
-The [`preprocessing`](preprocessing) directory contains code for data preprocessing prior to running [TopCap](/TopCap) and the comparison models below.  
+The [`preprocessing`](preprocessing) directory contains code for preprocessing data prior to running [TopCap](/TopCap) and the comparison models below.  
 
-We build state-of-art comparison models to comprehensively evaluate TopCap's performance: 
+## MFCC-based speech classification models
 
-- [STFT–CNN](TopCap/comparison/STFT–CNN), including both STFT–CNN-8 and STFT–CNN-16 
+We build 2 state-of-the-art comparison models that leverage mel-frequency cepstral coefficients (MFCC) extracted from speech signals.  Both models are implemented using 
+PyTorch and are designed to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on MFCC features.  The models differ in architecture.  Implementation of each includes a full pipeline from data loading and MFCC-feature extraction to model training and evaluation.  
 
-# MFCC-based speech classification models
+### Gated recurrent unit (GRU)
 
-We build two state-of-art comparison models that leverage mel-frequency cepstral coefficients (MFCC) extracted from speech signals.  Both models are implemented using 
-PyTorch and are designed to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on MFCC features.  The models differ in architecture: 
+[`MFCC–GRU.py`](MFCC–GRU.py) realises this model.  
 
-- Gated recurrent unit (GRU) [`MFCC–GRU.py`](MFCC–GRU.py) 
-- Transformer [`MFCC–Transformer.py`](MFCC–Transformer.py) 
-
-Both implementations include full pipelines from data loading and MFCC feature extraction to model training and evaluation.  
-
----
-
-## File Overview
-
-### 1. `MFCC_GRU_classification_model.py`  
-This script corresponding to scetion 2.1.2 of the paper implements a GRU-based classifier for MFCC features.
-
-- **Data Loading & Feature Extraction:**  
+#### Data loading & feature extraction
   - Loads audio files (WAV format) from separate directories for voiced and voiceless sounds.
   - Extracts 40-dimensional MFCC features (with `n_fft=256`) using Librosa.
   - Transposes and converts features to PyTorch tensors.
@@ -45,11 +35,9 @@ This script corresponding to scetion 2.1.2 of the paper implements a GRU-based c
   - Prints training loss and accuracy periodically.
   - Evaluates the model on a test set and reports overall test loss and accuracy.
 
+### Transformer
 
----
-
-### 2. `MFCC_Transformer_classification_model.py`  
-This script corresponding to scetion 2.1.2 of the paper implements a Transformer-based classifier for MFCC features.
+[`MFCC–Transformer.py`](MFCC–Transformer.py) realises this model.  
 
 - **Data Loading & Feature Extraction:**  
   - Similar to the GRU model, it extracts MFCC features from the audio files in the voiced and voiceless directories.
@@ -112,3 +100,8 @@ Install the required packages using pip:
 
 ```bash
 pip install torch librosa numpy matplotlib scikit-learn
+```
+
+## STFT-based speech classification models
+
+The [`STFT–CNN`](STFT–CNN) directory contains 2 convolutional neural network comparison models based on short-time Fourier transform (STFT) features.  
