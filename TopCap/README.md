@@ -1,7 +1,6 @@
 # TopCap: topological features for machine learning
 
-The code for the snapshot results in Fig. 2 of the varied shapes of vowels, voiced consonants, and voiceless consonants can be found in 
-[`snapshot.ipynb`](TopCap/snapshot.ipynb).  
+The code for the snapshot results in Fig. 2 of the varied shapes of vowels, voiced consonants, and voiceless consonants can be found in [`snapshot.ipynb`](TopCap/snapshot.ipynb).  
 
 ## Primary experiments
 
