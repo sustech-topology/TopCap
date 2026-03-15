@@ -76,7 +76,7 @@ def add_noise(y, seed=110, noise_type='gaussian', snr_db=5):
     else:
         raise ValueError(f"Unsupported noise type: {noise_type}")
 
-    noise_power = np.maximum(np.mean(noise**2), 1e-10)  # 确保噪声功率不为零
+    noise_power = np.maximum(np.mean(noise**2), 1e-10)  
     target_noise_power = signal_power / (10 ** (snr_db / 10))
     scaling_factor = np.sqrt(target_noise_power / noise_power)
     scaled_noise = noise * scaling_factor
