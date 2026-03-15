@@ -4,10 +4,7 @@ We proceed according to the flowchart in Fig. 3e.
 
 ## Step 1: Deriving phonetic data from natural speech
 
-Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) (MFA) to align each speech signal into phonetic segments through the 
-following steps (cf. Supplementary Sec. 4.1).  Detailed guidelines of MFA can be found on the 
-[Installation](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html) page.  See 
-[this tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanation.  
+Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/index.html) (MFA) to align each speech signal into phonetic segments through the following steps (cf. Supplementary Sec. 4.1).  Detailed guidelines of MFA can be found on the [Installation](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html) page.  See [this tutorial](https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html) for more explanation.  
 
 - Download the acoustic model and dictionary.  
   ```
@@ -22,12 +19,8 @@ following steps (cf. Supplementary Sec. 4.1).  Detailed guidelines of MFA can be
 
 ## Step 2: Time-delay embedding and persistent homology
 
-Topological feature extraction is achieved [`feature.py`](feature.py), which captures the most significant topological features within the segmented phonetic time series.  
-The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
+Topological feature extraction is achieved [`feature.py`](feature.py), which captures the most significant topological features within the segmented phonetic time series.  The output is a `.csv` file containing the birth time and lifetime corresponding to the point in a persistence diagram with the longest lifetime.  
 
 ## Step 3: Machine learning
 
-Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set 
-aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive 
-Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  The [`results`](results) directory contains ROC and AUC from machine 
-learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d).  
+Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30\% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  The [`results`](results) directory contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d).  
