@@ -1,3 +1,12 @@
+# Model comparison
+
+- [Data preprocessing](TopCap/comparison/preprocessing) 
+
+We build state-of-art comparison models to comprehensively evaluate TopCap's performance: 
+- [MFCC–GRU](TopCap/comparison/MFCC–GRU.py) 
+- [MFCC–Transformer](TopCap/comparison/MFCC–Transformer.py) 
+- [STFT–CNN](TopCap/comparison/STFT–CNN), including both STFT–CNN-8 and STFT–CNN-16 
+
 # MFCC-based Audio Classification Models
 
 This repository provides two distinct audio classification models that leverage Mel-Frequency Cepstral Coefficients (MFCC) extracted from audio files. Both models are implemented using PyTorch and are designed to distinguish between two classes (e.g., voiced vs. voiceless consonants) based on MFCC features. The models differ in architecture:
