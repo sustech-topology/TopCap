@@ -14,12 +14,11 @@ We build 2 state-of-the-art comparison models that leverage mel-frequency cepstr
 
 [`MFCC–GRU.py`](MFCC–GRU.py) realises this model as follows.  
 
-#### Data loading & feature extraction
-
-- Loads speech files (.wav format) from separate directories for voiced and voiceless consonants.  
-- Extracts 40-dimensional MFCC features (with `n_fft=256`) using Librosa.  
-- Transposes and converts features to PyTorch tensors.  
-- Generates binary labels (0 for voiced, 1 for voiceless) and constructs a combined dataset.  
+- Data loading & feature extraction
+  - Loads speech files (.wav format) from separate directories for voiced and voiceless consonants.  
+  - Extracts 40-dimensional MFCC features (with `n_fft=256`) using Librosa.  
+  - Transposes and converts features to PyTorch tensors.  
+  - Generates binary labels (0 for voiced, 1 for voiceless) and constructs a combined dataset.  
 
 #### Dataset preparation
 
@@ -66,28 +65,6 @@ We build 2 state-of-the-art comparison models that leverage mel-frequency cepstr
 - Trains the Transformer model using the same loss function and optimiser settings as the GRU model.  
 - Training progress (loss and accuracy) is printed periodically.  
 - Evaluates model performance on the test set and displays training progress graphs.  
-
-
-### `Gauss_SVM_acc.py`
-This script evaluates the performance of a Gaussian (RBF) SVM classifier on a dataset using stratified 5-fold cross-validation. Key aspects include:
-
-- **Data Loading and Preprocessing:**  
-  - Reads a CSV file (e.g., `Sample_TIMIT_noise0_arr.csv`) where the third and fourth columns represent features and the fifth column represents binary labels.
-  - Ensures that the dataset is suitable for binary classification.
-
-- **Pipeline Construction and Cross-Validation:**  
-  - Constructs a scikit-learn pipeline that standardizes the features using `StandardScaler` and then applies an SVM classifier with an RBF kernel.
-  - Performs stratified 5-fold cross-validation in parallel (using all available CPU cores by default) to assess model performance.
-
-- **Output Metrics:**  
-  - Prints individual fold accuracies as well as the mean accuracy and standard deviation across folds.
-
-- **Usage Considerations:**  
-  - Verify that the CSV file is in the expected format.  
-  - Install necessary libraries such as scikit-learn, Pandas, and NumPy.
-  - Adjust the `n_jobs` parameter if needed to optimize parallel processing.
-
----
 
 ## Requirements
 
