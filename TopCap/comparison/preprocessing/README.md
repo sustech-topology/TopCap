@@ -20,9 +20,8 @@
   
 [`LibriSpeech.py`](LibriSpeech.py) begins with traversing the source folder and its subfolders, gathering all files into a new directory.  Next, the script opens the original `.txt` file and reads its contents to process the sentences.  It splits each sentence based on several beginning string characters.  Finally, for each processed sentence, a corresponding `.TextGrid` file is generated with the appropriate format for MFA.  
 
-# As input of the main experiment and comparison experiments
-In our study, we consider two types of input: the main experiment and the comparison experiment. 
+### Note on inputs for TopCap and its comparison models
 
-The main experiment employs the TopCap method [csv_process_TopCap](https://github.com/sustech-topology/TopCap/blob/main/dataset%20preprocessing/csv_process_TopCap.py), utilizing the "phones" tier in the TextGrid file to extract the corresponding phonemes, then to do time delay embedding and persistent homology to obtain topological features, which are then recorded in a CSV file. All datasets follow this streamlined process except for TIMIT, which uses its original phonemes cutting information. The relevant code for this part is included in the TIMIT_study file. 
+For TopCap, [`feature.py`](/TopCap/primary/feature.py) uses the "phones" tier in the `.TextGrid` file to extract the corresponding phones.  It then performs time-delay embedding and persistent homology to obtain topological features, which are recorded in a `.csv` file.  All datasets are fed to this streamlined process except TIMIT, which provides its original phone cutting information (see [`TIMIT.py`](TIMIT.py) above).  
 
-The comparison experiment utilizes the [cut_wav](https://github.com/sustech-topology/TopCap/blob/main/dataset%20preprocessing/cut_wav.py) files to extract audio segments corresponding to the selected factors. These segments are saved in two subfolders within a single directory, serving as input for the neural network classification.
+The model comparison experiment uses [cut_wav](cut_wav.py) to extract speech segments corresponding to the selected factors.  These segments are saved in two subfolders within a single directory, serving as input for the neural network classifications.  
