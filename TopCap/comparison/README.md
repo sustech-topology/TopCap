@@ -76,4 +76,4 @@ pip install torch librosa numpy matplotlib scikit-learn
 
 ## STFT-based speech classification models
 
-The [`STFT–CNN`](STFT–CNN) directory contains 2 convolutional neural network comparison models based on short-time Fourier transform (STFT) features.  
+The [`STFT–CNN`](STFT–CNN) directory contains 2 convolutional neural network (CNN) comparison models based on short-time Fourier transform (STFT) features.  
