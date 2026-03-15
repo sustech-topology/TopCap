@@ -78,7 +78,7 @@ The following codes correspond to results in Figs. 6 and 7, respectively.
 
 ### Consonant waveforms
 
-[This repository](supplements/consonants_waveforms) contains waveforms of pulmonic consonants.  Audio signals for these consonants are from [here](https://en.wikipedia.org/wiki/List_of_consonants).  
+[This directory](additional/waveform) contains waveforms of pulmonic consonants.  Audio signals for these consonants are from [here](https://en.wikipedia.org/wiki/List_of_consonants).  
 
 ### Codes for results not appearing in the manuscript
 
