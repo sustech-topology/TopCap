@@ -1,11 +1,11 @@
 # STFT-based speech classification models
 
-The difference between STFT_CNN and STFT_CNN^+ is that the spectrogram size of the former is 8×8, while that of the latter is 16×16. The corresponding code is as follows. 
+The difference between [STFT–CNN-8](STFT–CNN-8.py) and [STFT–CNN-16](STFT–CNN-16.py) is that the spectrogram size of the former is 8×8 while that of the latter is 16×16.  The corresponding code goes as follows.  
   ```
   spectrogram = tf.image.resize(spectrogram, [16, 16]), 
   ```
-which appears in both two programs. 
+which appears in both files.  
 
-STFT_CNN_classification_model1 utilizes the entire dataset for CNN and generates plots using t-SNE and UMAP. Regarding the plotting, to ensure the data quantity is consistent between methods TopCap and STFT_CNN, a random selection of 1/10 of the dataset was used with method TopCap, since STFT_CNN uses 1/10 of the whole dataset as validation set.
+[`STFT–CNN-8.py`](STFT–CNN-8.py) uses the entire dataset for CNN and generates plots using t-SNE and UMAP.  Regarding the plotting, to ensure the data quantity is consistent between the TopCap and STFT–CNN models, a random selection of 1/10 of the dataset was used with TopCap, since STFT–CNN uses 1/10 of the whole dataset as a validation set.  
 
-STFT_CNN_classification_model2 utilizes the sampled dataset solely for CNN, catering to the needs of the post-sampling phase of large datasets.
+[`STFT–CNN-16.py`](STFT–CNN-16.py) uses the sampled dataset solely for CNN, catering to the needs of the post-sampling phase of large datasets.  
