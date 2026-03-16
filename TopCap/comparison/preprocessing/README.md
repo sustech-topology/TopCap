@@ -20,7 +20,7 @@
   
 [`LibriSpeech.py`](LibriSpeech.py) begins with traversing the source folder and its subfolders, gathering all files into a new directory.  Next, the script opens the original `.txt` file and reads its contents to process the sentences.  It splits each sentence based on several beginning string characters.  Finally, for each processed sentence, a corresponding `.TextGrid` file is generated with the appropriate format for MFA.  
 
-### Note on inputs for TopCap and its comparison models
+## Inputs for TopCap and its comparison models
 
 For TopCap, [`feature.py`](/TopCap/primary/feature.py) uses the "phones" tier in the `.TextGrid` file to extract the corresponding phones.  It then performs time-delay embedding and persistent homology to obtain topological features, which are recorded in a `.csv` file.  All datasets are fed to this streamlined process except TIMIT, which provides its original phone cutting information (see [`TIMIT.py`](TIMIT.py) above).  
 
