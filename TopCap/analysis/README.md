@@ -2,7 +2,7 @@
 
 This directory contains code for results in Fig. 4 of analysing and comparing the features derived from TopCap, STFT, and MFCC.  It contains 3 Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
 
-## Code functionality overview
+## Code functionality
 
 - [`TopCap.ipynb`](TopCap.ipynb) 
   - Demonstrates the extraction and analysis of PD features from audio signals.
@@ -19,9 +19,9 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
   - Walks through preprocessing the audio, extracting MFCCs, and visualizing the results.
   - Ideal for projects related to speech recognition and audio classification.
 
-## Features
+## Code features
 
-- **Audio Preprocessing:** Load and preprocess audio data for feature extraction.
+- Audio preprocessing: Load and preprocess audio data for feature extraction.
 - **Diverse Feature Extraction Methods:** 
   - PD features for specific audio analysis tasks.
   - STFT for time-frequency representation.
@@ -31,10 +31,11 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
 
 ## Requirements for running the codes
 
-- Version: Python 3.x 
-- Environment: Jupyter Notebook or JupyterLab
-- Install the necessary packages using pip: 
+- Version: Python 3.x
 
+- Environment: Jupyter Notebook or JupyterLab
+
+- Install the necessary packages using pip: 
 ```bash
 pip install librosa matplotlib numpy pandas 
 ```
