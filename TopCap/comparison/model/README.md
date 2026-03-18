@@ -68,7 +68,7 @@ We also bulid a comparative model that uses the spectral features derived by sho
 - CNN classifier architecture
   - The model adopts a sequential structure.  
   - It consists of three convolutional blocks, each comprising a Conv2D layer (using ReLU activation and same padding) followed by a MaxPooling2D layer, with the number of filters increasing progressively across blocks (64, 128, 256).  
-  - After the convolutional layers, a flatten layer and two fully connected (dense) layers are added.  A final sigmoid activation function outputs a single probability value for 0/1 binary classification (voiced vs. voiceless consonants).  
+  - After the convolutional layers, a flatten layer and two fully connected (dense) layers are added.  A final sigmoid activation function outputs a single probability value for binary classification (voiced vs. voiceless consonants).  
     
 - Training & evaluation
   - The model is compiled using the Adam optimiser and binary cross-entropy loss function.  
