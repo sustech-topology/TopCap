@@ -1,6 +1,6 @@
 # Model comparison
 
-To comprehensively evaluate TopCap's performance, we build multiple state-of-the-art comparative models and benchmark them against a wide range datasets.  
+To comprehensively evaluate TopCap's performance, we build multiple state-of-the-art comparative models and benchmark them against a wide range datasets.  This directory contains code for results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  
 
 ## Data preprocessing
 
