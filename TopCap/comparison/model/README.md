@@ -89,5 +89,5 @@ We also bulid a comparative model that uses the spectral features derived by sho
 Install the required packages using pip: 
 
 ```bash
-pip install torch tensorflow librosa numpy matplotlib scikit-learn
+pip install librosa matplotlib numpy scikit-learn tensorflow torch 
 ```
