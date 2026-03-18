@@ -24,9 +24,9 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
 - Audio preprocessing: Load and preprocess audio data for feature extraction.  
 
 - Diverse feature extraction methods: 
-  - Topological PD features for specific audio analysis tasks.  
-  - STFT for time-frequency representation.  
-  - MFCC for capturing the spectral properties of audio according to human auditory perception.  
+  - Topological PD features for specific audio analysis tasks 
+  - STFT for time-frequency representation 
+  - MFCC for capturing the spectral properties of audio according to human auditory perception 
 
 - Visualisation: Each notebook includes plots and charts to help interpret the extracted features.  
 
