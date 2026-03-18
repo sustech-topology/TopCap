@@ -33,7 +33,7 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
 
 - Version: Python 3.x 
 - Environment: Jupyter Notebook or JupyterLab
-- Packeges: Install the necessary packages using pip 
+- Install the necessary packages using pip: 
 
 ```bash
 pip install librosa matplotlib numpy pandas 
