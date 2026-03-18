@@ -62,8 +62,9 @@ def get_spectrogram(waveform):
   # as image-like input data with convolution layers (which expect
   # shape (`batch_size`, `height`, `width`, `channels`).
   spectrogram = spectrogram[..., tf.newaxis]
-  # Resize the spectrogram to 8*8(STFT_CNN) or 16*16(STFT_CNN^+). 
-  spectrogram = tf.image.resize(spectrogram, [16, 16])
+  # Resize the spectrogram to 8*8 (STFT–CNN-8) or 16*16 (STFT–CNN-16). 
+  spectrogram = tf.image.resize(spectrogram, [8, 8])
+# spectrogram = tf.image.resize(spectrogram, [16, 16])
   return spectrogram
 
 def make_spec_ds(ds):
