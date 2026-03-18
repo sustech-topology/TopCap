@@ -8,4 +8,4 @@ The [`data`](data) directory contains code for preprocessing data prior to runni
 
 ## Comparative models
 
-The [`model`](model) directory contains code for the comparative models MFCC–GRU, MFCC–Transformer, STFT–CNN-8, and STFT–CNN-16.  
+The [`model`](model) directory contains code for the comparative models MFCC–GRU, MFCC–Transformer, STFT–CNN-8, and STFT–CNN-16 appearing in Table 1.  
