@@ -8,7 +8,7 @@ from tensorflow.keras import models
 
 
 # Obtain the local file path of the dataset.
-DATASET_PATH = 'G:/Python Exercise/QQR Program/train500_audio_segment_wav_all'
+DATASET_PATH = 'D:\\code\\Signal_Recognition\\audio_segment'
 data_dir = pathlib.Path(DATASET_PATH)
 
 # Retrieve the dataset and select 2000 samples
