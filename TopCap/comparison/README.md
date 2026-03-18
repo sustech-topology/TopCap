@@ -62,9 +62,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 
 ### STFT-based speech classification models
 
-We also bulid a comparative model that uses the spectral features derived by short-time Fourier transform (STFT), with a convolutional neural network (CNN) for implementation.  Based on resizing the spectrograms to 2 different dimensions (one $16\times16$, the other $8\times8$), this comparison is divided into two experiments.  The model is implemented using TensorFlow and aims to distinguish between voiced and voiceless consonants based on the STFT features.  The model implementation includes a complete pipeline from data loading and STFT feature extraction to model training and evaluation.  
-
-[`STFT–CNN.py`](STFT–CNN.py) realises this model as follows.
+We also bulid a comparative model that uses the spectral features derived by short-time Fourier transform (STFT), with a convolutional neural network (CNN) for implementation.  Based on resizing the spectrograms to 2 different dimensions (one $16\times16$, the other $8\times8$), this comparison is divided into two experiments.  The model is implemented using TensorFlow and aims to distinguish between voiced and voiceless consonants based on the STFT features.  The model implementation [`STFT–CNN.py`](STFT–CNN.py) includes a complete pipeline from data loading and STFT feature extraction to model training and evaluation as follows.  
 
 - Data Loading & Dataset Partitioning
   - Loads speech files (.wav format) from a specified directory using `tf.keras.utils.audio_dataset_from_directory`. 
