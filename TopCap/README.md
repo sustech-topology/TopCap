@@ -8,8 +8,7 @@ The [`primary`](primary) directory contains code for results in Fig. 3 of machin
 
 ## Model comparison
 
-The [`comparison`](comparison) directory contains code for results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  These 
-datasets are from the LJSpeech, TIMIT, and LibriSpeech repositories, along with 4 additional corpora from ALLSSTAR that do not appear in the primary experiments.  
+The [`comparison`](comparison) directory contains code for results in Table 1 of comparing TopCap with 4 state-of-the-art methods on 8 small and 4 large datasets.  These datasets are from the LJSpeech, TIMIT, and LibriSpeech repositories, along with 4 additional corpora from ALLSSTAR that do not appear in the primary experiments.  
 
 ## Feature analysis
 
