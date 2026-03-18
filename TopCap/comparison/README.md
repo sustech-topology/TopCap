@@ -4,7 +4,7 @@ To comprehensively evaluate TopCap's performance, we build multiple state-of-the
 
 ## Data preprocessing
 
-The [`preprocessing`](preprocessing) directory contains code for preprocessing data prior to running [`TopCap`](/TopCap) and the comparative models below.  
+The [`data`](data) directory contains code for preprocessing data prior to running [`TopCap`](/TopCap) and the comparative models below.  
 
 ## Comparative models
 
