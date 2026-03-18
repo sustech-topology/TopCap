@@ -1,6 +1,6 @@
 # Feature analysis
 
-The repository corresponds to Figure 4 in Section 2.1.3, Feature Analysis, of the paper. This repository contains three Jupyter Notebooks that demonstrate various methods for extracting and analyzing audio features from audio signals. Each notebook focuses on a different technique and provides step-by-step guidance along with visualizations to help you understand the feature extraction process. 
+This directory contains code for results in Fig. 4 of analysing and comparing the features derived from TopCap, STFT, and MFCC.  It contains 3 Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
 
 ## File Functionality Overview
 
