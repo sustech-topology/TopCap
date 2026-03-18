@@ -1,14 +1,14 @@
 # Model comparison
 
-To comprehensively evaluate TopCap's performance, we build multiple state-of-the-art comparison models and benchmark them against a wide range datasets.  
+To comprehensively evaluate TopCap's performance, we build multiple state-of-the-art comparative models and benchmark them against a wide range datasets.  
 
 ## Data preprocessing
 
-The [`preprocessing`](preprocessing) directory contains code for preprocessing data prior to running [`TopCap`](/TopCap) and the comparison models below.  
+The [`preprocessing`](preprocessing) directory contains code for preprocessing data prior to running [`TopCap`](/TopCap) and the comparative models below.  
 
 ## MFCC-based speech classification models
 
-We build 2 state-of-the-art comparison models that leverage mel-frequency cepstral coefficients (MFCC) extracted from speech signals.  Both models are implemented using PyTorch and are designed to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on MFCC features.  The models differ in architecture.  Implementation of each includes a full pipeline from data loading and MFCC-feature extraction to model training and evaluation.  
+We build 2 state-of-the-art comparative models that leverage mel-frequency cepstral coefficients (MFCC) extracted from speech signals.  Both models are implemented using PyTorch and are designed to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on MFCC features.  The models differ in architecture.  Implementation of each includes a full pipeline from data loading and MFCC-feature extraction to model training and evaluation.  
 
 ### Gated recurrent unit (GRU)
 
@@ -60,7 +60,7 @@ We build 2 state-of-the-art comparison models that leverage mel-frequency cepstr
 
 ## STFT-based speech classification models
 
-We bulid a comparative model that utilizes the Short-Time Fourier Transform (STFT) and a Convolutional Neural Network (CNN) for implementation. Based on resizing the spectrograms to two different dimensions (one $16 \times 16$ and the other $8 \times 8$), the work is divided into two experiments. The model is implemented using TensorFlow and aims to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on STFT features. The model implementation includes a complete pipeline from data loading and STFT feature extraction to model training and evaluation. 
+We also bulid a comparative model that uses the spectral features by short-time Fourier transform (STFT) with a convolutional neural network (CNN) for implementation.  Based on resizing the spectrograms to two different dimensions (one $16 \times 16$ and the other $8 \times 8$), the work is divided into two experiments. The model is implemented using TensorFlow and aims to distinguish between two classes (i.e., voiced vs. voiceless consonants) based on STFT features. The model implementation includes a complete pipeline from data loading and STFT feature extraction to model training and evaluation. 
 
 [`STFT–CNN.py`](STFT–CNN.py) realises this model as follows.
 
@@ -83,7 +83,7 @@ We bulid a comparative model that utilizes the Short-Time Fourier Transform (STF
   - It is trained on the training set for 10 epochs, with performance monitored on the validation set.
   - The loss and accuracy metrics recorded during training can be accessed via the history object.
 
-Running the above codes requires: 
+## Requirements for running the above codes
 
 - Python version: Python 3.x 
 - Key libraries: 
