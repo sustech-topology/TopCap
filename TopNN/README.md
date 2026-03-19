@@ -6,7 +6,7 @@ The repository corresponds to Section 2.2, Topology-enhanced neural networks of 
 
 ## File Overview
 
-### 1. `Multiple_experiments_on_topology_enhanced_neural_networks.py`
+### 1. `TopNN.py`
 This script is focused on performing multiple experiments for classifying audio consonants using topology-enhanced neural networks. Its main functionalities include:
 
 - **Data Preparation and Feature Extraction:**  
