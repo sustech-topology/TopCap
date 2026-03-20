@@ -78,7 +78,7 @@ We also build a comparative model that uses the spectral features derived by sho
 ## Requirements for running the codes
 
 - Python version: Python 3.x 
-- Key libraries: 
+- Key packages: 
   - Librosa 
   - Matplotlib 
   - NumPy 
