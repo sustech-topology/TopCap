@@ -21,7 +21,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
   - Provides additional plots of 3D PCA projections for standard and cyclic TDE with varying $\tau$.  
   - Saves computed results in pickle files for later review or further analysis.  
 
-For its usage, update the file path to the pickled time series (the `phone` file) before running.  The script will display several plots, including the original time series, its magnitude spectrum with annotated frequency peaks, and the relationship between PH metrics and embedding parameters.  
+**Usage**: Update the file path to the pickled time series (the `phone` file) before running.  The script will display several plots, including the original time series, its magnitude spectrum with annotated frequency peaks, and the relationship between PH metrics and embedding parameters.  
 
 ## Discussion on additional geometric features
 
