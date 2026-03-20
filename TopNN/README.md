@@ -42,7 +42,7 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
   - Deep learning: PyTorch
   - Miscellanies: CSV, OS, Multiprocessing modules 
 
-You can install most of these packages using pip: 
+The user can install most of these packages using pip: 
 
 ```bash
 pip install gudhi librosa matplotlib numpy pandas persim ripser scikit-learn scipy soundfile torch 
