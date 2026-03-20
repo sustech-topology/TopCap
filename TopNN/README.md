@@ -16,9 +16,9 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
 
 - Neural network models 
   Three GRU-based classifiers are implemented for comparison.  
-  - TopGRUClassifier: Combines GRU-encoded features with topological features.  
-  - ZeroGRUClassifier: Uses GRU features concatenated with zero vectors in place of topological features.  
-  - GRUClassifier: A standard GRU classifier, with optional initialisation based on weights from the other models.  
+  - `TopGRUClassifier`: Combines GRU-encoded features with topological features.  
+  - `ZeroGRUClassifier`: Uses GRU features concatenated with zero vectors in place of topological features.  
+  - `GRUClassifier`: A standard GRU classifier, with optional initialisation based on weights from the other models.  
   
 - Training & evaluation with cross-validation 
   - The script uses k-fold cross-validation to train and evaluate the three models over multiple (20 by default) experiments.  
