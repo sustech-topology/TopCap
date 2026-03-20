@@ -37,23 +37,24 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 
 **Usage**: Make sure the pickled time series (e.g., stored in a file named `phone`) is accessible.  Run the script to generate plots that detail the PCA eigenvalue spectra as functions of $\tau$ and $d$ respectively.  
 
-## Standard vs. cyclic time-delay embedding
+## Standard vs. cyclic TDE
 
-As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 interactive 3D plots to comprehensively compare and visualise the methods of time-delay embedding (TDE) in relation to the effects of embedding parameters.  It focuses on visualising the geometry of embedded data and provides the following functionalities.  
+As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 interactive 3D plots to comprehensively compare and visualise the methods of TDE in relation to the effects of embedding parameters.  It focuses on visualising the geometry of embedded data and provides the following functionalities.  
 
 - Methods of time-delay embedding 
   - Standard TDE: Uses a fixed delay without wrapping around the time series.  
   - Cyclic TDE: Applies a modulo operation to wrap around the time series, ensuring continuity in cyclic data.  
 
 - 3D Visualisation via PCA 
-  - Each embedded dataset is reduced to three dimensions using PCA.  The script then plots the projections in a 3D scatter plot, where point colour represents locations of sampled data points in the time series prior to embedding.  
+
+  Each embedded dataset is reduced to three dimensions using PCA.  The script then plots the projections in a 3D scatter plot, where point colour represents locations of sampled data points in the time series prior to embedding.  
 
 - Parameter variation 
   - First row: Standard embedding with a fixed embedding dimension 10 and varying delays 5, 10, 50, 100.  
   - Second row: Cyclic embedding with the same embedding dimension 10 and a different set of delays 5, 100, 500, 1000.  
   - Third and fourth rows: Standard and cyclic embedding with a fixed delay 1 and varying embedding dimensions 10, 100, 500, 1270.  
 
-For its usage, ensure the pickled time series data (commonly referred to as the `phone` file) is available through the specified path.  Run the script to generate a comprehensive set of 3D visualisations which help with selecting optimal embedding parameters.  
+**Usage**: Ensure the pickled time series data (commonly referred to as the `phone` file) is available through the specified path.  Run the script to generate a comprehensive set of 3D visualisations which help with selecting optimal embedding parameters.  
 
 ## Further discussion on parameter selection
 
