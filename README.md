@@ -12,12 +12,7 @@ The [`TopNN`](TopNN) directory contains code for results in Fig. 5 and Table 2.
 
 ## Detection of vibration patterns
 
-The following codes correspond to results in Figs. 6 and 7, respectively.  
-
-- [Experiments on synthetic data](Vibration/synthetic.ipynb) 
-- [Experiments on real-world data](Vibration/real.ipynb)
-
-
+The [`Vibration`](Vibration) directory contains code for results in Figs. 6 and 7.  
 
 ## Additional codes and materials
 
