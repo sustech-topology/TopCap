@@ -7,27 +7,27 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
 [`TopGRU.py`](TopGRU.py) realises the model of topology-enhanced gated recurrent unit (GRU) networks as follows.  
 
 - Data preparation & feature extraction 
-  - Load audio files and constructs a file index for audio samples stored in designated "voiced" and "voiceless" folders, with an option to add noise.
-  - Extracts topological features from each audio file using time delay embedding and persistent homology.
-  - Extracts MFCC features from each audio file using Librosa.
+  - Loads audio files and constructs a file index for audio samples stored in designated "voiced" and "voiceless" folders, with an option to add noise.  
+  - Extracts topological features from each audio file using time-delay embedding and persistent homology.  
+  - Extracts MFCC features from each audio file using Librosa.  
 
-- Custom Dataset and DataLoader 
-  A custom PyTorch `Dataset` (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.
+- Custom dataset and DataLoader 
+  A custom PyTorch dataset (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.  
 
 - Neural network models 
-  Three GRU-based classifiers are implemented:
-  - **TopGRUClassifier:** Combines GRU-encoded features with topological features.
-  - **ZeroGRUClassifier:** Uses GRU features concatenated with zero vectors in place of topological features.
-  - **GRUClassifier:** A standard GRU classifier, with optional initialization based on weights from the other models.
+  Three GRU-based classifiers are implemented for comparison.  
+  - TopGRUClassifier: Combines GRU-encoded features with topological features.  
+  - ZeroGRUClassifier: Uses GRU features concatenated with zero vectors in place of topological features.  
+  - GRUClassifier: A standard GRU classifier, with optional initialisation based on weights from the other models.  
   
 - Training & evaluation with cross-validation 
-  - The script uses k-fold cross-validation to train and evaluate the three models over multiple experiments (default 20 experiments).  
-  - Training and testing accuracies are recorded and averaged across folds.
+  - The script uses k-fold cross-validation to train and evaluate the three models over multiple (20 by default) experiments.  
+  - Training and testing accuracy rates are recorded and averaged across folds.  
   
 - Usage considerations 
-  - Ensure that the CSV file and audio directories are correctly specified.  
-  - Install necessary libraries such as PyTorch, scikit-learn, Librosa, NumPy, Pandas, and Matplotlib.  
-  - Adjust hyperparameters (e.g., number of epochs, batch size, learning rate) as needed for your dataset.
+  - Ensure that the `.csv` file and audio directories are correctly specified.  
+  - Install necessary packages as listed below.  
+  - Adjust hyperparameters (e.g., number of epochs, batch size, learning rate) as needed for the user's dataset.  
 
 ## Requirements for running the codes
 
