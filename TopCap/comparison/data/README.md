@@ -24,4 +24,4 @@
 
 For TopCap, [`feature.py`](/TopCap/primary/feature.py) uses the "phones" tier in the `.TextGrid` file to extract the corresponding phones.  It then performs time-delay embedding and persistent homology to obtain topological features, which are recorded in a `.csv` file.  All datasets are fed to this streamlined process except TIMIT, which provides its original phone cutting information (see [`TIMIT.py`](TIMIT.py) above).  
 
-The model comparison experiment uses [cut_wav](cut_wav.py) to extract speech segments corresponding to the selected factors.  These segments are saved in two subfolders within a single directory, serving as input for the neural network classifications.  
+The model comparison experiment uses [`cut_wav.py`](cut_wav.py) to extract speech segments corresponding to the selected factors.  These segments are saved in two subfolders within a single directory, serving as input for the neural network classifications.  
