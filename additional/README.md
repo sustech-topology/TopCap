@@ -8,8 +8,8 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 
 - PH Computation 
   - Uses the Ripser library to compute persistence diagrams on the point clouds obtained from both standard and cyclic time-delay embedding (TDE).  It then extracts the key metrics: 
-    - Birth time: The starting point of a homological feature 
-    - Lifetime: The persistence (duration) of the feature 
+    - Birth time, i.e., the starting point of a homological feature 
+    - Lifetime, i.e., the persistence (duration) of the feature 
 
 - Parallel processing 
   - Employs Python’s multiprocessing to compute PH metrics for a range of delay values $\tau$ and embedding dimensions $d$ in parallel, improving performance on large datasets.  
@@ -25,15 +25,14 @@ For its usage, update the file path to the pickled time series (the `phone` file
 
 [`Disc-feature.py`](Disc-feature.py) produces results in Fig. 8d.  This script focuses on characterising the dynamical properties of the time series by examining how principal component analysis (PCA) eigenvalues of the embedded data change with embedding parameters.  It provides the following functionalities.  
 
-- **PCA Eigenvalue Analysis:**  
+- PCA eigenvalue analysis 
   - **As a Function of Delay (τ):** Computes PCA eigenvalues using circular time delay embeddings while varying τ. It then plots the first 10 eigenvalues versus the delay.
   - **As a Function of Embedding Dimension (d):** For a fixed delay, it varies the embedding dimension and plots the corresponding PCA eigenvalues.
 
 - **Insight into System Dynamics:**  
   By analyzing how the eigenvalues evolve, one can infer the intrinsic dimensionality and the complexity of the underlying dynamics in the time series.
 
-- **Usage:**  
-  Make sure the pickled time series (e.g., stored in a file named `phone`) is accessible. Run the script to generate plots that detail the PCA eigenvalue spectra as functions of τ and d.
+For its usage, make sure the pickled time series (e.g., stored in a file named `phone`) is accessible. Run the script to generate plots that detail the PCA eigenvalue spectra as functions of τ and d.
 
 ## Standard vs. cyclic time-delay embedding
 
