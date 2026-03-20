@@ -16,11 +16,11 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 
 - Dataset preparation
   - Splits the dataset into training and test sets.  
-  - Uses a custom PyTorch `Dataset` and a collate function that handles variable-length sequences with padding.
+  - Uses a custom `PyTorch` `Dataset` and a collate function that handles variable-length sequences with padding.
 
 - GRU classifier architecture
   - A single-layer GRU processes the MFCC sequences using packed padded sequences.  
-  - A batch normalization layer is applied to the final hidden state.  
+  - A batch normalisation layer is applied to the final hidden state.  
   - A fully connected layer outputs a single logit for binary classification.
 
 - Training & evaluation
@@ -79,12 +79,12 @@ We also build a comparative model that uses the spectral features derived by sho
 
 - Python version: Python 3.x 
 - Key packages: 
-  - Librosa 
-  - Matplotlib 
-  - NumPy 
-  - PyTorch
-  - TensorFlow
-  - Scikit-learn 
+  - `Librosa` 
+  - `Matplotlib` 
+  - `NumPy` 
+  - `PyTorch`
+  - `TensorFlow`
+  - `Scikit-learn` 
 
 Install the required packages using pip: 
 
