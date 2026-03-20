@@ -6,7 +6,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 
 [`Disc-parameter.py`](Disc-parameter.py) produces results in Fig. 8c.  This script focuses on quantifying topological features as a function of embedding parameters.  More specifically, it is designed to study how topological features, extracted from the embedded time series via persistent homology (PH), vary with changes in the time delay $\tau$ and the embedding dimension $d$. It provides the following functionalities.  
 
-- PH Computation 
+- PH computation 
   - Uses the Ripser library to compute persistence diagrams on the point clouds obtained from both standard and cyclic time-delay embedding (TDE).  It then extracts the key metrics: 
     - Birth time, i.e., the starting point of a homological feature 
     - Lifetime, i.e., the persistence (duration) of the feature 
