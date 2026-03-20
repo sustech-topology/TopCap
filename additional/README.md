@@ -4,29 +4,54 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 
 ## Discussion on parameter selection
 
-[`Disc-parameter.py`](Disc-parameter.py) produces results in Fig. 8c as follows.  
+[`Disc-parameter.py`](Disc-parameter.py) produces results in Fig. 8c.  This script focuses on quantifying topological features as a function of embedding parameters.  More specifically, it is designed to study how topological features, extracted from the embedded time series via persistent homology (PH), vary with changes in the time delay $\tau$ and the embedding dimension $d$. It provides the following functionalities.  
+
+- PH Computation 
+  - Uses the Ripser library to compute persistence diagrams on the point clouds obtained from both standard and cyclic time-delay embedding (TDE).  It then extracts the key metrics: 
+    - Birth time: The starting point of a homological feature 
+    - Lifetime: The persistence (duration) of the feature 
+
+- Parallel processing 
+  - Employs Python’s multiprocessing to compute PH metrics for a range of delay values $\tau$ and embedding dimensions $d$ in parallel, improving performance on large datasets.  
+
+- Comprehensive visualisation 
+  - Plots the variation of the birth times and lifetimes as functions of delay for cyclic TDE.  
+  - Provides additional plots of 3D PCA projections for standard and cyclic TDE with varying $\tau$.  
+  - Saves computed results in pickle files for later review or further analysis.  
+
+For its usage, update the file path to the pickled time series (the `phone` file) before running.  The script will display several plots, including the original time series, its magnitude spectrum with annotated frequency peaks, and the relationship between PH metrics and embedding parameters.  
 
 ## Discussion on additional geometric features
 
-[`Disc-feature.py`](Disc-feature.py) produces results in Fig. 8d as follows.  
+[`Disc-feature.py`](Disc-feature.py) produces results in Fig. 8d.  This script focuses on characterising the dynamical properties of the time series by examining how principal component analysis (PCA) eigenvalues of the embedded data change with embedding parameters.  It provides the following functionalities.  
+
+- **PCA Eigenvalue Analysis:**  
+  - **As a Function of Delay (τ):** Computes PCA eigenvalues using circular time delay embeddings while varying τ. It then plots the first 10 eigenvalues versus the delay.
+  - **As a Function of Embedding Dimension (d):** For a fixed delay, it varies the embedding dimension and plots the corresponding PCA eigenvalues.
+
+- **Insight into System Dynamics:**  
+  By analyzing how the eigenvalues evolve, one can infer the intrinsic dimensionality and the complexity of the underlying dynamics in the time series.
+
+- **Usage:**  
+  Make sure the pickled time series (e.g., stored in a file named `phone`) is accessible. Run the script to generate plots that detail the PCA eigenvalue spectra as functions of τ and d.
 
 ## Standard vs. cyclic time-delay embedding
 
-As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 interactive 3D plots to comprehensively compare and visualise the methods of time-delay embedding (TDE) in relation to the effects of embedding parameters.  It provides the following key functionalities.  
+As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 interactive 3D plots to comprehensively compare and visualise the methods of time-delay embedding (TDE) in relation to the effects of embedding parameters.  It focuses on visualising the geometry of embedded data and provides the following functionalities.  
 
 - Methods of time-delay embedding 
   - Standard TDE: Uses a fixed delay without wrapping around the time series.  
   - Cyclic TDE: Applies a modulo operation to wrap around the time series, ensuring continuity in cyclic data.  
 
 - 3D Visualisation via PCA 
-  - Each embedded dataset is reduced to three dimensions using Principal Component Analysis (PCA).  The script then plots the projections in a 3D scatter plot, where point colour represents locations of sampled data points in the time series prior to embedding.  
+  - Each embedded dataset is reduced to three dimensions using PCA.  The script then plots the projections in a 3D scatter plot, where point colour represents locations of sampled data points in the time series prior to embedding.  
 
 - Parameter variation 
   - First row: Standard embedding with a fixed embedding dimension 10 and varying delays 5, 10, 50, 100.  
   - Second row: Cyclic embedding with the same embedding dimension 10 and a different set of delays 5, 100, 500, 1000.  
   - Third and fourth rows: Standard and cyclic embedding with a fixed delay 1 and varying embedding dimensions 10, 100, 500, 1270.  
 
-As for its usage, ensure the selected time series data (commonly referred to as the `phone` file) is available through the specified path.  Run the script to generate a comprehensive set of 3D visualisations which help with selecting optimal embedding parameters.  
+For its usage, ensure the pickled time series data (commonly referred to as the `phone` file) is available through the specified path.  Run the script to generate a comprehensive set of 3D visualisations which help with selecting optimal embedding parameters.  
 
 ## Further discussion on parameter selection
 
@@ -56,53 +81,6 @@ All the codes are listed as either `.py` (regular Python file) or `.ipynb` (inte
 
 
 
-
-This repository contains a suite of Python scripts for analyzing time series data through time delay embeddings. The tools provided here focus on visualizing the geometry of embedded data, characterizing the dynamical properties via PCA eigenvalues, and quantifying topological features (persistent homology) as a function of embedding parameters. These scripts are particularly useful for studying complex signals (e.g., audio or other sequential data) by revealing hidden structures and dynamical invariants.
-
----
-
-## File Overview
-
-### 1. `Supp-TDE.py`
-
-
----
-
-### 2. `Disc-parameter.py`
-This script corresponding to Discussion section of the paper is designed to study how topological features, extracted from the embedded time series via persistent homology, vary with changes in the time delay (τ) and the embedding dimension (d). Its features include:
-
-- **Persistent Homology Computation:**  
-  Uses the Ripser library to compute persistence diagrams on the point clouds obtained from both standard and circular time delay embeddings. It then extracts the key metrics:
-  - **Birth Date:** The starting point of a homological feature.
-  - **Lifetime:** The persistence (duration) of the feature.
-
-- **Parallel Processing:**  
-  Employs Python’s multiprocessing to compute persistent homology metrics for a range of delay values (τ) and embedding dimensions (d) in parallel, improving performance on large datasets.
-
-- **Comprehensive Visualization:**  
-  - Plots the variation of the birth dates and lifetimes as functions of delay for circular embeddings.
-  - Provides additional plots of 3D PCA projections for standard and circular embeddings with varying τ.
-  - Saves computed results in pickle files for later review or further analysis.
-
-- **Usage:**  
-  Update the file path to the pickled time series (the `phone` file) before running. The script will display several plots—including the original time series, its magnitude spectrum with annotated frequency peaks, and the relationship between persistent homology metrics and embedding parameters.
-
----
-
-### 3. `Disc-feature.py`
-This script also corresponding to Discussion section of the paper focuses on characterizing the dynamical properties of the time series by examining how PCA eigenvalues of the embedded data change with embedding parameters. It offers:
-
-- **PCA Eigenvalue Analysis:**  
-  - **As a Function of Delay (τ):** Computes PCA eigenvalues using circular time delay embeddings while varying τ. It then plots the first 10 eigenvalues versus the delay.
-  - **As a Function of Embedding Dimension (d):** For a fixed delay, it varies the embedding dimension and plots the corresponding PCA eigenvalues.
-
-- **Insight into System Dynamics:**  
-  By analyzing how the eigenvalues evolve, one can infer the intrinsic dimensionality and the complexity of the underlying dynamics in the time series.
-
-- **Usage:**  
-  Make sure the pickled time series (e.g., stored in a file named `phone`) is accessible. Run the script to generate plots that detail the PCA eigenvalue spectra as functions of τ and d.
-
----
 
 ## Common Requirements
 
