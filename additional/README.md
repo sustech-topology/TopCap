@@ -12,7 +12,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 
 ## Visualisation of embedded point clouds via standard and cyclic TDE
 
-As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 interactive 3D plots to visualise the effects of time-delay embedding parameters, including the following key functionalities.  
+As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 interactive 3D plots to visualise the effects of time-delay embedding parameters.  It provides the following key functionalities.  
 
 - Methods of time-delay embedding 
   - Standard TDE: Uses a fixed delay without wrapping around the time series.  
