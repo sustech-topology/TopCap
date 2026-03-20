@@ -9,11 +9,11 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
 - Data preparation & feature extraction 
   - Loads audio files and constructs a file index for audio samples stored in designated "voiced" and "voiceless" folders, with an option to add noise.  
   - Extracts topological features from each audio file using time-delay embedding and persistent homology.  
-  - Extracts MFCC features from each audio file using Librosa.  
+  - Extracts MFCC features from each audio file using `Librosa`.  
 
 - Custom dataset and DataLoader 
 
-  A custom PyTorch dataset (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.  
+  A custom `PyTorch` dataset (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.  
 
 - Neural network models 
 
@@ -35,12 +35,12 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
 
 - Python version: Python 3.x 
 - Key packages 
-  - Common: Matplotlib, NumPy, Pandas
-  - Audio processing: Librosa, SciPy, SoundFile
-  - Topological data analysis: Gudhi, Persim, Ripser
-  - Machine learning: scikit-learn
-  - Deep learning: PyTorch
-  - Miscellanies: CSV, OS, Multiprocessing modules 
+  - Common: `Matplotlib`, `NumPy`, `Pandas`
+  - Audio processing: `Librosa`, `SciPy`, `SoundFile`
+  - Topological data analysis: `Gudhi`, `Persim`, `Ripser`
+  - Machine learning: `scikit-learn`
+  - Deep learning: `PyTorch`
+  - Miscellanies: `CSV`, `OS`, `Multiprocessing` modules 
 
 The user can install most of these packages using pip: 
 
