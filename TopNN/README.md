@@ -12,9 +12,11 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
   - Extracts MFCC features from each audio file using Librosa.  
 
 - Custom dataset and DataLoader 
-  - A custom PyTorch dataset (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.  
+
+  A custom PyTorch dataset (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.  
 
 - Neural network models 
+
   Three GRU-based classifiers are implemented for comparison.  
   - `TopGRUClassifier`: Combines GRU-encoded features with topological features.  
   - `ZeroGRUClassifier`: Uses GRU features concatenated with zero vectors in place of topological features.  
