@@ -13,7 +13,8 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
     - Lifetime, i.e., the persistence (duration) of the feature 
 
 - Parallel processing 
-  - Employs Python’s multiprocessing to compute PH metrics for a range of delay values $\tau$ and embedding dimensions $d$ in parallel, improving performance on large datasets.  
+
+  Employs Python’s multiprocessing to compute PH metrics for a range of delay values $\tau$ and embedding dimensions $d$ in parallel, improving performance on large datasets.  
 
 - Comprehensive visualisation 
   - Plots the variation of the birth times and lifetimes as functions of delay for cyclic TDE.  
