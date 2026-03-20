@@ -62,7 +62,7 @@ All scripts above rely on several common Python libraries.  Make sure the follow
 
 - Numerical and scientific libraries: `NumPy`, `Pickle`, `SciPy` 
 
-- Data processing and visualisation: `Matplotlib`, `scikit-learn` 
+- Data processing and visualisation: `Matplotlib`, `Scikit-learn` 
 
 - Topological data analysis: `Ripser` 
 
