@@ -2,23 +2,46 @@
 
 This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, and Supplementary Table 1. It also contains miscellaneous files intended to enable and facilitate the user to reproduce the results and understand the methods in the manuscript.  
 
-- [`Disc-parameter.py`](Disc-parameter.py) produces results in Fig. 8c supporting discussion on parameter selection.  
+## Discussion on parameter selection
 
-- [`Disc-feature.py`](Disc-feature.py) produces results in Fig. 8d supporting discussion on additional geometric features.  
+[`Disc-parameter.py`](Disc-parameter.py) produces results in Fig. 8c as follows.  
 
-- [`Supp-TDE.py`](Supp-TDE.py) generates visualisation in Supplementary Fig. 2 of embedded point clouds via standard and cyclic TDE.  
+## Discussion on additional geometric features
 
-- [`Supp-Disc.ipynb`](Supp-Disc.ipynb) produces results in Supplementary Fig. 3 and Supplementary Table 1 supporting further discussion on parameter selection.  
+[`Disc-feature.py`](Disc-feature.py) produces results in Fig. 8d as follows.  
 
-## Consonant waveforms
+## Visualisation of embedded point clouds via standard and cyclic TDE
 
-[This directory](additional/waveform) contains waveforms of pulmonic consonants.  Audio signals for these consonants are from [here](https://en.wikipedia.org/wiki/List_of_consonants).  
+As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 interactive 3D plots to visualise the effects of time-delay embedding parameters, including the following key functionalities.  
+
+- Methods of time-delay embedding 
+  - Standard TDE: Uses a fixed delay without wrapping around the time series.  
+  - Cyclic TDE: Applies a modulo operation to wrap around the time series, ensuring continuity in cyclic data.  
+
+- 3D Visualisation via PCA 
+  Each embedded dataset is reduced to three dimensions using Principal Component Analysis (PCA). The script then plots the projections in a 3D scatter plot where point colors represent the index in the time series.
+
+- Parameter variation 
+  - First row: Standard embedding with a fixed embedding dimension (10) and varying delays (e.g., 5, 10, 50, 100).
+  - Second row: Cyclic embeddings with the same embedding dimension (10) and a different set of delays (e.g., 5, 100, 500, 1000).
+  - Third and fourth rows: Embeddings (standard and circular, respectively) with a fixed delay (tau = 1) and varying embedding dimensions (e.g., 10, 100, 500, 1000).
+
+- **Usage:**  
+  Ensure the pickled time series data (commonly referred to as the `phone` file) is available at the specified path. Run the script to generate a comprehensive set of 3D visualizations that help in selecting optimal embedding parameters.
+
+## Further discussion on parameter selection
+
+[`Supp-Disc.ipynb`](Supp-Disc.ipynb) produces results in Supplementary Fig. 3 and Supplementary Table 1.  
 
 ## Codes for results not appearing in the manuscript
 
 - [observation_dimension](additional/observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams.  
 - [observation_dimension_plot](additional/observation_dimension_plot.ipynb) includes parameters and graph in the discussion section.  
 - [stft_plot_maker_refine](additional/stft_plot_maker_refine.ipynb)
+
+## Consonant waveforms
+
+[This directory](additional/waveform) contains waveforms of pulmonic consonants.  Audio signals for these consonants are from [here](https://en.wikipedia.org/wiki/List_of_consonants).  
 
 ## Figure generation
 
@@ -42,23 +65,7 @@ This repository contains a suite of Python scripts for analyzing time series dat
 ## File Overview
 
 ### 1. `Supp-TDE.py`
-This script corresponding to Figure.S3 of the paper generates a grid of 16 interactive 3D plots to visualize the effects of different time delay embedding parameters. Key functionalities include:
 
-- **Time Delay Embedding Methods:**  
-  Implements two types of embeddings:
-  - **Standard Embedding:** Uses a fixed delay without wrapping around the time series.
-  - **Circular Embedding:** Applies a modulo operation to wrap around the time series, ensuring continuity in cyclic data.
-
-- **3D Visualization via PCA:**  
-  Each embedded dataset is reduced to three dimensions using Principal Component Analysis (PCA). The script then plots the projections in a 3D scatter plot where point colors represent the index in the time series.
-
-- **Parameter Variations:**  
-  - *First Row:* Standard embeddings with a fixed embedding dimension (10) and varying delays (e.g., 5, 10, 50, 100).
-  - *Second Row:* Circular embeddings with the same embedding dimension (10) and a different set of delays (e.g., 5, 100, 500, 1000).
-  - *Third and Fourth Rows:* Embeddings (standard and circular, respectively) with a fixed delay (tau = 1) and varying embedding dimensions (e.g., 10, 100, 500, 1000).
-
-- **Usage:**  
-  Ensure the pickled time series data (commonly referred to as the `phone` file) is available at the specified path. Run the script to generate a comprehensive set of 3D visualizations that help in selecting optimal embedding parameters.
 
 ---
 
