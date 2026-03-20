@@ -38,7 +38,7 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
   - Common: `Matplotlib`, `NumPy`, `Pandas`
   - Audio processing: `Librosa`, `SciPy`, `SoundFile`
   - Topological data analysis: `Gudhi`, `Persim`, `Ripser`
-  - Machine learning: `scikit-learn`
+  - Machine learning: `Scikit-learn`
   - Deep learning: `PyTorch`
   - Miscellanies: `CSV`, `OS`, `Multiprocessing` modules 
 
