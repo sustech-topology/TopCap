@@ -1,4 +1,4 @@
-# Topology-enhanced neural networks
+# TopNN: topology-enhanced neural networks
 
 This directory contains code for results in Fig. 5 and Table 2 of experiments with topology-enhanced neural networks.  It contains a collection of Python scripts designed for advanced audio signal processing, feature extraction using topological data analysis, and machine learning experiments.  The provided scripts cover a range of functionalities from preprocessing audio signals and extracting persistent-homology features, to training topology-enhanced neural network classifiers.  
 
