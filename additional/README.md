@@ -17,8 +17,8 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
   Employs Python’s multiprocessing to compute PH metrics for a range of delay values $\tau$ and embedding dimensions $d$ in parallel, improving performance on large datasets.  
 
 - Comprehensive visualisation 
-  - Plots the variation of the birth times and lifetimes as functions of delay for cyclic TDE.  
-  - Provides additional plots of 3D PCA projections for standard and cyclic TDE with varying $\tau$.  
+  - Plots the variation of the birth times and lifetimes as functions of delay for cyclic time-delay embedding (CTDE).  
+  - Provides additional plots of 3D PCA projections for standard and CTDE with varying $\tau$.  
   - Saves computed results in pickle files for later review or further analysis.  
 
 **Usage**: Update the file path to the pickled time series (the `phone` file) before running.  The script will display several plots, including the original time series, its magnitude spectrum with annotated frequency peaks, and the relationship between PH metrics and embedding parameters.  
@@ -28,13 +28,14 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 [`Disc-feature.py`](Disc-feature.py) produces results in Fig. 8d.  This script focuses on characterising the dynamical properties of the time series by examining how principal component analysis (PCA) eigenvalues of the embedded data change with embedding parameters.  It provides the following functionalities.  
 
 - PCA eigenvalue analysis 
-  - **As a Function of Delay (τ):** Computes PCA eigenvalues using circular time delay embeddings while varying τ. It then plots the first 10 eigenvalues versus the delay.
-  - **As a Function of Embedding Dimension (d):** For a fixed delay, it varies the embedding dimension and plots the corresponding PCA eigenvalues.
+  - As a function of delay $\tau$: Computes PCA eigenvalues using CTDE with varying $\tau$.  It then plots the first 10 eigenvalues about the delay.
+  - As a function of embedding dimension $d$: For a fixed delay, it varies the embedding dimension and plots the corresponding PCA eigenvalues.  
 
-- **Insight into System Dynamics:**  
-  By analyzing how the eigenvalues evolve, one can infer the intrinsic dimensionality and the complexity of the underlying dynamics in the time series.
+- Insight into system dynamics 
 
-For its usage, make sure the pickled time series (e.g., stored in a file named `phone`) is accessible. Run the script to generate plots that detail the PCA eigenvalue spectra as functions of τ and d.
+  By analysing how the eigenvalues evolve, one can infer the intrinsic dimensionality and the complexity of the underlying dynamics in the time series.  
+
+**Usage**: Make sure the pickled time series (e.g., stored in a file named `phone`) is accessible.  Run the script to generate plots that detail the PCA eigenvalue spectra as functions of $\tau$ and $d$ respectively.  
 
 ## Standard vs. cyclic time-delay embedding
 
