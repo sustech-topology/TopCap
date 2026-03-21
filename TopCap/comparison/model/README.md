@@ -24,7 +24,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
   - A fully connected layer outputs a single logit for binary classification.  
 
 - Training & evaluation 
-  - Trains the model using Binary Cross-Entropy with Logits Loss and the Adam optimiser.  
+  - Trains the model using binary cross-entropy with logits loss and the Adam optimiser.  
   - Prints training loss and accuracy periodically.  
   - Evaluates the model on a test set and reports overall test loss and accuracy.  
 
