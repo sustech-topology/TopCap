@@ -12,4 +12,4 @@ The [`comparison`](comparison) directory contains code for results in Table 1 of
 
 ## Feature analysis
 
-The [`analysis`](analysis) directory contains code for results in Fig. 4 of analysing and comparing the features derived from TopCap, STFT, and MFCC.  It contains 3 Jupyter notebooks that demonstrate various methods for extracting and analysing features from speech signals.  Each notebook focuses on a particular technique and provides step-by-step guidelines along with visualisation to help the user understand the feature extraction process.  
+The [`analysis`](analysis) directory contains code for results in Fig. 4 of analysing and comparing the features derived from TopCap, STFT, and MFCC.  
