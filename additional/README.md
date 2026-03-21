@@ -4,7 +4,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 
 ## Discussion on parameter selection
 
-[`Disc-parameter.py`](Disc-parameter.py) produces results in Fig. 8c.  This script focuses on quantifying topological features as a function of embedding parameters.  More specifically, it is designed to study how topological features, extracted from the embedded time series via persistent homology (PH), vary with changes in the time delay $\tau$ and the embedding dimension $d$. It provides the following functionalities.  
+[`Disc-parameter.py`](Disc-parameter.py) produces results in Fig. 8c.  This script focuses on quantifying topological features as a function of embedding parameters.  More specifically, it is designed to study how topological features, extracted from the embedded time series via persistent homology (PH), vary under change of the time delay $\tau$ and the embedding dimension $d$. It provides the following functionalities.  
 
 - PH computation 
 
