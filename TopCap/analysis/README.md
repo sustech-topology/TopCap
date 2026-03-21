@@ -15,8 +15,8 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
   - Provides visualisation to analyse how the frequency fingerprint of the audio evolves over time.  
 
 - [`MFCC.ipynb`](MFCC.ipynb) 
-  - Shows how to compute mel-frequency cepstral coefficients (MFCCs), a key feature in speech and audio processing.  
-  - Walks through preprocessing the audio, extracting MFCCs, and visualising the results.  
+  - Shows how to compute mel-frequency cepstral coefficients (MFCC), a key feature in speech and audio processing.  
+  - Walks through preprocessing the audio, extracting MFCC, and visualising the results.  
   - Ideal for projects related to speech recognition and audio classification.  
 
 ## Code features
