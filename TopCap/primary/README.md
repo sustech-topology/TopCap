@@ -25,7 +25,7 @@ Topological feature extraction is achieved in [`feature.py`](feature.py), which 
 
 Use the MATLAB (R2024b) [Classification Learner](https://www.mathworks.com/help/stats/classificationlearner-app.html) application, with 5-fold cross-validation, and set aside 30% records as test data.  Apply the following built-in algorithms: Optimizable Tree, Optimizable Discriminant, Binary GLM Logistic Regression, Optimizable Naive Bayes, Optimizable SVM, Optimizable KNN, Optimizable Efficient Linear, and Optimizable Ensemble.  
 
-To be more specific in this step, we prepare a corresponding code [`SVM.py`](SVM.py) for the SVM algorithm and use it with TopCap in the [model comparison](/TopCap/comparison) experiments.  This script evaluates the performance of a Gaussian Radial Basis Function (RBF) SVM classifier on a dataset using stratified 5-fold cross-validation.  Key aspects are as follows.  
+To be more specific in this step, we prepare a corresponding code [`SVM.py`](SVM.py) for the SVM algorithm and use it with TopCap in the [model comparison](/TopCap/comparison) experiments.  This script evaluates the performance of a Gaussian radial basis function (RBF) SVM classifier on a dataset using stratified 5-fold cross-validation.  Key aspects are as follows.  
 
 - Data loading & preprocessing
   - Reads a `.csv` file (e.g., [`Sample_TIMIT.csv`](Sample_TIMIT.csv)) where the third and fourth columns represent features and the fifth column represents binary labels.  
