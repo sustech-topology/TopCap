@@ -5,7 +5,7 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
 ## Code functionality
 
 - [`TopCap.ipynb`](TopCap.ipynb) 
-  - Demonstrates the extraction and analysis of persistence diagram features from audio signals.  
+  - Demonstrates the extraction and analysis of persistence diagram (PD) features from audio signals.  
   - Includes steps for loading audio data, processing the signal, and visualising the extracted PD features.  
   - Useful for understanding how power or other domain-specific metrics can be derived from audio.  
 
