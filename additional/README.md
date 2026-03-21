@@ -28,7 +28,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 [`Disc-feature.py`](Disc-feature.py) produces results in Fig. 8d.  This script focuses on characterising the dynamical properties of the time series by examining how principal component analysis (PCA) eigenvalues of the embedded data change with embedding parameters.  It provides the following functionalities.  
 
 - PCA eigenvalue analysis 
-  - As a function of delay $\tau$: Computes PCA eigenvalues using CTDE with varying $\tau$.  It then plots the first 10 eigenvalues about the delay.
+  - As a function of delay $\tau$: Computes PCA eigenvalues using CTDE with varying $\tau$.  It then plots the first 10 eigenvalues.
   - As a function of embedding dimension $d$: For a fixed delay, it varies the embedding dimension and plots the corresponding PCA eigenvalues.  
 
 - Insight into system dynamics 
