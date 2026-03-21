@@ -2,7 +2,7 @@
 
 ## ALLSSTAR
   
-[`ALLSSTAR.py`](ALLSSTAR.py) removes all tiers from the original `.TextGrid` file except for the "words" tier.  It then uses Montreal Forced Aligner (MFA, cf. the [primary experiments](/TopCap/primary)) to generate a new "phones" tier.  
+[`ALLSSTAR.py`](ALLSSTAR.py) removes all tiers from the original `.TextGrid` file except for the "words" tier.  It then uses Montreal Forced Aligner (MFA, cf. the [primary](/TopCap/primary) experiments) to generate a new "phones" tier.  
 
 ## LJSpeech
 
