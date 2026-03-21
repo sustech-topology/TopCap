@@ -28,13 +28,13 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
   
 - Usage considerations 
   - Ensure that the `.csv` file and audio directories are correctly specified.  
-  - Install necessary packages as listed below.  
+  - Install necessary libraries as listed below.  
   - Adjust hyperparameters (e.g., number of epochs, batch size, learning rate) as needed for the user's dataset.  
 
 ## Requirements for running the codes
 
 - Python version: Python 3.x 
-- Key packages 
+- Key libraries 
   - Common: `Matplotlib`, `NumPy`, `Pandas`
   - Audio processing: `Librosa`, `SciPy`, `SoundFile`
   - Topological data analysis: `Gudhi`, `Persim`, `Ripser`
@@ -42,7 +42,7 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
   - Deep learning: `PyTorch`
   - Miscellanies: `CSV`, `OS`, `Multiprocessing` modules 
 
-The user can install most of these packages using pip: 
+The user can install most of these libraries using pip: 
 
 ```bash
 pip install gudhi librosa matplotlib numpy pandas persim ripser scikit-learn scipy soundfile torch 
