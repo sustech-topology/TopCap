@@ -1,6 +1,6 @@
 # Primary experiments
 
-This directory contains code for results in Fig. 3 of machine learning topological features.  We proceed according to the flowchart in Fig. 3e.  The [`results`](results) directory contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d). 
+This directory contains code for results in Fig. 3 of machine learning topological features.  We proceed according to the flowchart in Fig. 3e as follows.  The [`results`](results) directory contains ROC and AUC from machine learning (Fig. 3a–b) as well as birth time and lifetime of consonants (Fig. 3c–d). 
 
 ## Step 1: Deriving phonetic data from natural speech
 
