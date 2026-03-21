@@ -11,9 +11,9 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
   - Extracts topological features from each audio file using time-delay embedding and persistent homology.  
   - Extracts MFCC features from each audio file using `Librosa`.  
 
-- Custom dataset and DataLoader 
+- Custom dataset and `DataLoader` 
 
-  A custom `PyTorch` dataset (`ConsonantDataset`) and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.  
+  A custom `PyTorch` dataset `ConsonantDataset` and a collate function are defined to handle variable-length MFCC feature sequences along with corresponding topological features and labels.  
 
 - Neural network models 
 
