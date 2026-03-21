@@ -9,7 +9,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 [`MFCC–GRU.py`](MFCC–GRU.py) realises this model as follows.  
 
 - Data loading & feature extraction
-  - Loads speech files (.wav format) from separate directories for voiced and voiceless consonants.  
+  - Loads speech files (`.wav` format) from separate directories for voiced and voiceless consonants.  
   - Extracts 40-dimensional MFCC features (with `n_fft=256`) using Librosa.  
   - Transposes and converts features to PyTorch tensors.  
   - Generates binary labels (0 for voiced, 1 for voiceless) and constructs a combined dataset.
