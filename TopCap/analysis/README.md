@@ -38,7 +38,7 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
 
 - Environment: Jupyter Notebook or JupyterLab
 
-- Install the necessary packages using pip: 
+- Install the necessary libraries using pip: 
 ```bash
 pip install librosa matplotlib numpy pandas 
 ```
