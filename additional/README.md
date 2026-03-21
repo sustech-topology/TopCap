@@ -82,7 +82,6 @@ pip install matplotlib numpy ripser scikit-learn scipy
 
 - [observation_dimension](additional/observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams.  
 - [observation_dimension_plot](additional/observation_dimension_plot.ipynb) includes parameters and graph in the discussion section.  
-- [stft_plot_maker_refine](additional/stft_plot_maker_refine.ipynb)
 
 ## Consonant waveforms
 
