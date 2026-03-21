@@ -17,7 +17,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
   Employs Python’s multiprocessing to compute PH metrics for a range of delay values $\tau$ and embedding dimensions $d$ in parallel, improving performance on large datasets.  
 
 - Comprehensive visualisation 
-  - Plots the variation of the birth times and lifetimes as functions of delay for cyclic time-delay embedding (CTDE).  
+  - Plots the variation of the birth times and lifetimes as functions of delay for cyclic TDE (CTDE).  
   - Provides additional plots of 3D PCA projections for standard and CTDE with varying $\tau$.  
   - Saves computed results in pickle files for later review or further analysis.  
 
