@@ -8,22 +8,22 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 
 [`MFCC–GRU.py`](MFCC–GRU.py) realises this model as follows.  
 
-- Data loading & feature extraction
+- Data loading & feature extraction 
   - Loads speech files (`.wav` format) from separate directories for voiced and voiceless consonants.  
-  - Extracts 40-dimensional MFCC features (with `n_fft=256`) using Librosa.  
-  - Transposes and converts features to PyTorch tensors.  
-  - Generates binary labels (0 for voiced, 1 for voiceless) and constructs a combined dataset.
+  - Extracts 40-dimensional MFCC features (with `n_fft=256`) using `Librosa`.  
+  - Transposes and converts features to `PyTorch` tensors.  
+  - Generates binary labels (0 for voiced, 1 for voiceless) and constructs a combined dataset.  
 
-- Dataset preparation
+- Dataset preparation 
   - Splits the dataset into training and test sets.  
-  - Uses a custom `PyTorch` `Dataset` and a collate function that handles variable-length sequences with padding.
+  - Uses a custom `PyTorch` `Dataset` and a collate function that handles variable-length sequences with padding.  
 
-- GRU classifier architecture
+- GRU classifier architecture 
   - A single-layer GRU processes the MFCC sequences using packed padded sequences.  
   - A batch normalisation layer is applied to the final hidden state.  
-  - A fully connected layer outputs a single logit for binary classification.
+  - A fully connected layer outputs a single logit for binary classification.  
 
-- Training & evaluation
+- Training & evaluation 
   - Trains the model using Binary Cross-Entropy with Logits Loss and the Adam optimiser.  
   - Prints training loss and accuracy periodically.  
   - Evaluates the model on a test set and reports overall test loss and accuracy.  
