@@ -40,5 +40,5 @@ To be more specific in this step, we prepare a corresponding code [`SVM.py`](SVM
 
 **Usage**: 
 - Verify that the `.csv` file is in the expected format.  
-- Install necessary libraries such as `NumPy`, `Pandas`, and `Scikit-learn`.  
+- Install necessary packages such as `NumPy`, `Pandas`, and `Scikit-learn`.  
 - Adjust the `n_jobs` parameter if needed to optimise parallel processing.  
