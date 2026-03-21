@@ -78,7 +78,7 @@ We also build a comparative model that uses the spectral features derived by sho
 ## Requirements for running the codes
 
 - Python version: Python 3.x 
-- Key packages: 
+- Key libraries: 
   - `Librosa` 
   - `Matplotlib` 
   - `NumPy` 
@@ -86,7 +86,7 @@ We also build a comparative model that uses the spectral features derived by sho
   - `TensorFlow`
   - `Scikit-learn` 
 
-Install the required packages using pip: 
+Install the required libraries using pip: 
 
 ```bash
 pip install librosa matplotlib numpy scikit-learn tensorflow torch 
