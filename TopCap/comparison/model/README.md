@@ -6,7 +6,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 
 ### Gated recurrent unit (GRU)
 
-[`MFCC–GRU.py`](MFCC–GRU.py) realises this model as follows.  
+[`MFCC–GRU.py`](MFCC–GRU.py) realises the model MFCC–GRU combining MFCC features and a GRU network as follows.  
 
 - Data loading & feature extraction 
   - Loads speech files (`.wav` format) from separate directories for voiced and voiceless consonants.  
@@ -30,7 +30,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 
 ### Transformer
 
-[`MFCC–Transformer.py`](MFCC–Transformer.py) realises this model as follows.  
+[`MFCC–Transformer.py`](MFCC–Transformer.py) realises the model MFCC–Transformer combining MFCC features and a Transformer as follows.  
 
 - Data loading & feature extraction
   - Similar to the GRU model above, it extracts MFCC features from the speech files in the voiced and voiceless directories.  
