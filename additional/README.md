@@ -18,7 +18,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, a
 
 - Comprehensive visualisation 
   - Plots the variation of the birth times and lifetimes as functions of delay for cyclic TDE (CTDE).  
-  - Provides additional plots of 3D PCA projections for standard and CTDE with varying $\tau$.  
+  - Provides additional plots of 3D PCA projections for standard TDE and CTDE with varying $\tau$.  
   - Saves computed results in pickle files for later review or further analysis.  
 
 **Usage**: Update the file path to the pickled time series (the `phone` file) before running.  The script will display several plots, including the original time series, its magnitude spectrum with annotated frequency peaks, and the relationship between PH metrics and embedding parameters.  
