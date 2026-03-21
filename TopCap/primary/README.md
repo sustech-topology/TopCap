@@ -32,11 +32,11 @@ To be more specific in this step, we prepare a corresponding code [`SVM.py`](SVM
   - Ensures that the dataset is suitable for binary classification.  
 
 - Pipeline construction & cross-validation
-  - Constructs a scikit-learn pipeline that standardises the features using StandardScaler and then applies an SVM classifier with an RBF kernel.  
+  - Constructs a `Scikit-learn` pipeline that standardises the features using `StandardScaler` and then applies an SVM classifier with an RBF kernel.  
   - Performs stratified 5-fold cross-validation in parallel (using all available CPU cores by default) to assess model performance.  
 
 - Output metrics
-  - Prints individual fold accuracies as well as the mean accuracy and standard deviation across folds.  
+  - Prints individual fold accuracy rates as well as the mean accuracy and standard deviation across folds.  
 
 - Usage considerations
   - Verify that the `.csv` file is in the expected format.  
