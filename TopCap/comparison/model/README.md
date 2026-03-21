@@ -49,7 +49,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 
 - Training & evaluation
   - Trains the Transformer model using the same loss function and optimiser settings as the GRU model.  
-  - Training progress (loss and accuracy) is printed periodically.  
+  - Prints training progress (loss and accuracy) periodically.  
   - Evaluates model performance on the test set and displays training progress graphs.  
 
 ## STFT-based speech classification models
