@@ -91,11 +91,11 @@ pip install matplotlib numpy ripser scikit-learn scipy
 
 The [`data`](data) directory contains 
 
-### Consonant waveforms
+### Waveforms
 
 The [waveform](waveform) directory contains waveforms of pulmonic consonants.  Audio signals for these consonants are from [here](https://en.wikipedia.org/wiki/List_of_consonants).  
 
-### Consonant STFT images
+### STFT images
 
 The [`image`](image) directory contains 
 
