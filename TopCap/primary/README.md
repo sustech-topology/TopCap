@@ -11,7 +11,7 @@ Use [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/
   mfa model download acoustic english_us_arpa
   mfa model download dictionary english_us_arpa
   ```
-- Convert sampling rate into 16kHz by [`convert.ipynb`](convert.ipynb).  
+- Convert sampling rate into 16 kHz by [`convert.ipynb`](convert.ipynb).  
 - Align the speech records.  The output files are in `.TextGrid` format.  
   ```
   mfa align ~/mfa_data/my_corpus english_us_arpa english_us_arpa ~/mfa_data/my_corpus_aligned
