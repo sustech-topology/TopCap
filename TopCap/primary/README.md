@@ -38,7 +38,7 @@ To be more specific in this step, we prepare a corresponding code [`SVM.py`](SVM
 - Output metrics
   - Prints individual fold accuracy rates as well as the mean accuracy and standard deviation across folds.  
 
-- Usage considerations
-  - Verify that the `.csv` file is in the expected format.  
-  - Install necessary libraries such as scikit-learn, Pandas, and NumPy.  
-  - Adjust the `n_jobs` parameter if needed to optimise parallel processing.  
+**Usage**: 
+- Verify that the `.csv` file is in the expected format.  
+- Install necessary libraries such as `NumPy`, `Pandas`, and `Scikit-learn`.  
+- Adjust the `n_jobs` parameter if needed to optimise parallel processing.  
