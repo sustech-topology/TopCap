@@ -26,10 +26,10 @@ This directory contains code for results in Fig. 5 and Table 2 of experiments wi
   - The script uses k-fold cross-validation to train and evaluate the three models over multiple (20 by default) experiments.  
   - Training and testing accuracy rates are recorded and averaged across folds.  
   
-- Usage considerations 
-  - Ensure that the `.csv` file and audio directories are correctly specified.  
-  - Install necessary libraries as listed below.  
-  - Adjust hyperparameters (e.g., number of epochs, batch size, learning rate) as needed for the user's dataset.  
+**Usage**: 
+- Ensure that the `.csv` file and audio directories are correctly specified.  
+- Install necessary libraries as listed below.  
+- Adjust hyperparameters (e.g., number of epochs, batch size, learning rate) as needed for the user's dataset.  
 
 ## Requirements for running the codes
 
