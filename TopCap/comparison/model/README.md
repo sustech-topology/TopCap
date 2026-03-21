@@ -39,7 +39,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 
 - Dataset preparation
   - Splits the data into training and test sets.  
-  - Uses PyTorch DataLoader to create batches for training.
+  - Uses `PyTorch` `DataLoader` to create batches for training.
 
 - Transformer classifier architecture
   - Incorporates absolute positional encoding to capture sequential information.  
