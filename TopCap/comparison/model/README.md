@@ -33,7 +33,7 @@ We build 2 state-of-the-art comparative models that leverage mel-frequency cepst
 [`MFCC–Transformer.py`](MFCC–Transformer.py) realises this model as follows.  
 
 - Data loading & feature extraction
-  - Similar to the GRU model, it extracts MFCC features from the speech files in the voiced and voiceless directories.  
+  - Similar to the GRU model above, it extracts MFCC features from the speech files in the voiced and voiceless directories.  
   - Pads the sequences to a uniform length and converts them into a tensor suitable for Transformer input.  
   - Generates corresponding binary labels.
 
