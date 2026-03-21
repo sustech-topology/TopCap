@@ -58,7 +58,7 @@ As in Supplementary Fig. 2, [`Supp-TDE.py`](Supp-TDE.py) generates a grid of 16 
 
 ## Requirements for running the codes
 
-All scripts above rely on several common Python libraries.  Make sure the following packages are installed.  
+All scripts above rely on several common Python libraries.  Make sure the following libraries are installed.  
 
 - Numerical and scientific libraries: `NumPy`, `Pickle`, `SciPy` 
 
@@ -68,7 +68,7 @@ All scripts above rely on several common Python libraries.  Make sure the follow
 
 - Multiprocessing: Python's built-in `Multiprocessing` modules 
 
-The user can install the required packages using pip: 
+The user can install the required libraries using pip: 
 
 ```bash
 pip install matplotlib numpy ripser scikit-learn scipy 
