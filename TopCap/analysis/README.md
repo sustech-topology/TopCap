@@ -21,16 +21,22 @@ This directory contains code for results in Fig. 4 of analysing and comparing th
 
 ## Code features
 
-- Audio preprocessing: Load and preprocess audio data for feature extraction.  
+- Audio preprocessing 
 
-- Diverse feature extraction methods: 
+  Load and preprocess audio data for feature extraction.  
+
+- Diverse feature extraction methods 
   - Topological PD features for specific audio analysis tasks 
   - STFT for time-frequency representation 
   - MFCC for capturing the spectral properties of audio according to human auditory perception 
 
-- Visualisation: Each notebook includes plots and charts to help interpret the extracted features.  
+- Visualisation
 
-- Quantification: Use logistic classification to quantify the features.  
+  Each notebook includes plots and charts to help interpret the extracted features.  
+
+- Quantification
+
+  Use logistic classification to quantify the features.  
 
 ## Requirements for running the codes
 
