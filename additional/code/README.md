@@ -1,6 +1,6 @@
 # Additional code
 
-This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, and Supplementary Table 1.  
+This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, Supplementary Table 1, etc.  
 
 ## Discussion on parameter selection
 
