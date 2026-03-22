@@ -14,8 +14,8 @@ The [`data`](data) directory contains
 
 ### Waveforms
 
-The [waveform](waveform) directory contains waveforms of pulmonic consonants.  Audio signals for these consonants are from [here](https://en.wikipedia.org/wiki/List_of_consonants).  
+The [waveform](waveform) directory contains waveforms of pulmonic consonants.  
 
 ### STFT images
 
-The [`image`](image) directory contains some examples of images for phonetic data after short-time Fourier transform (STFT).  
+The [`image`](image) directory contains images for phonetic data after short-time Fourier transform (STFT).  
