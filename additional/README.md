@@ -10,7 +10,7 @@ The [`code`](code) directory contains code for results in Fig. 8, Supplementary 
 
 ### Sample data
 
-The [`data`](data) directory contains 
+The [`data`](data) directory contains sample data associated with the code for the experiments.  
 
 ### Waveforms
 
