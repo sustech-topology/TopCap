@@ -16,7 +16,7 @@ The [`Vibration`](Vibration) directory contains code for results in Figs. 6 and 
 
 ## Additional codes and materials
 
-The [`additional`](additional) directory contains code for results in Fig. 8, Supplementary Figs. 2–3, and Supplementary Table 1.  It also contains supplementary files intended to enable and facilitate the user to reproduce the results and apply the methods in the manuscript.  
+The [`additional`](additional) directory contains code for results in Fig. 8, Supplementary Figs. 2–3, and Supplementary Table 1.  It also contains additional files intended to enable and facilitate the user to reproduce the results and apply the methods in the manuscript.  
 
 ## Notes
 
