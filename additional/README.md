@@ -18,4 +18,4 @@ The [waveform](waveform) directory contains waveforms of pulmonic consonants.  A
 
 ### STFT images
 
-The [`image`](image) directory contains 
+The [`image`](image) directory contains some examples of images for phonetic data after short-time Fourier transform (STFT).  
