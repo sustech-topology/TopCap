@@ -6,16 +6,14 @@ This directory contains code for results in the [manuscript](https://yifeizhu.gi
 
 The [`code`](code) directory contains code for results in Fig. 8, Supplementary Figs. 2–3, Supplementary Table 1, etc.  
 
-## Material
-
-### Sample data
+## Sample data
 
 The [`data`](data) directory contains sample data associated with the code for the experiments.  
 
-### Waveforms
+## Waveforms
 
 The [waveform](waveform) directory contains waveforms of pulmonic consonants.  
 
-### STFT images
+## STFT images
 
 The [`image`](image) directory contains images for phonetic data after short-time Fourier transform (STFT).  
