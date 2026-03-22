@@ -8,7 +8,7 @@ This directory contains code for results in Fig. 8, Supplementary Figs. 2–3, S
 
 - PH computation 
 
-  Uses the Ripser library to compute persistence diagrams on the point clouds obtained from both standard and cyclic time-delay embedding (TDE).  It then extracts the key metrics: 
+  Uses the `Ripser` library to compute persistence diagrams on the point clouds obtained from both standard and cyclic time-delay embedding (TDE).  It then extracts the key metrics: 
     - Birth time, i.e., the starting point of a homological feature 
     - Lifetime, i.e., the persistence (duration) of the feature 
 
