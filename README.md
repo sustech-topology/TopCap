@@ -14,7 +14,7 @@ The [`TopNN`](TopNN) directory contains code for results in Fig. 5 and Table 2.
 
 The [`Vibration`](Vibration) directory contains code for results in Figs. 6 and 7.  
 
-## Additional codes and materials
+## Additional code and material
 
 The [`additional`](additional) directory contains code for results in Fig. 8, Supplementary Figs. 2–3, and Supplementary Table 1.  It also contains additional files intended to enable and facilitate the user to reproduce the results and apply the methods in the [manuscript](https://yifeizhu.github.io/tail.pdf).  
 
