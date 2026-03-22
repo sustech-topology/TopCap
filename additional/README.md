@@ -1,10 +1,10 @@
 # Additional code and material
 
-This directory contains code for results in the [manuscript](https://yifeizhu.github.io/tail.pdf) and its Supplementary Information beyond the Results section.  It also contains additional files intended to enable and facilitate the user to reproduce the results and apply the methods in the manuscript.  
+This directory contains code for results in the [manuscript](https://yifeizhu.github.io/tail.pdf) and its Supplementary Information not appearing in the Results section.  It also contains additional files intended to enable and facilitate the user to reproduce the results and apply the methods in the manuscript.  
 
 ## Code
 
-The [`code`](code) directory contains code for results in Fig. 8, Supplementary Figs. 2–3, and Supplementary Table 1.  
+The [`code`](code) directory contains code for results in Fig. 8, Supplementary Figs. 2–3, Supplementary Table 1, etc.  
 
 ## Material
 
