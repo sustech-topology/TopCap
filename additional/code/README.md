@@ -78,7 +78,8 @@ pip install matplotlib numpy ripser scikit-learn scipy
 
 [`Supp-Disc.ipynb`](Supp-Disc.ipynb) produces results in Supplementary Fig. 3 and Supplementary Table 1.  
 
-## Codes for results not appearing in the manuscript
+## Codes for results not included in the manuscript
 
-- [observation_dimension](additional/observation_dimension.ipynb) illustrates how dimension influences time delay embedding and persistent diagrams.  
-- [observation_dimension_plot](additional/observation_dimension_plot.ipynb) includes parameters and graph in the discussion section.
+- [`observation_dimension.ipynb`](observation_dimension.ipynb) illustrates how embedding dimension affects TDE and persistence diagrams.  
+
+- [`observation_dimension_plot.ipynb`](observation_dimension_plot.ipynb) contains related parameters and graphics.  
