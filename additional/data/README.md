@@ -15,7 +15,7 @@ This directory contains sample data associated with the code for the experiments
   - [`observation_dimension_plot.ipynb`](/additional/code/observation_dimension_plot.ipynb) of the [`additional/code`](/additional/code) directory 
   - [`plot.ipynb`](/additional/image/plot.ipynb) of the [`additional/image`](/additional/image) directory 
 
-- The [audio_segment](`audio_segment`) directory demonstrates the direcotry of the same name which appears in the codes [`cut_wav.py`](/TopCap/comparison/data/cut_wav.py), [`MFCC–GRU.py`](/TopCap/comparison/model/MFCC–GRU.py), [`MFCC–Transformer.py`](/TopCap/comparison/model/MFCC–Transformer.py), and [`STFT–CNN.py`](/TopCap/comparison/model/STFT–CNN.py) associated with the [model comparison](/TopCap/comparison) experiments with results in Table 1.  
+- The [audio_segment](`audio_segment`) directory demonstrates the directory of the same name which appears in the codes [`cut_wav.py`](/TopCap/comparison/data/cut_wav.py), [`MFCC–GRU.py`](/TopCap/comparison/model/MFCC–GRU.py), [`MFCC–Transformer.py`](/TopCap/comparison/model/MFCC–Transformer.py), and [`STFT–CNN.py`](/TopCap/comparison/model/STFT–CNN.py) associated with the [model comparison](/TopCap/comparison) experiments with results in Table 1.  
 
 - [`Sample_TIMIT.csv`](Sample_TIMIT.csv) gives an example of input for [`SVM.py`](/TopCap/primary/SVM.py) in Step 3 of machine learning step with [TopCap](/TopCap/primary).  
 
