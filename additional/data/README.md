@@ -4,4 +4,4 @@ This directory contains sample data associated with the code for the experiments
 
 - [`phone`](phone) records the voiced consonant [ŋ] which supports results in Fig. 8 and Supplementary Fig. 2.
 
-- [`Sample_TIMIT.csv`](Sample_TIMIT.csv) gives an example as input for [`SVM.py`](/TopCap/primary/SVM.py) in Step 3 of machine learning with TopCap.  
+- [`Sample_TIMIT.csv`](Sample_TIMIT.csv) gives an example of input for [`SVM.py`](/TopCap/primary/SVM.py) in Step 3 of machine learning with TopCap.  
