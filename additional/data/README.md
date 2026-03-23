@@ -7,7 +7,7 @@ This directory contains sample data associated with the code for the experiments
   - [`Supp-Disc.ipynb.ipynb`](/additional/code/Supp-Disc.ipynb.ipynb) of the [`additional/code`](/additional/code) directory for results in Supplementary Fig. 3 and Supplementary Table 1 
   - [`observation_dimension.ipynb`](/additional/code/observation_dimension.ipynb) of the [`additional/code`](/additional/code) directory 
 
-- The [ALL_ENG_ENG_HT1](`ALL_ENG_ENG_HT1`) directory contains datasets from ALLSSTAR HT1 needed in [`convert.ipynb`](/TopCap/primary/convert.ipynb) in Step 1 of deriving phonetic data from natural speech with [TopCap](/TopCap/primary).  
+- The [ALL_ENG_ENG_HT1](`ALL_ENG_ENG_HT1`) directory contains datasets from HT1 of ALLSSTAR needed in [`convert.ipynb`](/TopCap/primary/convert.ipynb) in Step 1 of deriving phonetic data from natural speech with [TopCap](/TopCap/primary).  
 
 - The [input](input) and [output](output) directories contain phonetic data before and after applying the Montreal Forced Aligner, respectively.  They appear in the following codes: 
   - [`convert.ipynb`](/TopCap/primary/convert.ipynb) in Step 1 of deriving phonetic data from natural speech with [TopCap](/TopCap/primary) 
