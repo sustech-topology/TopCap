@@ -17,8 +17,8 @@ This directory contains sample data associated with the code for the experiments
 
 - The [audio_segment](`audio_segment`) directory demonstrates the direcotry of the same name which appears in the codes [`cut_wav.py`](/TopCap/comparison/data/cut_wav.py), [`MFCC–GRU.py`](/TopCap/comparison/model/MFCC–GRU.py), [`MFCC–Transformer.py`](/TopCap/comparison/model/MFCC–Transformer.py), and [`STFT–CNN.py`](/TopCap/comparison/model/STFT–CNN.py) associated with the [model comparison](/TopCap/comparison) experiments with results in Table 1.  
 
-- [`phone`](phone) records the voiced consonant [ŋ] which supports results in Fig. 8 and Supplementary Fig. 2.  
-
 - [`Sample_TIMIT.csv`](Sample_TIMIT.csv) gives an example of input for [`SVM.py`](/TopCap/primary/SVM.py) in Step 3 of machine learning step with [TopCap](/TopCap/primary).  
+
+- [`phone`](phone) records the voiced consonant [ŋ] which supports results in Fig. 8 and Supplementary Fig. 2.  
 
 For access to the full datasets, please refer to the Data availability section of the manuscript and contact the corresponding author [Yifei Zhu](mailto:zhuyf@sustech.edu.cn).  
