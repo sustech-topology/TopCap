@@ -15,6 +15,12 @@ This directory contains sample data associated with the code for the experiments
   - [`observation_dimension_plot.ipynb`](/additional/code/observation_dimension_plot.ipynb) of the [`additional/code`](/additional/code) directory 
   - [`plot.ipynb`](/additional/image/plot.ipynb) of the [`additional/image`](/additional/image) directory 
 
+- The [audio_segment](`audio_segment`) directory demonstrates the one that appears in the following codes associated with the [model comparison](/TopCap/comparison) experiments with TopCap for results in Table 1: 
+  - [`cut_wav.py`](/TopCap/comparison/data/cut_wav.py) 
+  - [`MFCC–GRU.py`](/TopCap/comparison/model/MFCC–GRU.py)
+  - [`MFCC–Transformer.py`](/TopCap/comparison/model/MFCC–Transformer.py)
+  - [`STFT–CNN.py`](/TopCap/comparison/model/STFT–CNN.py)
+
 - [`phone`](phone) records the voiced consonant [ŋ] which supports results in Fig. 8 and Supplementary Fig. 2.  
 
 - [`Sample_TIMIT.csv`](Sample_TIMIT.csv) gives an example of input for [`SVM.py`](/TopCap/primary/SVM.py) in Step 3 of machine learning step with [TopCap](/TopCap/primary).  
