@@ -10,7 +10,7 @@ This directory contains sample data associated with the code for the experiments
   - [`observation_dimension_plot.ipynb`](/additional/code/observation_dimension_plot.ipynb) of the [`additional/code`](/additional/code) directory 
   - [`plot.ipynb`](/additional/image/plot.ipynb) of the [`additional/image`](/additional/image) directory 
 
--In particular, [`ALL_049_F_ENG_ENG_HT1.TextGrid`](ALL_049_F_ENG_ENG_HT1.TextGrid) and [`ALL_049_F_ENG_ENG_HT1.wav`](ALL_049_F_ENG_ENG_HT1.wav) are data needed in the following codes: 
+- In particular, [`ALL_049_F_ENG_ENG_HT1.TextGrid`](ALL_049_F_ENG_ENG_HT1.TextGrid) and [`ALL_049_F_ENG_ENG_HT1.wav`](ALL_049_F_ENG_ENG_HT1.wav) are data needed in the following codes: 
   - [`snapshot.ipynb`](/TopCap/snapshot.ipynb) for results with [TopCap](/TopCap) in Fig. 2 
   - [`Supp-Disc.ipynb.ipynb`](/additional/code/Supp-Disc.ipynb.ipynb) of the [`additional/code`](/additional/code) directory for results in Supplementary Fig. 3 and Supplementary Table 1 
   - [`observation_dimension.ipynb`](/additional/code/observation_dimension.ipynb) of the [`additional/code`](/additional/code) directory
