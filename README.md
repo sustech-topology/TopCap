@@ -1,6 +1,6 @@
 # Topology-enhanced machine learning for consonant recognition
 
-Here is the source code for TopCap and related models as presented in the Results section of the [manuscript](https://yifeizhu.github.io/tail.pdf).  The [data](additional/data) that support the findings of this study are openly available in [SpeechBox, ALLSSTAR Corpora](https://speechbox.linguistics.northwestern.edu/allsstar), as well as [LJSpeech](https://keithito.com/LJ-Speech-Dataset/), [TIMIT](https://catalog.ldc.upenn.edu/LDC93S1), and [LibriSpeech](https://www.openslr.org/12).  
+This repository contains the source code for TopCap and related models as presented in the Results section of the [manuscript](https://yifeizhu.github.io/tail.pdf).  The [data](additional/data) that support the findings of this study are openly available in [SpeechBox, ALLSSTAR Corpora](https://speechbox.linguistics.northwestern.edu/allsstar), as well as [LJSpeech](https://keithito.com/LJ-Speech-Dataset/), [TIMIT](https://catalog.ldc.upenn.edu/LDC93S1), and [LibriSpeech](https://www.openslr.org/12).  
 
 **Code formats**: All the codes are listed as either `.py` (regular Python file) or `.ipynb` (interactive Python notebook) interchangeably.  The latter format needs to be run in environments such as Jupyter Notebook or JupyterLab.  
 
