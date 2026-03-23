@@ -6,5 +6,9 @@ This directory contains sample data associated with the code for the experiments
 
 - [`phone`](phone) records the voiced consonant [ŋ] which supports results in Fig. 8 and Supplementary Fig. 2.
 
-- [`Sample_TIMIT.csv`](Sample_TIMIT.csv) gives an example of input for [`SVM.py`](/TopCap/primary/SVM.py) in the machine learning step with TopCap.
+- [`Sample_TIMIT.csv`](Sample_TIMIT.csv) gives an example of input for [`SVM.py`](/TopCap/primary/SVM.py) in Step 3 of machine learning step with TopCap.
+
+- The [input](input) and [output](output) directories contain phonetic data before and after applying the Montreal Forced Aligner, respectively.  They appear in the following codes:
+  - [`convert.ipynb`](/TopCap/primary/convert.ipynb) in Step 1 of deriving phonetic data from natural speech with TopCap
+  - [`plot.ipynb`](/additional/image/plot.ipynb) of the [`image`](/additional/image) directory 
 
